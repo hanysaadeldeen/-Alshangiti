@@ -1,6 +1,12 @@
 <template>
   <main class="MainPage">
     <AboutSection />
+    <WhyUsSection />
+    <NumbersSection />
+    <CertificatesSection />
+    <TestmonialsSection />
+    <BlogSection />
+
 
     <section></section>
   </main>

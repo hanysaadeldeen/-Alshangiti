@@ -1,7 +1,7 @@
 <template>
     <header class="relative z-20 max-2xl:px-6 py-4 md:py-6 text-white bg-primary-500"
         :class="adjustedPath === '/' ? 'home' : ''" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
-        <div class="mx-auto max-w-[1391px] ">
+        <div class="mx-auto max-w-[1315px] ">
             <div class="relative z-40">
                 <div class="flex items-center justify-between ">
                     <nuxt-link :to="localePath('index')" class="block relative ">
@@ -18,8 +18,8 @@
                                         الرئيسية
                                     </nuxt-link>
                                 </li>
-                                <li :class="adjustedPath === '/company' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('company')">
+                                <li :class="adjustedPath === '/about-us' ? 'active' : ''">
+                                    <nuxt-link :to="localePath('about-us')">
 
                                         من نحن
 
@@ -46,7 +46,7 @@
                         </nav>
                         <div class="hidden  justify-between  lg:flex items-center gap-2 xl:gap-6">
                             <ul>
-                                <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
+                                <li :class="adjustedPath === '/contact-us' ? 'active' : ''">
                                     <nuxt-link :to="localePath('contact-us')">
                                         تواصل معنا
                                     </nuxt-link>
@@ -84,10 +84,10 @@
                                     </nuxt-link>
                                 </li>
                                 <li :class="[
-                                    adjustedPath === '/company' ? 'active' : '',
+                                    adjustedPath === '/about-us' ? 'active' : '',
                                     'text-white hover:text-PrimaryPL3',
                                 ]">
-                                    <nuxt-link :to="localePath('company')" @click="isSideBar = !isSideBar"
+                                    <nuxt-link :to="localePath('about-us')" @click="isSideBar = !isSideBar"
                                         class="w-full">
                                         من نحن
 

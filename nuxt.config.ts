@@ -37,11 +37,12 @@ export default defineNuxtConfig({
           href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css",
         },
       ],
-      title: "",
+      title: "محمود الشنقيطي",
       meta: [
         {
           name: "description",
-          content: "",
+          content:
+            "محمود الشنقيطي وشركاه هو صرح قانوني رائد تأسس على يد محامٍ خبير أمضى أكثر من 20 عامًا في قلب المشهد القانوني السعودي",
         },
       ],
     },

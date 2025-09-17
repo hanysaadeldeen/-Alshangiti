@@ -1,5 +1,5 @@
 <template>
-    <section class="AboutSection max-w-[1388px] mx-auto max-2xl:px-6">
+    <section class="AboutSection max-w-[1315px] mx-auto max-2xl:px-6">
         <div class="container mx-auto ">
             <div class="flex max-md:flex-col gap-8 justify-between items-center">
 
@@ -32,8 +32,7 @@
 
                     <!-- Button -->
                     <div class="flex justify-center md:justify-start">
-                        <button
-                            class="bg-primary-500 hover:bg-primary-600 text-white font-cairo px-6 py-3 rounded-md transition">
+                        <button class="bg-primary-500 hover:bg-primary-600 text-white font-cairo px-6 py-3  transition">
                             اعرف أكثر عنا
                         </button>
                     </div>
@@ -41,7 +40,7 @@
                 <!-- Image -->
                 <div class="flex justify-center">
                     <img src="~/assets/img/About/alshangiti.webp" alt="alshangiti img" width="392" height="434"
-                        class="max-w-[300px] md:max-w-[392px]  object-contain" />
+                        class="max-w-[300px] md:max-w-[392px]  object-contain" loading="lazy" />
                 </div>
             </div>
         </div>
