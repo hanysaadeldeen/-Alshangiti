@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-primary-500">
-        <div class="container max-w-[1316px] mx-auto py-12">
+        <div class="container max-w-[1316px] max-2xl:px-6 mx-auto py-12">
             <div
                 class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6 md:gap-10 lg:gap-20 pb-10 md:pb-14  relative border-b border-white">
                 <div class="flex-grow">
@@ -67,7 +67,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="">
+                <div class="w-full md:w-[335px]">
                     <h1 class="text-white text-base font-medium mb-6 border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
 
                         خبرة في قطاع الأعمال <span class="text-[#EEC882]">
@@ -77,25 +77,18 @@
                     </h1>
                     <nav class="text-white">
                         <ul>
-                            <li class="pt-0 flex items-center gap-4 group">
-                                <i
-                                    class="fa-solid fa-phone text-TextM group-hover:text-Secondary transition-all ease-in-out duration-300"></i>
-                                <span :dir="locale === 'ar' ? 'ltr' : ''">
-                                    +966 50 123 4567
-                                </span>
-                            </li>
-                            <li class="flex items-center gap-4 group">
-                                <i
-                                    class="fa-solid fa-envelope text-TextM group-hover:text-Secondary transition-all ease-in-out duration-300"></i>
-                                <span>
-                                    info@techozone.sa
-                                </span>
-                            </li>
-                            <li class="pb-0 flex items-center gap-4 group border-none">
+                            <li class="pb-0 flex items-center gap-4 group  mb-4">
                                 <i
                                     class="fa-solid fa-location-dot  text-TextM group-hover:text-Secondary transition-all ease-in-out duration-300"></i>
                                 <span>
-                                    الرياض، المملكة العربية السعودية
+                                    جدة - حي الخالدية - برج جي فيو - الطابق التاسع
+                                </span>
+                            </li>
+                            <li class="pb-0 flex items-center gap-4 group ">
+                                <i
+                                    class="fa-solid fa-location-dot  text-TextM group-hover:text-Secondary transition-all ease-in-out duration-300"></i>
+                                <span>
+                                    الرياض - طريق المطار - واجهة اعمال الرياض
                                 </span>
                             </li>
                         </ul>
@@ -104,8 +97,8 @@
             </div>
 
 
-            <div class="pt-9  flex justify-between items-center">
-                <div class="flex flex-wrap gap-3 md:gap-4 mt-6 md:mt-10">
+            <div class="flex justify-between items-center pt-6 md:pt-8">
+                <div class="flex flex-wrap gap-3 md:gap-4 ">
                     <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white group cursor-pointer hover:border-[#474747] transition-all duration-200 ease-in-out "
                         v-for="social in SocialMedia" :key="social.id">
                         <a :href="social.link" target="_blank" rel="noopener noreferrer" class="text-base "

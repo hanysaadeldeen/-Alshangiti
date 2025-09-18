@@ -25,12 +25,9 @@
 
                                     </nuxt-link>
                                 </li>
-                                <li :class="adjustedPath === '/projects' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('projects')">
-
+                                <li :class="adjustedPath.startsWith('consulting') ? 'active' : ''">
+                                    <nuxt-link :to="localePath('consulting-contracts')">
                                         خدماتنا
-
-
                                     </nuxt-link>
                                 </li>
                                 <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
@@ -237,11 +234,11 @@ ul li {
 }
 
 ul li:hover {
-    border-bottom: 2px solid #617961;
+    color: white;
 }
 
 ul li.active {
-    border-bottom: 2px solid #617961;
+    color: white;
     font-weight: 700;
 }
 
