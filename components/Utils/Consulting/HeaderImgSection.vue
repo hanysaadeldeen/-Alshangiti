@@ -7,7 +7,6 @@
             <h1 class="text-[32px] md:text-[40px] lg:text-[52px] lg:!leading-[52px] text-white font-bold">{{ title }}
             </h1>
         </div>
-
     </div>
 </template>
 
