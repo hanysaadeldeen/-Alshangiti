@@ -1,17 +1,24 @@
 <template>
-    <header class="relative z-20 max-2xl:px-6 py-4 md:py-6 text-white bg-primary-500"
+    <header class="relative z-30 max-2xl:px-6 py-4 md:py-6 text-white bg-primary-500"
         :class="adjustedPath === '/' ? 'home' : ''" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
         <div class="mx-auto max-w-[1315px] ">
             <div class="relative z-40">
                 <div class="flex items-center justify-between ">
-                    <nuxt-link :to="localePath('index')" class="block relative ">
-                        <img src="~/assets/img/Logo.svg" :class="locale === 'ar' ? '' : 'hidden'"
-                            class="h-[50px] w-fit  xl:h-[70px] relative " alt="Mcc" height="70px" width="290"
-                            loading="eager" fetchpriority="high" />
-
-                    </nuxt-link>
                     <div class="flex items-center justify-between gap-6">
-                        <nav class="relative hidden lg:block h-full ">
+                        <nuxt-link :to="localePath('index')" class="block relative ">
+                            <img src="~/assets/img/Logo.svg" :class="locale === 'ar' ? '' : 'hidden'"
+                                class="h-[50px] w-fit  xl:h-[57px] relative " alt="alshangiti" height="57px" width="220"
+                                loading="eager" fetchpriority="high" />
+                        </nuxt-link>
+                        <h1
+                            class="hidden md:inline text-white text-base font-medium  border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
+                            خبرة في قطاع الأعمال <span class="text-[#EEC882]">
+                                منذ 2005
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="flex items-center justify-between gap-6 ">
+                        <!-- <nav class="relative hidden lg:block h-full z-20 bg-text">
                             <ul class="flex  items-center">
                                 <li :class="adjustedPath === '/' ? 'active' : ''">
                                     <nuxt-link :to="localePath('index')">
@@ -25,20 +32,84 @@
 
                                     </nuxt-link>
                                 </li>
-                                <li :class="adjustedPath.startsWith('consulting') ? 'active' : ''">
+
+                                <li :class="adjustedPath.startsWith('consulting') ? 'active' : ''" class="relative">
                                     <nuxt-link :to="localePath('consulting-contracts')">
                                         خدماتنا
                                     </nuxt-link>
+
+
                                 </li>
+
                                 <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
                                     <nuxt-link :to="localePath('suppliers')">
-
                                         المدونة
-
-
                                     </nuxt-link>
                                 </li>
 
+                            </ul>
+                            <div
+                                class="absolute top-0 left-0 w-fit min-w-[220px] h-fit p-6 flex flex-col items-start bg-red-500 z-10">
+                                <nuxt-link to="consulting-contracts"
+                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                    الاستشارات والعقود
+                                </nuxt-link>
+                                <nuxt-link to="consulting-contracts"
+                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                    الاستشارات والعقود
+                                </nuxt-link>
+                                <nuxt-link to="consulting-contracts"
+                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                    الاستشارات والعقود
+                                </nuxt-link>
+                            </div>
+                        </nav> -->
+
+
+                        <nav class="relative hidden lg:block h-full">
+                            <ul class="flex items-center">
+                                <li :class="adjustedPath === '/' ? 'active' : ''">
+                                    <nuxt-link :to="localePath('index')">الرئيسية</nuxt-link>
+                                </li>
+
+                                <li :class="adjustedPath === '/about-us' ? 'active' : ''">
+                                    <nuxt-link :to="localePath('about-us')">من نحن</nuxt-link>
+                                </li>
+
+                                <!-- هنا: اجعل الـ li هو الـ relative و استخدم group لعرض القائمة عند hover -->
+                                <li class="relative group">
+                                    <div class="flex justify-center items-center gap-2" @click="openMenu = !openMenu">
+
+                                        <span class="cursor-pointer"
+                                            :class="adjustedPath.includes('consulting') ? 'active' : ''">
+                                            خدماتنا
+                                        </span>
+                                        <i class="fa-solid fa-chevron-up text-white transition-all ease-in-out duration-300"
+                                            :class="!openMenu ? '-rotate-180' : 'rotate-0'"></i>
+                                    </div>
+
+                                    <!-- dropdown: top-full => يبدأ من أسفل الـ li، z-50 => فوق باقي المحتوى -->
+                                    <div class=" absolute top-[66px] right-0 mt-2 w-fit min-w-[220px] p-6 flex flex-col
+                                        items-start bg-primary-600 z-50 transform transition-all duration-200"
+                                        :class="openMenu ? 'opacity-100 visible translate-y-0' : 'opacity-100 invisible -translate-y-2'">
+                                        <nuxt-link @click="openMenu = false" to="consulting-contracts"
+                                            class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                            الاستشارات والعقود
+                                        </nuxt-link>
+                                        <nuxt-link @click="openMenu = false" to="consulting-arbitration"
+                                            class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                            التقاضي والتحكيم
+                                        </nuxt-link>
+                                        <nuxt-link @click="openMenu = false" to="consulting-company"
+                                            class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                            خدمات الشركات
+                                        </nuxt-link>
+                                    </div>
+                                </li>
+
+                                <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
+                                    <nuxt-link :to="localePath('suppliers')">المدونة</nuxt-link>
+                                </li>
                             </ul>
                         </nav>
                         <div class="hidden  justify-between  lg:flex items-center gap-2 xl:gap-6">
@@ -149,7 +220,11 @@ const isSideBar = ref<boolean>(false);
 const transitionName = computed(() =>
     locale.value === "ar" ? "sidebar-ar" : "sidebar-en",
 );
+
+const openMenu = ref(false)
 const route = useRoute();
+
+
 
 // Optimize sidebar toggle function
 const toggleSidebar = () => {
@@ -186,6 +261,8 @@ const getPathWithoutLocale = (path: string) => {
 };
 
 const adjustedPath = computed(() => getPathWithoutLocale(route.path));
+
+
 </script>
 
 <style scoped>
@@ -237,7 +314,8 @@ ul li:hover {
     color: white;
 }
 
-ul li.active {
+ul li.active,
+.active {
     color: white;
     font-weight: 700;
 }

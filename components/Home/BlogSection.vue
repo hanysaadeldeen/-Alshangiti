@@ -9,7 +9,15 @@
                     حلول قانونية دقيقة تدعم نجاحك وتحقق أهدافك
                 </p>
             </div>
-            <button class="text-white bg-primary-500  py-2 px-5">عرض الكل</button>
+            <button
+                class="relative overflow-hidden border w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
+                <span
+                    class=" text-xs md:text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
+                    عرض الكل</span>
+                <span
+                    class="absolute w-full -bottom-10 text-xs md:text-sm lg:text-base font-medium  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                    عرض الكل</span>
+            </button>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20">
             <div class="card boxShadow rounded-3xl overflow-hidden cursor-pointer" v-for="blog in Blogs">

@@ -1,9 +1,11 @@
 <template>
     <section class="my-16 md:my-[120px] mx-auto max-w-[1315px] max-2xl:px-6 overflow-hidden">
-        <h1 class="text-text text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-6 md:mb-8">خدماتنا الأخرى
+        <h1
+            class="text-text font-bold text-2xl md:text-[32px] lg:text-[40px] leading-[50px] md:leading-[72px] mb-6 md:mb-8">
+            خدماتنا الأخرى
         </h1>
         <div class="mt-9">
-            <div class="grid grid-cols-2  max-md:grid-cols-1 gap-6">
+            <div class="grid grid-cols-2  max-md:grid-cols-1 gap-6 p-2">
                 <div class="p-6 rounded-3xl boxShadow">
                     <div class="mb-4">
                         <h2 class="text-text font-normal text-xl md:text-2xl mb-1">

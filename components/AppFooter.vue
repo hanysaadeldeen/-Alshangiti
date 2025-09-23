@@ -1,7 +1,9 @@
 <template>
-    <footer class="relative">
+    <footer class="relative " :class="adjustedPath.includes('contact-us') ? 'pt-28 ' : ''">
 
-        <div class="h-[calc(100%-100px)] bg-primary-500 absolute bottom-0 left-0 w-full">
+
+        <div class=" bg-primary-500 absolute bottom-0 left-0 w-full"
+            :class="adjustedPath.includes('contact-us') ? 'h-full ' : 'h-[calc(100%-100px)]'">
             <div class="relative h-full">
                 <div class='absolute top-0 left-0  h-full'>
                     <img src="~/assets/img/Utils/FooterLeftVector.svg" alt="FooterLeftVector.svg"
@@ -16,20 +18,41 @@
         </div>
         <div class="container max-w-[1316px] max-2xl:px-6 mx-auto pb-12 relative ">
 
-            <div class="w-fit mx-auto ">
+            <div class=" flex justify-center mb-16 md:mb-[120px]"
+                :class="adjustedPath.includes('contact-us') ? 'hidden' : ''">
                 <FormSec />
             </div>
-
-            <div
-                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-20 pb-10 md:pb-14  relative border-b border-white">
-                <div class="flex-grow">
+            <!-- grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 -->
+            <div class="flex  flex-wrap gap-6 lg:gap-10  pb-10 md:pb-14  relative border-b border-white">
+                <div class="flex-grow col-span-2">
                     <nuxt-link :to="localePath('index')" class="block relative cursor-pointer">
                         <img src="~/assets/img/Logo.svg" class="h-[50px] w-fit  xl:h-[80px] relative block"
                             alt="techOzone" height="80" width="186" loading="lazy" />
                     </nuxt-link>
 
+                    <div class="flex gap-4 md:gap-6 font-bold">
+                        <button
+                            class="relative overflow-hidden border-[2px] w-fit mt-6 px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                            <span
+                                class=" text-xs md:text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                اطلب عرض مالي</span>
+                            <span
+                                class="absolute w-full -bottom-10 text-xs md:text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                اطلب عرض مالي</span>
+                        </button>
+                        <button
+                            class="relative overflow-hidden border-[2px] w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                            <span
+                                class=" text-xs md:text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                احجز استشارة قانونية</span>
+                            <span
+                                class="absolute w-full -bottom-10 text-xs md:text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                احجز استشارة قانونية</span>
+                        </button>
+
+                    </div>
                 </div>
-                <div class="max-w-[183px] md:mx-auto">
+                <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
                     <h1 class="text-white text-base font-medium mb-6">
                         استكشف</h1>
                     <nav>
@@ -53,7 +76,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="max-w-[183px] md:mx-auto">
+                <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
                     <h1 class="text-white text-base font-medium mb-6">
                         خدماتنا
                     </h1>

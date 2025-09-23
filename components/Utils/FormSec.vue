@@ -1,21 +1,21 @@
 <template>
     <div
-        class="bg-white boxShadow w-full md:max-w-[500px] rounded-xl py-6 lg:py-8 px-10  lg:px-14 lg:max-w-[616px] relative mb-16 md:mb-[120px]">
+        class="bg-white boxShadow w-full md:max-w-[500px]  rounded-xl py-6 lg:py-8 px-10  lg:px-14 lg:max-w-[616px] relative ">
 
         <!-- <div class="absolute top-0 left-0 w-full h-full">
             <img src="~/assets/img/footerGroup.svg" alt="footerGroup" class="w-full h-full object-cover z-0">
         </div> -->
         <!-- <h1 class="text-xl md:text-2xl lg:text-3xl font-normal mb-7 text-primary-700"> -->
-        <h1 class=" font-normal text-2xl lg:text-[32px] leading-[50px] md:leading-[72px] relative z-10">
+        <h1 class=" font-normal text-xl md:text-2xl lg:text-[32px] leading-[50px] md:leading-[72px] relative z-10">
             تواصل مع فريقنا القانوني
         </h1>
         <div class="bg-[#3A3A3A] rounded-full h-0.5 w-full max-w-[85px] mb-7 relative z-10"></div>
+
         <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }"
-            class="w-full lg:max-w-[640px] relative z-10 ">
-            <div class="flex max-lg:flex-col w-full gap-4 lg:gap-8 mb-8">
+            class="w-full lg:max-w-[616px] relative z-10 ">
+            <div class="flex max-lg:flex-col w-full gap-4 lg:gap-8 mb-6">
                 <div class="flex flex-col w-full lg:max-w-[304px]">
-                    <label for="FullName"
-                        class="text-TextD3  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
+                    <label for="FullName" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
                         {{ locale === "ar" ? "الاسم الأول" : "First Name" }}
                     </label>
                     <Field id="FullName" name="FullName" type="text" :placeholder="locale === 'en'
@@ -29,8 +29,7 @@
                     }}</span>
                 </div>
                 <div class="flex flex-col w-full lg:max-w-[304px]">
-                    <label for="LastName"
-                        class="text-TextD3  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
+                    <label for="LastName" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
                         {{ locale === "ar" ? "الاسم الأخير" : "last Name" }}
                     </label>
                     <Field id="LastName" name="LastName" type="text" :placeholder="locale === 'en'
@@ -44,8 +43,22 @@
                     }}</span>
                 </div>
             </div>
-            <div class="flex flex-col w-full  mb-8">
-                <label for="email" class="text-TextD3  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
+            <div class="flex flex-col w-full  mb-6">
+                <label for="phoneNumber" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
+                    {{ locale === "ar" ? "رقم الهاتف" : "Phone Number" }}
+                </label>
+                <Field id="phoneNumber" name="phoneNumber" type="text" :placeholder="locale === 'en'
+                    ? 'e.g. +9665xxxxxxx'
+                    : 'أدخل رقم الهاتف '
+                    "
+                    class="inputBack py-2 md:py-3 px-2.5 md:px-4 h-[48px] w-full border  focus:outline-none focus:ring-2 focus:ring-primary-main"
+                    :class="{ '!border-red-500': errors.phoneNumber }" />
+                <span class="text-red-500 text-sm">{{
+                    errors.phoneNumber
+                }}</span>
+            </div>
+            <div class="flex flex-col w-full  mb-6">
+                <label for="email" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
                     {{
                         locale === "ar" ? "عنوان البريد الإلكتروني" : "e.g. name@domain.com"
                     }}
@@ -59,21 +72,25 @@
                 <span class="text-red-500 text-sm">{{ errors.email }}</span>
             </div>
             <div class="flex flex-col w-full lg:max-w-[640px]">
-                <label for="message" class="text-TextD3  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
+                <label for="message" class="text-text w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
                     {{ locale === "ar" ? "الرسالة" : "Message" }}
                 </label>
                 <Field id="message" name="message" as="textarea" :placeholder="locale === 'en'
                     ? 'Write your project details or inquiry here'
                     : 'اكتب رسالتك هنا'
                     "
-                    class="  inputBack p-4 w-full h-32 md:h-[160px] border rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-Primary"
+                    class="  inputBack p-4 w-full h-32 md:h-[100px] border rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-Primary"
                     :class="{ '!border-red-500': errors.message }" />
                 <span class="text-red-500 text-sm">{{ errors.message }}</span>
             </div>
-            <button type="submit"
-                class="border w-full mt-10 rounded-2xl py-3 px-6 md:px-8 lg:px-10 flex justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-600 text-white hover:bg-BtnBgPrimaryHover active:bg-BtnBgPrimaryPressed border-transparent">
-                <span class="text-xs md:text-sm lg:text-base font-medium">ابدأ مشروعك الآن</span>
-            </button>
+            <Button title="إرسال" />
+            <div class="mt-5 text-text text-sm font-normal">
+                من خلال إرسال استفسارك، فإنك توافق على الخاصة
+                <nuxt-link to="privacy">
+                    <span class="text-primary-500 underline">سياسة
+                        الخصوصية</span>
+                </nuxt-link> بنا.
+            </div>
         </Form>
     </div>
 </template>
@@ -167,4 +184,11 @@ const onSubmit = async (values: any) => {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.inputBack {
+    background-color: transparent;
+    border: 1px solid #B5B5B5;
+    color: #293329;
+    border-radius: 8px;
+}
+</style>

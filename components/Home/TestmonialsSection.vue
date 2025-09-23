@@ -42,8 +42,8 @@
                 }" :navigation="{
                     nextEl: nextEl,
                     prevEl: prevEl,
-                }" class="">
-                    <SwiperSlide v-for="(value, index) in 10" class="pb-5 px-1">
+                }" class="rounded-3xl ">
+                    <SwiperSlide v-for="(value, index) in 10" class="pb-1 px-1  ">
                         <div class="Card boxShadow py-10 px-8 flex flex-col gap-4 bg-white rounded-3xl  h-fit">
                             <div class="flex gap-2">
                                 <div class="size-12 rounded-full bg-primary-50"></div>
