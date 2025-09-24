@@ -1,5 +1,6 @@
 <template>
   <main class="MainPage">
+    <HomeHeroSection />
     <AboutSection />
     <WhyUsSection />
     <NumbersSection />
