@@ -32,16 +32,17 @@
 
                     <!-- Button -->
                     <div class="flex justify-center md:justify-start">
+                        <nuxt-link to="/about-us">
 
-                        <button
-                            class="relative overflow-hidden border w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
-                            <span
-                                class=" text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                                اعرف أكثر عنا</span>
-                            <span
-                                class="absolute w-full -bottom-10 text-sm lg:text-base font-medium  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                اعرف أكثر عنا</span>
-                        </button>
+                            <button
+                                class="relative overflow-hidden border w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
+                                <span
+                                    class=" text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
+                                    اعرف أكثر عنا</span>
+                                <span
+                                    class="absolute w-full -bottom-10 text-sm lg:text-base font-medium  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                    اعرف أكثر عنا</span>
+                            </button></nuxt-link>
                     </div>
                 </div>
                 <!-- Image -->

@@ -31,25 +31,29 @@
                     </nuxt-link>
 
                     <div class="flex gap-4 md:gap-6 font-bold">
-                        <button
-                            class="relative overflow-hidden border-[2px] w-fit mt-6 px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
-                            <span
-                                class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                اطلب عرض مالي</span>
-                            <span
-                                class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
-                                اطلب عرض مالي</span>
-                        </button>
-                        <button
-                            class="relative overflow-hidden border-[2px] w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
-                            <span
-                                class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                احجز استشارة قانونية</span>
-                            <span
-                                class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
-                                احجز استشارة قانونية</span>
-                        </button>
+                        <nuxt-link to="/contact-us">
+                            <button
+                                class="relative overflow-hidden border-[2px] w-fit mt-6 px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                                <span
+                                    class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                    اطلب عرض مالي</span>
+                                <span
+                                    class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                    اطلب عرض مالي</span>
+                            </button>
+                        </nuxt-link>
 
+                        <nuxt-link to="/book-consultation">
+                            <button
+                                class="relative overflow-hidden border-[2px] w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                                <span
+                                    class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                    احجز استشارة قانونية</span>
+                                <span
+                                    class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                    احجز استشارة قانونية</span>
+                            </button>
+                        </nuxt-link>
                     </div>
                 </div>
                 <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
@@ -63,9 +67,9 @@
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath.includes('/blogs') }" class="my-1">
-                                <nuxt-link :to="localePath('/blogs')">
+                                <div>
                                     المدونة
-                                </nuxt-link>
+                                </div>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/contact-us' }">
                                 <nuxt-link :to="localePath('/contact-us')">
@@ -82,18 +86,18 @@
                     </h1>
                     <nav class="text-white">
                         <ul>
-                            <li :class="{ 'active': adjustedPath === '/faqs' }">
-                                <nuxt-link :to="localePath('/faqs')">
+                            <li :class="{ 'active': adjustedPath === '/consulting-company' }">
+                                <nuxt-link :to="localePath('/consulting-company')">
                                     خدمات الشركات
                                 </nuxt-link>
                             </li>
-                            <li :class="{ 'active': adjustedPath === '/privacy' }" class="my-4">
-                                <nuxt-link :to="localePath('/privacy')">
+                            <li :class="{ 'active': adjustedPath === '/consulting-contracts' }" class="my-4">
+                                <nuxt-link :to="localePath('/consulting-contracts')">
                                     خدمات الاستشارات و العقود
                                 </nuxt-link>
                             </li>
-                            <li :class="{ 'active': adjustedPath === '/terms' }">
-                                <nuxt-link :to="localePath('/terms')">
+                            <li :class="{ 'active': adjustedPath === '/consulting-arbitration' }">
+                                <nuxt-link :to="localePath('/consulting-arbitration')">
                                     خدمات التقاضي و التحكيم
                                 </nuxt-link>
                             </li>
@@ -183,19 +187,7 @@ const SocialMedia = [
         id: 1,
         icon: '<i class="fa-brands fa-instagram text-[#7B7B7B]"></i>',
         socialName: "Instagram",
-        link: "https://www.instagram.com/healthygo.369/",
-    },
-    {
-        id: 2,
-        icon: '<i class="fa-brands fa-snapchat text-[#7B7B7B]"></i>',
-        socialName: "snapchat",
-        link: "https://www.snapchat.com/in/do-sa-b3682a362/",
-    },
-    {
-        id: 3,
-        icon: '<i class="fa-brands fa-whatsapp text-[#7B7B7B]"></i>',
-        socialName: "whatsapp",
-        link: "https://wa.me/966502765770",
+        link: "https://",
     },
     {
         id: 4,
