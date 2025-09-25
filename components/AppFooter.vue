@@ -9,7 +9,7 @@
                     <img src="~/assets/img/Utils/FooterLeftVector.svg" alt="FooterLeftVector.svg"
                         class="object-contain h-full">
                 </div>
-                <div class='absolute top-0 right-0  h-full'>
+                <div class='absolute top-0 right-0 max-md:hidden  h-full'>
                     <img src="~/assets/img/Utils/FooterRightVector.svg" alt="FooterLeftVector.svg"
                         class="object-contain h-full">
 
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <p class="text-base font-normal text-white">
-                    © 2025 جميع الحقوق محفوظة لشركة البدور. بواسطة DO
+                    © 2025 جميع الحقوق محفوظة لشركة Al-Shanqiti. بواسطة DO
                 </p>
                 <div class="flex gap-4 md:gap-6 items-center text-white">
                     <nuxt-link to="/terms">

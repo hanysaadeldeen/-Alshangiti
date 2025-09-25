@@ -8,15 +8,14 @@
             <div class=" max-w-[834px] relative z-10">
                 <h1 class="text-2xl md:text-3xl lg:text-[40px]  lg:!leading-[72px] text-white font-bold">{{ title }}
                 </h1>
-                <div class="flex gap-4 md:gap-6 mt-8 md:mt-12">
-
+                <div class="flex gap-3 md:gap-6 justify-start items-center max-md:flex-col mt-8 md:mt-12">
                     <button
-                        class="border border-transparent relative overflow-hidden  w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
+                        class="border-[2px] border-white border-transparent relative overflow-hidden  max-md:w-full min-w-[168px] w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
                         <span
-                            class="text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
+                            class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
                             اطلب خدمة</span>
                         <span
-                            class="absolute w-full -bottom-10 text-sm lg:text-base font-medium  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                            class="absolute w-full -bottom-10 text-sm lg:text-base font-bold  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
                             اطلب خدمة</span>
                     </button>
                     <button type="submit"

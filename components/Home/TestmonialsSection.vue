@@ -5,7 +5,8 @@
         <div class="absolute top-0 left-0 w-full h-[calc(100%-86px)] bg-primary-500"></div>
 
         <div class="container max-w-[1315px] mx-auto max-2xl:px-6 z-10 relative">
-            <div class="sectionTitle mb-12 md:mb-24 flex gap-4 md:gap-6 sm:items-end justify-between  max-sm:flex-col">
+            <div
+                class="sectionTitle mb-12 md:mb-24 flex gap-4 md:gap-6 items-start sm:items-end justify-between  max-sm:flex-col">
                 <div class="">
                     <h1 class="text-white font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2 ">
                         آراء عملاؤنا

@@ -3,13 +3,13 @@
         <div class="sectionTitle mb-24 flex gap-4 md:gap-6 sm:items-end justify-between  max-sm:flex-col">
             <div>
                 <h1 class="text-text font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2 ">
-                    آراء عملاؤنا
+                    مدونتنا
                 </h1>
                 <p class="text-2xl font-normal text-[#5E5E5E]">
-                    حلول قانونية دقيقة تدعم نجاحك وتحقق أهدافك
+                    مرجعك الشامل لأبرز الموضوعات القانونية
                 </p>
             </div>
-            <div class="flex gap-4 items-center  justify-end">
+            <div class="flex gap-4 items-center  justify-end max-md:justify-start">
                 <button
                     class="relative overflow-hidden border w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
                     <span

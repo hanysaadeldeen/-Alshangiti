@@ -18,52 +18,6 @@
                         </h1>
                     </div>
                     <div class="flex items-center justify-between gap-6 ">
-                        <!-- <nav class="relative hidden lg:block h-full z-20 bg-text">
-                            <ul class="flex  items-center">
-                                <li :class="adjustedPath === '/' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('index')">
-                                        الرئيسية
-                                    </nuxt-link>
-                                </li>
-                                <li :class="adjustedPath === '/about-us' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('about-us')">
-
-                                        من نحن
-
-                                    </nuxt-link>
-                                </li>
-
-                                <li :class="adjustedPath.startsWith('consulting') ? 'active' : ''" class="relative">
-                                    <nuxt-link :to="localePath('consulting-contracts')">
-                                        خدماتنا
-                                    </nuxt-link>
-
-
-                                </li>
-
-                                <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('suppliers')">
-                                        المدونة
-                                    </nuxt-link>
-                                </li>
-
-                            </ul>
-                            <div
-                                class="absolute top-0 left-0 w-fit min-w-[220px] h-fit p-6 flex flex-col items-start bg-red-500 z-10">
-                                <nuxt-link to="consulting-contracts"
-                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                    الاستشارات والعقود
-                                </nuxt-link>
-                                <nuxt-link to="consulting-contracts"
-                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                    الاستشارات والعقود
-                                </nuxt-link>
-                                <nuxt-link to="consulting-contracts"
-                                    class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                    الاستشارات والعقود
-                                </nuxt-link>
-                            </div>
-                        </nav> -->
 
 
                         <nav class="relative hidden lg:block h-full">
@@ -124,7 +78,8 @@
                         </div>
                     </div>
                     <div class="lg:hidden text-2xl cursor-pointer sm:text-3xl">
-                        <i class="fa-solid fa-bars-staggered " :class="{ hidden: isSideBar }" @click="toggleSidebar" />
+
+                        <i class="fa-solid fa-bars" :class="{ hidden: isSideBar }" @click="toggleSidebar" />
                         <i class="fa-solid fa-xmark text-white" :class="{ hidden: !isSideBar }"
                             @click="toggleSidebar" />
                     </div>
@@ -161,10 +116,7 @@
 
                                     </nuxt-link>
                                 </li>
-                                <li :class="[
-                                    adjustedPath === '/projects' ? 'active' : '',
-                                    'text-white hover:text-PrimaryPL3',
-                                ]">
+                                <li :class="adjustedPath.includes('consulting') ? 'active' : ''">
                                     <nuxt-link :to="localePath('projects')" @click="isSideBar = !isSideBar"
                                         class="w-full">
                                         خدماتنا
@@ -174,11 +126,9 @@
                                     adjustedPath === '/suppliers' ? 'active' : '',
                                     'text-white hover:text-PrimaryPL3',
                                 ]">
-                                    <nuxt-link :to="localePath('suppliers')" @click="isSideBar = !isSideBar"
-                                        class="w-full">
+                                    <div @click="isSideBar = !isSideBar" class="w-full">
                                         المدونة
-
-                                    </nuxt-link>
+                                    </div>
                                 </li>
 
                                 <li :class="[
