@@ -29,21 +29,10 @@ section,
     }
 }
 
-/* 
-.glassy {
-    background-color: rgba(9, 40, 146, 0.12);
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
+.boxShadow {
+    box-shadow: 0 0 10px 0px rgba(41, 51, 41, 0.16)
 }
 
-.glassyW {
-    background-color: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
-} */
-
-.boxShadow {
-    /* box-shadow: 0 0 10px 0px red */
-    box-shadow: 0 0 10px 0px rgba(41, 51, 41, 0.16)
-        /* background-color: red; */
+html {
+    scroll-behavior: smooth;
 }

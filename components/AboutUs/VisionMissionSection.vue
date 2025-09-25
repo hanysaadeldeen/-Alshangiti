@@ -1,6 +1,6 @@
 <template>
 
-    <section class="VisionMissionSection pt-[120px] md:pt-[240px] relative">
+    <div class="VisionMissionSection pt-[120px] md:pt-[240px] relative">
         <div class="absolute top-0 left-0 w-full h-[calc(100%-162px)] bg-[#EFF2EF]"></div>
         <div class="container max-w-[1315px] mx-auto max-2xl:px-6 z-10 relative">
             <div class="grid grid-cols-1 md:grid-cols-2 justify-center  gap-6 items-stretch">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-    </section>
+    </div>
 </template>
 
 <script setup lang="ts">

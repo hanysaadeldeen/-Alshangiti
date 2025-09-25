@@ -4,6 +4,8 @@
     <AboutSection />
     <WhyUsSection />
     <NumbersSection />
+    <ServicesSection />
+
     <CertificatesSection />
     <TestmonialsSection />
     <BlogSection />

@@ -15,7 +15,10 @@
         <VisionMissionSection />
         <OurValuesSection />
         <CertificatesSection />
-        <TestmonialsSection />
+        <div class="mb-24 md:mb-[154px]">
+
+            <TestmonialsSection />
+        </div>
 
 
     </main>

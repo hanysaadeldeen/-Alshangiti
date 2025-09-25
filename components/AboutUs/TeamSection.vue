@@ -78,11 +78,11 @@
 
         <div class="md:hidden px-16  mt-20 relative">
             <div ref="prevEl"
-                class="bg-primary-200 hover:bg-primary-400 transition-all ease-in-out p-3 size-12 rounded-full  cursor-pointer flex justify-center items-center text-white absolute top-1/2  -translate-y-1/2 right-1">
+                class="bg-primary-200 hover:bg-primary-400 transition-all ease-in-out  duration-300 p-3 size-12 rounded-full  cursor-pointer flex justify-center items-center text-white absolute top-1/2  -translate-y-1/2 right-1">
                 <i class="fa-solid fa-chevron-right text-xl "></i>
             </div>
             <div ref="nextEl"
-                class="bg-primary-200 hover:bg-primary-400 transition-all ease-in-out p-3 size-12 rounded-full cursor-pointer  flex justify-center items-center text-white absolute top-1/2  -translate-y-1/2 left-1">
+                class="bg-primary-200 hover:bg-primary-400 transition-all ease-in-out duration-300  p-3 size-12 rounded-full cursor-pointer  flex justify-center items-center text-white absolute top-1/2  -translate-y-1/2 left-1">
                 <i class="fa-solid fa-chevron-left text-xl "></i>
             </div>
             <Swiper :modules="modules" :slidesPerView="'auto'" class="px-10" :navigation="{

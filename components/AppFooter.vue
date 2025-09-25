@@ -34,19 +34,19 @@
                         <button
                             class="relative overflow-hidden border-[2px] w-fit mt-6 px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                             <span
-                                class=" text-xs md:text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
                                 اطلب عرض مالي</span>
                             <span
-                                class="absolute w-full -bottom-10 text-xs md:text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
                                 اطلب عرض مالي</span>
                         </button>
                         <button
                             class="relative overflow-hidden border-[2px] w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                             <span
-                                class=" text-xs md:text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
                                 احجز استشارة قانونية</span>
                             <span
-                                class="absolute w-full -bottom-10 text-xs md:text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
+                                class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
                                 احجز استشارة قانونية</span>
                         </button>
 
