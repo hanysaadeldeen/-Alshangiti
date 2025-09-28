@@ -148,11 +148,11 @@
                     © 2025 جميع الحقوق محفوظة لشركة Al-Shanqiti. بواسطة DO
                 </p>
                 <div class="flex gap-4 md:gap-6 items-center text-white">
-                    <nuxt-link to="/terms">
+                    <nuxt-link to="/terms" :class="{ 'active': adjustedPath === '/terms' }">
                         <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">الشروط
                             والأحكام</p>
                     </nuxt-link>
-                    <nuxt-link to="/privacy">
+                    <nuxt-link to="/privacy" :class="{ 'active': adjustedPath === '/privacy' }">
                         <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">سياسة
                             الخصوصية</p>
                     </nuxt-link>
@@ -202,5 +202,9 @@ const SocialMedia = [
 <style scoped>
 li {
     @apply text-white text-base font-normal my-2 hover:text-[#EEC882] duration-300 ease-in-out
+}
+
+.active {
+    color: #EEC882
 }
 </style>

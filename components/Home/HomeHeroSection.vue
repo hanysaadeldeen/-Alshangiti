@@ -38,7 +38,8 @@
             </div>
             <div class="flex justify-center items-center  w-fit mx-auto cursor-pointer">
                 <a href="#hook">
-                    <img src="~/assets/img/scrollTo.gif" alt="scrollTo.gif" width="60" height="60" class="size[60px]">
+                    <img src="~/assets/img/scrollTo.gif" alt="scrollTo.gif" width="60" height="60"
+                        class="size-[45px] md:size-[60px]">
                 </a>
             </div>
             <p class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px]"

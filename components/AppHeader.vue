@@ -7,8 +7,8 @@
                     <div class="flex items-center justify-between gap-6">
                         <nuxt-link :to="localePath('index')" class="block relative ">
                             <img src="~/assets/img/Logo.svg" :class="locale === 'ar' ? '' : 'hidden'"
-                                class="h-[50px] w-fit  xl:h-[57px] relative " alt="alshangiti" height="57px" width="220"
-                                loading="eager" fetchpriority="high" />
+                                class="h-[40px] md:h-[50px] w-fit  xl:h-[57px] relative " alt="alshangiti" height="57px"
+                                width="220" loading="eager" fetchpriority="high" />
                         </nuxt-link>
                         <h1
                             class="hidden md:inline text-white text-base font-medium  border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
@@ -42,8 +42,7 @@
                                             :class="!openMenu ? '-rotate-180' : 'rotate-0'"></i>
                                     </div>
 
-                                    <!-- dropdown: top-full => يبدأ من أسفل الـ li، z-50 => فوق باقي المحتوى -->
-                                    <div class=" absolute top-[66px] right-0 mt-2 w-fit min-w-[220px] p-6 flex flex-col
+                                    <div class=" absolute top-[60px] xl:top-[66px] right-0 mt-2 w-fit min-w-[220px] p-6 flex flex-col
                                         items-start bg-primary-600 z-50 transform transition-all duration-200"
                                         :class="openMenu ? 'opacity-100 visible translate-y-0' : 'opacity-100 invisible -translate-y-2'">
                                         <nuxt-link @click="openMenu = false" to="consulting-contracts"
@@ -61,8 +60,8 @@
                                     </div>
                                 </li>
 
-                                <li :class="adjustedPath === '/suppliers' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('suppliers')">المدونة</nuxt-link>
+                                <li :class="adjustedPath === '/blogs' ? 'active' : ''">
+                                    <nuxt-link :to="localePath('blogs')">المدونة</nuxt-link>
                                 </li>
                             </ul>
                         </nav>
@@ -116,14 +115,41 @@
 
                                     </nuxt-link>
                                 </li>
-                                <li :class="adjustedPath.includes('consulting') ? 'active' : ''">
-                                    <nuxt-link :to="localePath('projects')" @click="isSideBar = !isSideBar"
-                                        class="w-full">
-                                        خدماتنا
-                                    </nuxt-link>
-                                </li>
+                                <ul class="flex flex-col justify-start items-start">
+
+                                    <div class="w-fit flex justify-start items-center gap-2 py-2 cursor-pointer"
+                                        :class="adjustedPath.includes('consulting') ? 'active' : ''" @click="toggle">
+                                        <span>
+                                            خدماتنا
+                                        </span>
+                                        <i class="fa-solid fa-chevron-up text-white transition-all ease-in-out duration-300"
+                                            :class="!isOpen ? '-rotate-180' : 'rotate-0'"></i>
+                                    </div>
+                                    <div ref="answer" class="overflow-hidden transition-all duration-500"
+                                        :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }">
+                                        <div class=" flex justify-between items-start lg:items-center flex-col ">
+
+                                            <nuxt-link @click="[isSideBar = false, isOpen = false]"
+                                                to="consulting-contracts"
+                                                class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                                الاستشارات والعقود
+                                            </nuxt-link>
+                                            <nuxt-link @click="[isSideBar = false, isOpen = false]"
+                                                to="consulting-arbitration"
+                                                class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                                التقاضي والتحكيم
+                                            </nuxt-link>
+                                            <nuxt-link @click="[isSideBar = false, isOpen = false]"
+                                                to="consulting-company"
+                                                class="block py-3 text-white hover:text-secondary font-medium text-base">
+                                                خدمات الشركات
+                                            </nuxt-link>
+
+                                        </div>
+                                    </div>
+                                </ul>
                                 <li :class="[
-                                    adjustedPath === '/suppliers' ? 'active' : '',
+                                    adjustedPath === '/blogs' ? 'active' : '',
                                     'text-white hover:text-PrimaryPL3',
                                 ]">
                                     <div @click="isSideBar = !isSideBar" class="w-full">
@@ -212,6 +238,15 @@ const getPathWithoutLocale = (path: string) => {
 
 const adjustedPath = computed(() => getPathWithoutLocale(route.path));
 
+const isOpen = ref(false);
+const answerHeight = ref(0);
+const answer = ref<HTMLDivElement | null>(null);
+const toggle = async () => {
+    isOpen.value = !isOpen.value;
+
+    await nextTick();
+    if (answer.value) { answerHeight.value = answer.value.scrollHeight; }
+};
 
 </script>
 
@@ -238,17 +273,39 @@ ul li {
 }
 
 
-@media (min-width:1024px) and (max-width: 1280px) {
+
+/*
+@media (max-width: 1280px) {
     ul li {
         font-size: 14px;
         line-height: 22.4px;
         padding: 8px 16px;
+    }
+} */
+
+@media (min-width:768px) {
+    ul li {
+        padding: 8px 0;
     }
 }
 
 @media (max-width:768px) {
     ul li {
         padding: 8px 0px;
+    }
+}
+
+@media (min-width:1024px) {
+    ul li {
+        /* font-size: 14px;
+        line-height: 22.4px; */
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width:1280px) {
+    ul li {
+        padding: 8px 24px;
     }
 }
 
@@ -282,6 +339,10 @@ ul li.active,
 
 .sideBar nav ul li:hover,
 .sideBar nav ul li.active {
+    border-bottom: 2px solid #617961;
+}
+
+.active {
     border-bottom: 2px solid #617961;
 }
 
