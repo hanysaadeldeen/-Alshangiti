@@ -16,10 +16,10 @@
                 <p class="text-white font-normal text-lg md:text-xl text-center">حلول قانونية استباقية تحمي أصولك وتضمن
                     نموّ أعمالك
                     في السوق السعودية</p>
-                <div class="flex gap-3 md:gap-6 justify-center items-center max-md:flex-col mt-10">
+                <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
                     <nuxt-link to="/book-consultation">
                         <button
-                            class="w-fit relative overflow-hidden border max-md:w-full min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
+                            class="w-fit h-full border-[2px] border-primary-500 relative overflow-hidden max-md:w-full min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
                             <span
                                 class=" text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
                                 احجز استشارة قانونية</span>
