@@ -2,7 +2,12 @@
     <div class="HomeHeroSection h-[calc(100dvh+50vh)] relative">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50">
         </div>
-        <div class="h-full flex flex-col justify-evenly z-10 relative max-2xl:px-6">
+        <video autoplay muted loop playsinline poster="~/assets/img/heroPoster.webp"
+            class="w-full h-full object-cover absolute -z-10">
+            <source src="~/assets/img/heroVideo.webm" type="video/webm">
+        </video>
+
+        <div class="h-full flex flex-col justify-evenly z-20 relative max-2xl:px-6 ">
             <div class="max-w-[898px] mx-auto">
                 <h1
                     class="text-white font-bold mb-5 text-3xl text-center md:text-5xl lg:text-[64px] lg:!leading-[100px]">
@@ -58,12 +63,12 @@
 </script>
 
 <style scoped>
-.HomeHeroSection {
-    background-image: url("../../assets/img/homeHero.png");
+/* .HomeHeroSection {
+    background-image: url("../../assets/img/heroVideo.webm");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 #hook {
     scroll-margin-top: 40px;
