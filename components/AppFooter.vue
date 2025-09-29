@@ -113,6 +113,18 @@
                     <nav>
                         <ul>
 
+
+                            <li class="pb-0 flex items-center gap-4 group cursor-pointer">
+                                <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
+                                    class="flex items-center gap-2 group cursor-pointer">
+                                    <i
+                                        class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
+                                    <span>
+
+                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع
+                                    </span>
+                                </a>
+                            </li>
                             <li class="pb-0 flex items-center gap-4 group cursor-pointer">
                                 <a href="https://maps.app.goo.gl/jrgqJeYTCxMdmoM66?g_st=iw" target="_blank"
                                     class="flex items-center gap-2 group cursor-pointer">
@@ -127,17 +139,6 @@
                                         الطابق 2
                                         مكتب رقم 5
 
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="pb-0 flex items-center gap-4 group cursor-pointer">
-                                <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
-                                    class="flex items-center gap-2 group cursor-pointer">
-                                    <i
-                                        class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
-                                    <span>
-
-                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع
                                     </span>
                                 </a>
                             </li>

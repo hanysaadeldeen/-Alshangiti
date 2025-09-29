@@ -48,6 +48,8 @@
 <script setup lang="ts">
 
 import Blog1 from "../../assets/img/Blog/blog1.svg"
+import Blog2 from "../../assets/img/Blog/blog1.jpg"
+import Blog3 from "../../assets/img/Blog/blog2.jpg"
 const Blogs = [
     {
         id: 1,
@@ -60,14 +62,14 @@ const Blogs = [
         id: 2,
         title: "كيف تختار المحامي المناسب لقضيتك؟",
         desc: "اختيار المحامي المناسب يمكن أن يكون قرارًا حاسمًا في نجاح قضيتك. تعرف على العوامل التي يجب مراعاتها عند اختيار المحامي.",
-        img: Blog1,
+        img: Blog2,
         date: "15 سبتمبر 2023"
     },
     {
         id: 3,
         title: "التحديات القانونية في التجارة الإلكترونية",
         desc: "مع تزايد التجارة الإلكترونية، تواجه الشركات العديد من التحديات القانونية. تعرف على أبرز هذه التحديات وكيفية التعامل معها.",
-        img: Blog1,
+        img: Blog3,
         date: "10 سبتمبر 2023"
     }
 ]
