@@ -1,6 +1,6 @@
 <template>
-    <footer class="relative " :class="adjustedPath.includes('contact-us') ? 'pt-28 ' : ''">
-
+    <footer class="relative "
+        :class="[adjustedPath.includes('contact-us') ? 'pt-28 ' : '', adjustedPath === '/book-consultation' ? 'bg-[#F6F6F6]' : '']">
 
         <div class=" bg-primary-500 absolute bottom-0 left-0 w-full"
             :class="adjustedPath.includes('contact-us') ? 'h-full ' : 'h-[calc(100%-100px)]'">
@@ -112,19 +112,34 @@
                     </h1>
                     <nav>
                         <ul>
-                            <li class="pb-0 flex items-center gap-4 group  mb-4 cursor-pointer">
-                                <i
-                                    class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
-                                <span>
-                                    جدة - حي الخالدية - برج جي فيو - الطابق التاسع
-                                </span>
+
+                            <li class="pb-0 flex items-center gap-4 group cursor-pointer">
+                                <a href="https://maps.app.goo.gl/jrgqJeYTCxMdmoM66?g_st=iw" target="_blank"
+                                    class="flex items-center gap-2 group cursor-pointer">
+                                    <i
+                                        class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
+                                    <span>
+
+                                        المدينة المنورة
+                                        حي العهن
+                                        طريق الامير عبد المحسن <br>
+                                        المركز الماسي للاعمال
+                                        الطابق 2
+                                        مكتب رقم 5
+
+                                    </span>
+                                </a>
                             </li>
                             <li class="pb-0 flex items-center gap-4 group cursor-pointer">
-                                <i
-                                    class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
-                                <span>
-                                    الرياض - طريق المطار - واجهة اعمال الرياض
-                                </span>
+                                <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
+                                    class="flex items-center gap-2 group cursor-pointer">
+                                    <i
+                                        class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
+                                    <span>
+
+                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -139,13 +154,16 @@
                         <a :href="social.link" target="_blank" rel="noopener noreferrer"
                             class="text-base group-hover:text-[#EEC882]"
                             :aria-label="`Visit our ${social.socialName} page`">
-                            <i class="fa-brands  text-white group-hover:text-[#EEC882]   duration-200 ease-in-out transition-all text-lg"
+                            <i class="fa-brands  text-white group-hover:text-[#EEC882]   duration-200 ease-in-out transition-all text-xl group-hover:text-2xl"
                                 :class="social.icon"></i>
                         </a>
                     </div>
                 </div>
                 <p class="text-base font-normal text-white">
-                    © 2025 جميع الحقوق محفوظة لشركة Al-Shanqiti. بواسطة DO
+                    © 2025 جميع الحقوق محفوظة مكتب Al-Shanqiti بواسطة
+                    <a href="https://do.com.sa/" target="_blank">
+                        DO
+                    </a>
                 </p>
                 <div class="flex gap-4 md:gap-6 items-center text-white">
                     <nuxt-link to="/terms" :class="{ 'active': adjustedPath === '/terms' }">
@@ -183,17 +201,12 @@ const adjustedPath = computed(() => getPathWithoutLocale(route.path));
 
 
 const SocialMedia = [
+
     {
         id: 1,
-        icon: '<i class="fa-brands fa-instagram text-[#7B7B7B]"></i>',
-        socialName: "Instagram",
-        link: "https://",
-    },
-    {
-        id: 4,
-        icon: '<i class="fa-brands fa-tiktok text-[#7B7B7B]"></i>',
-        socialName: "tiktok",
-        link: "https://",
+        icon: '<i class="fa-brands fa-whatsapp text-[#7B7B7B]"></i>',
+        socialName: "whatsapp",
+        link: "https://wa.me/966126069234",
     },
 ];
 

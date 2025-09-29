@@ -19,7 +19,12 @@
                                 <li v-for="(bullet, index) in section.content" :key="index"
                                     class="lista px-5 mb-1 relative font-normal text-base md:text-lg text-TextMD"
                                     :class="locale === 'en' ? 'before:left-0' : 'before:right-0'">
-                                    {{ $t(bullet) }}
+                                    <span v-if="section.id === 'Data_Contact' && index === 0">
+                                        الهاتف:
+                                    </span>
+                                    <span :dir="section.id === 'Data_Contact' ? 'ltr' : ''">
+                                        {{ $t(bullet) }}
+                                    </span>
                                 </li>
                             </ul>
                         </div>

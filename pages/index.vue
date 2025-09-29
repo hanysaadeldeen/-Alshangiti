@@ -7,7 +7,7 @@
     <ServicesSection />
 
     <CertificatesSection />
-    <TestmonialsSection />
+    <!-- <TestmonialsSection /> -->
     <BlogSection />
 
 

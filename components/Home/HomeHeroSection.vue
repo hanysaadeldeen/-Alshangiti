@@ -15,7 +15,7 @@
                     القانوني لرحلة الاستثمار</h1>
                 <p class="text-white font-normal text-lg md:text-xl text-center">حلول قانونية استباقية تحمي أصولك وتضمن
                     نموّ أعمالك
-                    في السوق السعودية</p>
+                    في السوق السعودي</p>
                 <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
                     <nuxt-link to="/book-consultation">
                         <button
@@ -42,16 +42,16 @@
                 </div>
             </div>
             <div class="flex justify-center items-center  w-fit mx-auto cursor-pointer">
-                <a href="#hook">
+                <div @click="scrollToSection('hook')">
                     <img src="~/assets/img/scrollTo.gif" alt="scrollTo.gif" width="60" height="60"
                         class="size-[45px] md:size-[60px]">
-                </a>
+                </div>
             </div>
             <p class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px]"
                 id="hook">بخبرة
                 تمتد لعشرين
-                عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية متخصصة في مجالي التجارة والاستثمار.نتميز بفريق
-                محترف مبتكر، ومرونة في فهم متغيرات السوق، والتزام بأعلى معايير المسؤولية والأخلاقيات المهنية.نحن هنا
+                عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية متخصصة في مجالي التجارة والاستثمار. نتميز بفريق
+                محترف مبتكر، ومرونة في فهم متغيرات السوق، و التزام بأعلى معايير المسؤولية والأخلاقيات المهنية. نحن هنا
                 لندعم نجاحك ونحمي مصالحك من البداية إلى النهاية</p>
         </div>
 
@@ -60,6 +60,12 @@
 
 <script setup lang="ts">
 
+const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+};
 </script>
 
 <style scoped>

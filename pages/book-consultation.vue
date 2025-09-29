@@ -23,26 +23,31 @@
                         لماذا تحتاج إلى استشارة قانونية؟
                     </h1>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch  mt-10 md:mt-14">
-                        <div class="rounded-3xl boxShadow p-6 ">
-                            <div class="relative mb-2 md:mb-4 mr-1">
+                        <div class=" rounded-3xl boxShadow p-6 ">
+                            <div class="relative ">
                                 <div
-                                    class="absolute top-1/2 right-0 -translate-y-1/2 size-1.5 rounded-full bg-primary-500">
+                                    class="absolute top-4 right-0 -translate-y-1/2 size-1.5 rounded-full bg-primary-500">
                                 </div>
+                                <p
+                                    class="text-text text-base pr-4 md:text-lg lg:text-xl md:!leading-[35px] font-normal">
+                                    <span class="text-primary-500">
+                                        للحماية
+                                    </span> : تضمن لك أن تكون كل خطواتك مبنية على أساس قانوني متين، مما يحمي أصولك
+                                    واستثماراتك.
+                                </p>
                             </div>
-                            <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">
-                                <span class="text-primary-500">
-                                    للحماية
-                                </span> : تضمن لك أن تكون كل خطواتك مبنية على أساس قانوني متين، مما يحمي أصولك
-                                واستثماراتك.
-                            </p>
+
                         </div>
                         <div class="rounded-3xl boxShadow p-6 ">
-                            <div class="relative mb-2 md:mb-4 mr-1">
+
+
+                            <div class="relative ">
                                 <div
-                                    class="absolute top-1/2 right-0 -translate-y-1/2 size-1.5 rounded-full bg-primary-500">
+                                    class="absolute top-4 right-0 -translate-y-1/2 size-1.5 rounded-full bg-primary-500">
                                 </div>
                             </div>
-                            <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">
+
+                            <p class="text-text text-base pr-4 md:text-lg lg:text-xl md:!leading-[35px] font-normal">
                                 <span class="text-primary-500">
                                     للتوجيه
                                 </span>
@@ -50,18 +55,21 @@
                             </p>
                         </div>
                         <div class="rounded-3xl boxShadow p-6 ">
-                            <div class="relative mb-2 md:mb-4 mr-1">
-                                <div class="absolute top-20 right-0  size-1.5 rounded-full bg-primary-500">
-                                </div>
 
-                                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">
-                                    <span class="text-primary-500">
-                                        للوقاية
-                                    </span>
-                                    : قبل توقيع أي عقد أو اتخاذ أي قرار تجاري، تساعدك الاستشارة القانونية على فهم
-                                    المخاطر المحتملة وتجنب النزاعات المستقبلية.
-                                </p>
+
+
+                            <div class="relative ">
+                                <div
+                                    class="absolute top-4 right-0 -translate-y-1/2 size-1.5 rounded-full bg-primary-500">
+                                </div>
                             </div>
+                            <p class="text-text text-base pr-4 md:text-lg lg:text-xl md:!leading-[35px] font-normal">
+                                <span class="text-primary-500">
+                                    للوقاية
+                                </span>
+                                : قبل توقيع أي عقد أو اتخاذ أي قرار تجاري، تساعدك الاستشارة القانونية على فهم
+                                المخاطر المحتملة وتجنب النزاعات المستقبلية.
+                            </p>
                         </div>
                     </div>
                 </div>
