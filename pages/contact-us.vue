@@ -64,7 +64,7 @@
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
                         <div>
 
-                            <a href='https://wa.me/966126069234' target="_blank"
+                            <a href='https://wa.me/966126065682' target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
 
                                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
@@ -80,14 +80,14 @@
                                 </svg>
 
                                 <p class="text-black font-normal  text-base md:text-lg" dir="ltr">
-                                    +966 126069234
+                                    +966 126065682
                                 </p>
                             </a>
                         </div>
                     </div>
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
                         <div>
-                            <a href="https://mail.google.com/mail/?view=cm&to=info@shangitilaw.com" target="_blank"
+                            <a href="https://mail.google.com/mail/?view=cm&to=info@shangiti.com" target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@
 
                                 <p class="text-black font-normal text-base md:text-lg">
 
-                                    info@shangitilaw.com
+                                    info@shangiti.com
                                 </p>
                             </a>
                         </div>
@@ -136,7 +136,7 @@ const openMenu = ref(false)
 //         title: 'البريد الإلكتروني',
 //         description: "info@techozone.sa",
 //         icon: mail,
-//         link: "https://mail.google.com/mail/?view=cm&to=info@shangitilaw.com"
+//         link: "https://mail.google.com/mail/?view=cm&to=info@shangiti.com"
 //     },
 //     {
 //         title: ' رقم الهاتف',
