@@ -12,7 +12,6 @@
                 <div class='absolute top-0 right-0 max-md:hidden  h-full'>
                     <img src="~/assets/img/Utils/FooterRightVector.svg" alt="FooterLeftVector.svg"
                         class="object-contain h-full">
-
                 </div>
             </div>
         </div>
@@ -25,15 +24,28 @@
             <!-- grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 -->
             <div class="flex  flex-wrap gap-6 lg:gap-10  pb-10 md:pb-14  relative border-b border-white">
                 <div class="flex-grow col-span-2">
-                    <nuxt-link :to="localePath('index')" class="block relative cursor-pointer">
-                        <img src="~/assets/img/Logo.svg" class="h-[50px] w-fit  xl:h-[80px] relative block"
-                            alt="techOzone" height="80" width="186" loading="lazy" />
-                    </nuxt-link>
-
-                    <div class="flex gap-4 md:gap-6 font-bold">
-                        <nuxt-link to="/contact-us">
+                    <div class="flex  items-start gap-y-4 gap-x-16 max-[390px]:flex-col">
+                        <nuxt-link :to="localePath('index')" class="block relative cursor-pointer">
+                            <img src="~/assets/img/Logo.svg" class="h-[50px] w-fit  xl:h-[80px] relative block"
+                                alt="techOzone" height="80" width="186" loading="lazy" />
+                        </nuxt-link>
+                        <div
+                            class="text-secondary font-medium text-xl text-center relative  mb-6 max-[390px]:mr-[40px]">
+                            <div class="absolute top-1/2 -translate-y-1/2 -right-10">
+                                <img src="~/assets/img/date.svg" alt="date" width="40" height="40" class="-rotate-6 ">
+                            </div>
+                            <p>منذ</p>
+                            <p>2005</p>
+                            <div class="absolute top-1/2 -translate-y-1/2 -left-10">
+                                <img src="~/assets/img/date.svg" alt="date" width="40" height="40"
+                                    class="-scale-x-100 rotate-6 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 md:gap-6 font-bold mt-6 ">
+                        <nuxt-link to="/contact-us" class="max-[390px]:w-full sm:w-fit">
                             <button
-                                class="relative overflow-hidden border-[2px] w-fit mt-6 px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                                class="relative overflow-hidden max-[390px]:w-full sm:w-fit border-[2px]  px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                                 <span
                                     class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
                                     اطلب عرض مالي</span>
@@ -43,9 +55,9 @@
                             </button>
                         </nuxt-link>
 
-                        <nuxt-link to="/book-consultation">
+                        <nuxt-link to="/book-consultation" class="max-[390px]:w-full sm:w-fit">
                             <button
-                                class="relative overflow-hidden border-[2px] w-fit mt-6 px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
+                                class="relative overflow-hidden border-[2px] max-[390px]:w-full sm:w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                                 <span
                                     class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
                                     احجز استشارة قانونية</span>

@@ -8,12 +8,30 @@
         </video>
 
         <div class="h-full flex flex-col justify-evenly z-20 relative max-2xl:px-6 ">
+            <div
+                class="absolute top-6 sm:top-10 left-[50px] sm:left-[80px] text-white font-medium text-xl md:text-2xl lg:text-3xl text-center ">
+                <div class="relative w-fit">
+                    <div class="absolute top-1/2 -translate-y-1/2 -right-8 sm:-right-10">
+                        <img src="~/assets/img/date.svg" alt="date" width="50" height="50"
+                            class="max-sm:w-[35px] -rotate-6 ">
+                    </div>
+                    <p>منذ</p>
+                    <p>2005</p>
+                    <div class="absolute top-1/2 -translate-y-1/2  -left-8 sm:-left-10">
+                        <img src="~/assets/img/date.svg" alt="date" width="50" height="50"
+                            class="max-sm:w-[35px] -scale-x-100 rotate-6 ">
+                    </div>
+                </div>
+
+
+            </div>
             <div class="max-w-[898px] mx-auto">
                 <h1
                     class="text-white font-bold mb-5 text-3xl text-center md:text-5xl lg:text-[64px] lg:!leading-[100px]">
                     الشريك
                     القانوني لرحلة الاستثمار</h1>
-                <p class="text-white font-normal text-lg md:text-xl text-center">حلول قانونية استباقية تحمي أصولك وتضمن
+                <p class="text-white font-normal text-lg md:text-xl text-center">حلول قانونية استباقية تحمي أصولك
+                    وتضمن
                     نموّ أعمالك
                     في السوق السعودي</p>
                 <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
@@ -50,8 +68,10 @@
             <p class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px]"
                 id="hook">بخبرة
                 تمتد لعشرين
-                عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية متخصصة في مجالي التجارة والاستثمار. نتميز بفريق
-                محترف مبتكر، ومرونة في فهم متغيرات السوق، و التزام بأعلى معايير المسؤولية والأخلاقيات المهنية. نحن هنا
+                عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية متخصصة في مجالي التجارة والاستثمار. نتميز
+                بفريق
+                محترف مبتكر، ومرونة في فهم متغيرات السوق، و التزام بأعلى معايير المسؤولية والأخلاقيات المهنية. نحن
+                هنا
                 لندعم نجاحك ونحمي مصالحك من البداية إلى النهاية</p>
         </div>
 

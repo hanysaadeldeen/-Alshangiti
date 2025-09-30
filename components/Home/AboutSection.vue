@@ -54,7 +54,7 @@
                 </div>
                 <!-- Image -->
                 <div class="flex justify-center">
-                    <img src="~/assets/img/About/alshangiti.webp" alt="alshangiti img" width="392" height="434"
+                    <img src="~/assets/img/About/alshangiti.svg" alt="alshangiti img" width="392" height="434"
                         class="max-w-[300px] md:max-w-[392px]  object-contain" loading="lazy" />
                 </div>
             </div>

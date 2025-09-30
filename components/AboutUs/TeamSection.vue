@@ -19,29 +19,29 @@
             </div>
         </div>
         <div class="max-md:hidden members mx-auto max-w-[1315px] relative z-10 flex items-end mt-[132px]">
-            <div class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-200 ">
+            <div class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-200 w-full">
                 <div class="text-center max-w-[174px]">
                     <h1 class="text-base md:text-lg font-bold text-[#354335]">أ / بندر الشهري</h1>
                     <p class="text-[#656565] font-normal text-sm">بكالوريوس قانون
                         جامعة الملك عبد العزيز</p>
                 </div>
-                <div class="max-w-[242px] max-h-[196px]">
-                    <img src="~/assets/img/About/bander.webp" alt="bander.webp" width="242" height="196" loading="lazy"
-                        class="w-full h-full object-contain">
+                <div class="w-full max-w-[242px] max-h-[196px] ">
+                    <img src="~/assets/img/About/bander.svg" alt="bander" width="242" height="196" loading="lazy"
+                        class=" max-h-[196px] object-contain">
                 </div>
             </div>
-            <div class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-100">
+            <div class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-100 w-full">
                 <div class="text-center max-w-[174px]">
                     <h1 class="text-base md:text-lg font-bold text-[#354335]">أ / البراء محضار</h1>
                     <p class="text-[#656565] font-normal text-sm">بكالوريوس قانون
                         جامعة الملك عبد العزيز</p>
                 </div>
                 <div class="max-h-[198px] max-w-[232px]">
-                    <img src="~/assets/img/About/baraa.webp" alt="baraa.webp" width="232" height="198" loading="lazy"
-                        class="w-full h-full object-contain">
+                    <img src="~/assets/img/About/baraa.svg" alt="baraa" width="232" height="198" loading="lazy"
+                        class="w-full h-full object-contain max-h-[198px]">
                 </div>
             </div>
-            <div class="pt-10 px-11 flex gap-20 flex-col items-center justify-between bg-primary-200">
+            <div class="pt-10 px-11 flex gap-20 flex-col items-center justify-between bg-primary-200 w-full">
                 <div class="text-center max-w-[174px]">
                     <h1 class="text-base md:text-lg font-bold text-[#354335]">أ / محمود الشنقيطي</h1>
                     <p class="text-[#656565] font-normal text-sm">
@@ -49,29 +49,29 @@
                         جامعة الملك عبد العزيز</p>
                 </div>
                 <div class="max-h-[220px] max-w-[198px]">
-                    <img src="~/assets/img/About/shangiti.webp" alt="shangiti.webp" width="198" height="220"
-                        loading="lazy" class="w-full h-full object-contain">
+                    <img src="~/assets/img/About/alshangiti.svg" alt="alshangiti" width="198" height="220"
+                        loading="lazy" class="w-full h-full max-h-[220px] object-contain">
                 </div>
             </div>
-            <div class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-100">
+            <div class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-100 w-full">
                 <div class="text-center max-w-[174px]">
                     <h1 class="text-base md:text-lg font-bold text-[#354335]">أ / صهيب باحاذق</h1>
                     <p class="text-[#656565] font-normal text-sm">ماجيستير قانون دولي جامعة كينت - بريطانييا</p>
                 </div>
                 <div class="max-h-[196px] max-w-[246px]">
-                    <img src="~/assets/img/About/dohib.webp" alt="dohib.webp" width="246" height="196" loading="lazy"
-                        class="w-full h-full object-contain">
+                    <img src="~/assets/img/About/dohib.svg" alt="dohib" width="246" height="196" loading="lazy"
+                        class="w-full h-full max-h-[196px] object-contain">
                 </div>
             </div>
-            <div class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-200">
+            <div class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-200 w-full">
                 <div class="text-center max-w-[174px]">
                     <h1 class="text-base md:text-lg font-bold text-[#354335]">أ / حسان رسلان</h1>
                     <p class="text-[#656565] font-normal text-sm">بكالوريوس شريعة وقانون
                         جامعة الأزهر</p>
                 </div>
                 <div class="max-h-[198px] max-w-[232px]">
-                    <img src="~/assets/img/About/hosam.webp" alt="baraa.webp" width="232" height="198" loading="lazy"
-                        class="w-full h-full object-contain">
+                    <img src="~/assets/img/About/hosam.svg" alt="baraa" width="232" height="198" loading="lazy"
+                        class="w-full h-full max-h-[198px] object-contain">
                 </div>
             </div>
         </div>
@@ -85,7 +85,16 @@
                 class="bg-primary-200 hover:bg-primary-400 transition-all ease-in-out duration-300  p-3 size-12 rounded-full cursor-pointer  flex justify-center items-center text-white absolute top-1/2  -translate-y-1/2 left-1">
                 <i class="fa-solid fa-chevron-left text-xl "></i>
             </div>
-            <Swiper :modules="modules" :slidesPerView="'auto'" class="px-10" :navigation="{
+            <Swiper :modules="modules" :breakpoints="{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                500: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+            }" class="px-10" :navigation="{
                 nextEl: nextEl,
                 prevEl: prevEl,
             }">
@@ -98,7 +107,7 @@
                                 جامعة الملك عبد العزيز</p>
                         </div>
                         <div class="h-[220px] max-w-[198px]">
-                            <img src="~/assets/img/About/bander.webp" alt="bander.webp" width="198" height="220"
+                            <img src="~/assets/img/About/bander.svg" alt="bander" width="198" height="220"
                                 loading="lazy" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -111,8 +120,8 @@
                                 جامعة الملك عبد العزيز</p>
                         </div>
                         <div class="h-[220px] max-w-[198px]">
-                            <img src="~/assets/img/About/baraa.webp" alt="baraa.webp" width="198" height="220"
-                                loading="lazy" class="w-full h-full object-cover">
+                            <img src="~/assets/img/About/baraa.svg" alt="baraa" width="198" height="220" loading="lazy"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </SwiperSlide>
@@ -125,7 +134,7 @@
                                 جامعة الملك عبد العزيز</p>
                         </div>
                         <div class="h-[220px] max-w-[198px]">
-                            <img src="~/assets/img/About/shangiti.webp" alt="shangiti.webp" width="198" height="220"
+                            <img src="~/assets/img/About/alshangiti.svg" alt="alshangiti" width="198" height="220"
                                 loading="lazy" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -137,8 +146,8 @@
                             <p class="text-[#656565] font-normal text-sm">ماجيستير قانون دولي جامعة كينت - بريطانييا</p>
                         </div>
                         <div class="h-[220px] max-w-[198px]">
-                            <img src="~/assets/img/About/dohib.webp" alt="dohib.webp" width="198" height="220"
-                                loading="lazy" class="w-full h-full object-cover">
+                            <img src="~/assets/img/About/dohib.svg" alt="dohib" width="198" height="220" loading="lazy"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </SwiperSlide>
@@ -150,8 +159,8 @@
                                 جامعة الأزهر</p>
                         </div>
                         <div class="h-[220px] max-w-[198px]">
-                            <img src="~/assets/img/About/hosam.webp" alt="baraa.webp" width="198" height="220"
-                                loading="lazy" class="w-full h-full object-cover">
+                            <img src="~/assets/img/About/hosam.svg" alt="baraa" width="198" height="220" loading="lazy"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </SwiperSlide>

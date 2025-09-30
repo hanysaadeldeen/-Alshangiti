@@ -17,16 +17,17 @@
                         <div class="flex items-center justify-center gap-4 cursor-pointer">
                             <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
-
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M25.3327 13.6C25.3327 22 15.9993 28 15.9993 28C15.9993 28 6.66602 22 6.66602 13.6C6.66602 8.29807 10.8447 4 15.9993 4C21.154 4 25.3327 8.29807 25.3327 13.6Z"
-                                        stroke="#617961" stroke-width="2.66667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <circle cx="16" cy="13.3333" r="4" stroke="#EEC882" stroke-width="2.66667"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                <div>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M25.3327 13.6C25.3327 22 15.9993 28 15.9993 28C15.9993 28 6.66602 22 6.66602 13.6C6.66602 8.29807 10.8447 4 15.9993 4C21.154 4 25.3327 8.29807 25.3327 13.6Z"
+                                            stroke="#617961" stroke-width="2.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="16" cy="13.3333" r="4" stroke="#EEC882" stroke-width="2.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                                 <p class="text-black font-normal text-base md:text-lg">
                                     جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع
                                 </p>
@@ -36,24 +37,24 @@
                     </div>
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
                         <div class="flex items-center justify-center gap-4 cursor-pointer">
-                            <a href="https://maps.app.goo.gl/jrgqJeYTCxMdmoM66?g_st=iw" target="_blank"
+                            <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
-
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M25.3327 13.6C25.3327 22 15.9993 28 15.9993 28C15.9993 28 6.66602 22 6.66602 13.6C6.66602 8.29807 10.8447 4 15.9993 4C21.154 4 25.3327 8.29807 25.3327 13.6Z"
-                                        stroke="#617961" stroke-width="2.66667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <circle cx="16" cy="13.3333" r="4" stroke="#EEC882" stroke-width="2.66667"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                <div>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M25.3327 13.6C25.3327 22 15.9993 28 15.9993 28C15.9993 28 6.66602 22 6.66602 13.6C6.66602 8.29807 10.8447 4 15.9993 4C21.154 4 25.3327 8.29807 25.3327 13.6Z"
+                                            stroke="#617961" stroke-width="2.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="16" cy="13.3333" r="4" stroke="#EEC882" stroke-width="2.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                                 <p class="text-black font-normal text-base md:text-lg">
                                     المدينة المنورة
                                     حي العهن
                                     طريق الامير عبد المحسن
                                     المركز الماسي للاعمال
-
                                 </p>
                             </a>
 
