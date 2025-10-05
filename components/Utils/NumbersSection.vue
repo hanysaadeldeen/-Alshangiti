@@ -6,7 +6,7 @@
                 <div class="Card boxShadow py-10 px-8 flex flex-col gap-4 bg-white rounded-3xl"
                     v-for="(state, index) in Numbers" ref="counterElements" :key="index">
                     <h1 class="text-text font-bold text-5xl lg:text-6xl lg:!leading-[84px] text-center">{{ state.value
-                    }}+
+                        }}+
                     </h1>
                     <p class="md:mb-6 text-[#777777] text-lg md:text-xl font-normal text-center">{{ state.text }}</p>
                 </div>
@@ -27,7 +27,7 @@ const Numbers = reactive([
     {
         text: "قضية ومنازعة تم إدارتها وتسويتها بنجاح",
         value: 0,
-        targetValue: 500
+        targetValue: 2000
 
     },
     {

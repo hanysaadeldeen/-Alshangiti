@@ -53,9 +53,9 @@
                                             class="block py-3 text-white hover:text-secondary font-medium text-base">
                                             التقاضي والتحكيم
                                         </nuxt-link>
-                                        <nuxt-link @click="openMenu = false" to="consulting-company"
+                                        <nuxt-link @click="openMenu = false" to="consulting-projects"
                                             class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                            خدمات الشركات
+                                            خدمات المشاريع
                                         </nuxt-link>
                                     </div>
                                 </li>
@@ -140,9 +140,9 @@
                                                 التقاضي والتحكيم
                                             </nuxt-link>
                                             <nuxt-link @click="[isSideBar = false, isOpen = false]"
-                                                to="consulting-company"
+                                                to="consulting-projects"
                                                 class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                                خدمات الشركات
+                                                خدمات المشاريع
                                             </nuxt-link>
 
                                         </div>

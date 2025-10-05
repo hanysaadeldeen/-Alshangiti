@@ -9,7 +9,7 @@
                 </h1>
             </div>
         </div>
-        <AboutNumbersSection />
+        <!-- <AboutNumbersSection /> -->
         <HistorySection />
         <TeamSection />
         <VisionMissionSection />

@@ -11,8 +11,9 @@
             </div>
         </div>
 
-        <services-section-card v-for="service in Services" :Details="service.Details" :img="service.img"
-            :title="service.title" :description="service.description" :descriptionToogle="service.descriptionToogle" />
+        <services-section-card v-for="service in Services" :link="service.link" :Details="service.Details"
+            :img="service.img" :title="service.title" :description="service.description"
+            :descriptionToogle="service.descriptionToogle" />
 
     </section>
 </template>
@@ -38,7 +39,8 @@ const Services = [
             "التفاوض القانوني",
             "إدارة المخاطر",
             "حماية الحقوق والالتزامات",
-        ]
+        ],
+        link: "consulting-contracts"
     },
     {
         title: "2. التقاضي والتحكيم",
@@ -57,19 +59,21 @@ const Services = [
             "القضايا الاقتصادية",
             "القضايا المدنية",
             "التحصيل",
-        ]
+        ],
+        link: "consulting-arbitration"
     },
     {
-        title: "3. خدمات الشركات",
+        title: "3. خدمات المشاريع",
         description: "التأسيس . الاندماج . الحوكمة . التراخيص",
-        descriptionToogle: "نساندك في رحلتك الاستثمارية منذ البداية، بدءاً من تأسيس الشركات بكافة أنواعها (محلية، فروع شركات أجنبية، مساهمة)، ومروراً بهيكلة الشركات وإعادة تنظيمها، ووصولاً إلى عمليات الاندماج والاستحواذ المعقدة. كما نضمن حصولك على جميع التراخيص والموافقات الرسمية اللازمة.",
+        descriptionToogle: "ما بين زمنين وتسلسل إجرائي محدد، يقع نطاق بالغ الأهمية لقطاع الأعمال يوصف مهنيا بالمشاريع، والتي قد تكون فكرة استثمارية يرافقها ما هو ذهني وقيمي، كالعلامات والنماذج، وما يضمن الاستمرار والنمو، كحماية المنتجات من التقليد وحصرية العمل في المشاريع عن طريق الوكالات والامتياز. ",
         img: table,
         Details: [
             "السجلات و التراخيص",
             "الاستثمار و الصفقات",
             "الملكية الفكرية",
             "الخدمات اللوجيستية",
-        ]
+        ],
+        link: "consulting-projects"
     },
 ]
 </script>

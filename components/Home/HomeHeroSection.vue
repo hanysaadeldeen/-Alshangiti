@@ -4,7 +4,7 @@
         </div>
         <video autoplay muted loop playsinline poster="~/assets/img/heroPoster.webp"
             class="w-full h-full object-cover absolute -z-10">
-            <source src="~/assets/img/heroVideo.webm" type="video/webm">
+            <source src="" type="video/webm">
         </video>
 
         <div class="h-full flex flex-col justify-evenly z-20 relative max-2xl:px-6 ">

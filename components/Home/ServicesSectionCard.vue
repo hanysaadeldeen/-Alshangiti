@@ -16,6 +16,7 @@
                             :class="isOpen ? 'text-white' : 'text-[#5E5E5E]'">
                             {{ description }}
                         </p>
+
                     </div>
                     <div class="p-2 cursor-pointer lg:hidden" @click="toggle">
                         <i class="fa-solid fa-chevron-up  transition-all ease-in-out duration-300 "
@@ -25,15 +26,46 @@
                 <div ref="answer" class="overflow-hidden transition-all duration-500"
                     :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }">
                     <div class="mt-6 flex justify-between items-start lg:items-center max-lg:flex-col max-lg:gap-6">
-                        <p class="text-lg md:text-xl text-white font-normal pl-4 max-w-[656px]">
-                            {{ descriptionToogle }}
-                        </p>
+                        <div class="flex flex-col gap-5">
+                            <p class="text-lg md:text-xl text-white font-normal pl-4 max-w-[656px]">
+                                {{ descriptionToogle }}
+                            </p>
+
+                            <div class="flex gap-3 md:gap-6 justify-start items-center max-md:flex-col ">
+                                <nuxt-link :to="link">
+                                    <button
+                                        class="w-fit relative overflow-hidden border-[2px] max-md:w-full  min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white  hover:text-secondary border-white hover:border-secondary">
+                                        <span
+                                            class="  text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
+                                            عرض المزيد من التفاصيل
+                                        </span>
+                                        <span
+                                            class="absolute -bottom-10  text-sm lg:text-base font-bold  group-hover:bottom-0 group-hover:-translate-y-1/2 w-full  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                            عرض المزيد من التفاصيل
+                                        </span>
+                                    </button> </nuxt-link>
+                                <nuxt-link to="contact-us">
+                                    <button
+                                        class="border-[2px] border-primary-500 border-transparent relative overflow-hidden  max-md:w-full min-w-[120px] w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
+                                        <span
+                                            class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
+                                            اطلب خدمة</span>
+                                        <span
+                                            class="absolute w-full -bottom-10 text-sm lg:text-base font-bold  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
+                                            اطلب خدمة</span>
+                                    </button>
+                                </nuxt-link>
+
+                            </div>
+                        </div>
+
                         <div class="md:pr-4 md:border-r  border-primary-50 max-w-[466px]">
                             <div class="flex gap-x-2 gap-y-4 justify-start flex-wrap">
                                 <div v-for="value in Details"
                                     class="rounded-full bg-primary-50 text-text py-2 px-4 text-sm w-fit max-md:w-full max-md:text-center">
                                     {{ value }}
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -55,6 +87,7 @@ defineProps<{
     description: string
     descriptionToogle: string
     Details: string[]
+    link: string
 
 }>()
 

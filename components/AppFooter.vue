@@ -98,9 +98,9 @@
                     </h1>
                     <nav class="text-white">
                         <ul>
-                            <li :class="{ 'active': adjustedPath === '/consulting-company' }">
-                                <nuxt-link :to="localePath('/consulting-company')">
-                                    خدمات الشركات
+                            <li :class="{ 'active': adjustedPath === '/consulting-projects' }">
+                                <nuxt-link :to="localePath('/consulting-projects')">
+                                    خدمات المشاريع
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/consulting-contracts' }" class="my-4">
@@ -132,8 +132,11 @@
                                     <i
                                         class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
                                     <span>
-
-                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع
+                                        <!-- 
+                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع -->
+                                        جدة ‑ حي الخالدية ‑
+                                        برج جي ڤيو | الطابق 9
+                                        <br> مكتب رقم 904
                                     </span>
                                 </a>
                             </li>
