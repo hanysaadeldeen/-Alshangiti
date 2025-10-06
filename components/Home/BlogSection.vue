@@ -34,10 +34,10 @@
                     <p class="text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6">
                         {{ blog.desc }}
                     </p>
-                    <div class="flex justify-between items-center mt-4">
+                    <!-- <div class="flex justify-between items-center mt-4">
                         <span class="text-primary-500 font-bold text-sm md:text-base">اقرأ المزيد</span>
                         <span class="text-[#A1A1A1] font-normal text-sm md:text-base">{{ blog.date }}</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
