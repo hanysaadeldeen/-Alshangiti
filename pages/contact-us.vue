@@ -15,7 +15,7 @@
                 <div class="flex flex-col gap-6 md:gap-8 w-full  md:max-w-[503px]">
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
                         <div class="flex items-center justify-center gap-4 cursor-pointer">
-                            <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
+                            <a href="https://maps.app.goo.gl/BwhvmWm2MVtbuNcj6?g_st=aw" target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
                                 <div>
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"

@@ -9,7 +9,7 @@
                     <img src="~/assets/img/Utils/FooterLeftVector.svg" alt="FooterLeftVector.svg"
                         class="object-contain h-full">
                 </div>
-                <div class='absolute top-0 right-0 max-md:hidden  h-full'>
+                <div class='absolute top-0 right-0 max-lg:hidden  h-full'>
                     <img src="~/assets/img/Utils/FooterRightVector.svg" alt="FooterLeftVector.svg"
                         class="object-contain h-full">
                 </div>
@@ -98,9 +98,9 @@
                     </h1>
                     <nav class="text-white">
                         <ul>
-                            <li :class="{ 'active': adjustedPath === '/consulting-projects' }">
-                                <nuxt-link :to="localePath('/consulting-projects')">
-                                    خدمات المشاريع
+                            <li :class="{ 'active': adjustedPath === '/consulting-arbitration' }">
+                                <nuxt-link :to="localePath('/consulting-arbitration')">
+                                    خدمات التقاضي و التحكيم
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/consulting-contracts' }" class="my-4">
@@ -108,11 +108,13 @@
                                     خدمات الاستشارات و العقود
                                 </nuxt-link>
                             </li>
-                            <li :class="{ 'active': adjustedPath === '/consulting-arbitration' }">
-                                <nuxt-link :to="localePath('/consulting-arbitration')">
-                                    خدمات التقاضي و التحكيم
+                            <li :class="{ 'active': adjustedPath === '/consulting-projects' }">
+                                <nuxt-link :to="localePath('/consulting-projects')">
+                                    خدمات المشاريع
                                 </nuxt-link>
                             </li>
+
+
                         </ul>
                     </nav>
                 </div>
@@ -127,7 +129,7 @@
 
 
                             <li class="pb-0 flex items-center gap-4 group cursor-pointer">
-                                <a href="https://maps.app.goo.gl/U5QASucpQ9aic1XY8" target="_blank"
+                                <a href="https://maps.app.goo.gl/BwhvmWm2MVtbuNcj6?g_st=aw" target="_blank"
                                     class="flex items-center gap-2 group cursor-pointer">
                                     <i
                                         class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>

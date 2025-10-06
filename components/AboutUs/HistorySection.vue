@@ -1,49 +1,3 @@
-<!-- <template>
-    <section class="History  mx-auto max-w-[1315px] max-2xl:px-10">
-
-        <div
-            class="relative flex flex-col gap-[119px] max-w-[1096px] border-r-[5px] pr-[38px] border-primary-200 pb-[157px]">
-            <div class="relative">
-                <div class="size-8 rounded-full absolute bg-primary-200 -right-[56px] flex justify-center items-center">
-                    <div class="size-5 bg-primary-500 rounded-full"></div>
-                </div>
-                <h1 class="mb-10 font-bold text-xl md:text-2xl lg:text-[40px] ">قبل عام 2005</h1>
-                <p class="text-lg md:text-xl lg:text-2xl font-normal text-[#5E5E5E]">بدأت رحلة المؤسس، محمود الشنقيطي،
-                    بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في
-                    مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.</p>
-            </div>
-            <div class="relative ">
-                <div class="size-8 rounded-full absolute bg-primary-200 -right-[56px] flex justify-center items-center">
-                    <div class="size-5 bg-white rounded-full"></div>
-                </div>
-                <h1 class="opacity-20 mb-10 font-bold text-xl md:text-2xl lg:text-[40px] ">قبل عام 2005</h1>
-                <p class="opacity-20 text-lg md:text-xl lg:text-2xl font-normal text-[#5E5E5E]">بدأت رحلة المؤسس، محمود
-                    الشنقيطي،
-                    بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في
-                    مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.</p>
-            </div>
-            <div class="relative">
-                <div class="size-8 rounded-full absolute bg-primary-200 -right-[56px] flex justify-center items-center">
-                    <div class="size-5 bg-white rounded-full"></div>
-                </div>
-                <h1 class="opacity-20 mb-10 font-bold text-xl md:text-2xl lg:text-[40px] ">منذ عام 2005 وحتى الآن
-                </h1>
-                <p class="opacity-20 text-lg md:text-xl lg:text-2xl font-normal text-[#5E5E5E]">بدأت رحلة المؤسس، محمود
-                    الشنقيطي،
-                    بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في
-                    مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.</p>
-            </div>
-        </div>
-
-    </section>
-</template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped></style> -->
-
 <template>
     <section class="History mx-auto max-w-[1315px] max-2xl:px-10">
         <div
@@ -74,8 +28,8 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const items = ref([
     { title: "قبل عام 2005", desc: "بدأت رحلة المؤسس، محمود الشنقيطي، بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.", active: false },
-    { title: "عام 2005", desc: "استقل المؤسس عن العمل الحكومي وأسس مكتب  محمود الشنقيطي للمحاماة والاستشارات القانونية، متخصصًا في خدمات قطاع الأعمال. كان الهدف هو سد فجوة في هذا القطاع وتوفير خدمات قانونية متخصصة.", active: false },
-    { title: "منذ عام 2005 وحتى الآن", desc: "بدأت رحلة المؤسس، محمود الشنقيطي، بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.", active: false },
+    { title: "عام 2005", desc: "تأسس محمود الشنقيطي للمحاماة والاستشارات القانونية عام 2005م، وقد حقق اعترافًا وتقديرًا مهنيًا واسعًا، ونموذجا متقدما لفريق محلي يعمل وفقاً للمعايير الدولية في قطاع المحاماة والاستشارات القانونية. إنّ قيادات التحول السعودية من الفئة الشابة ثنائي اللغة محليًا ودوليًا، وسنحافظ على نفس هذا الخط العمري بفريق في أغلبه من الجيل الجديد الديناميكي، والذي يتميز بتبسيط عمله والاختصار وتنفيذ الخدمة بذكاء مما ينعكس على مناولة الخدمة بقيمة عادلة. ", active: false },
+    { title: "منذ عام 2005 وحتى الآن", desc: "نعمل بشكل يومي على تعميق معرفتنا النظرية وتطبيقاتها العملية في مسارنا مستلهمين فلسفة قطاع الأعمال بتحويل خامتنا المصقولة الى منحوتة فريدة.", active: false },
 ]);
 
 const historyRefs = ref([]);
