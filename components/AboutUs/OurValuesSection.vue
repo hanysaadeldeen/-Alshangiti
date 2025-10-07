@@ -18,7 +18,7 @@
                 </div>
                 <div>
                     <h2 class="text-text text-lg font-bold text-center mb-1">{{ card.title }}</h2>
-                    <p class="text-[#5E5E5E] text-base font-normal text-center">{{ card.desc }}</p>
+                    <p class="text-[#5E5E5E] text-base font-normal text-center ">{{ card.desc }}</p>
                 </div>
             </div>
         </div>

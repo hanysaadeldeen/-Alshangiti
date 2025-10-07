@@ -17,7 +17,8 @@
                     <h2 class="text-text text-lg md:text-xl lg:text-2xl md:!leading-[45px] font-bold mx-4"> {{
                         cardOTitle }}</h2>
                 </div>
-                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">{{ cardOdesc }}</p>
+                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal  text-justify">{{
+                    cardOdesc }}</p>
             </div>
             <div class="rounded-3xl boxShadow p-6 " v-if="cardTTitle && cardTdesc">
                 <div class="relative mb-2 md:mb-4">
@@ -25,7 +26,8 @@
                     <h2 class="text-text text-lg md:text-xl lg:text-2xl md:!leading-[45px] font-bold mx-4"> {{
                         cardTTitle }}</h2>
                 </div>
-                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">{{ cardTdesc }}</p>
+                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal  text-justify">{{
+                    cardTdesc }}</p>
             </div>
             <div class="rounded-3xl boxShadow p-6 " v-if="cardThT && cardThdesc">
                 <div class="relative mb-2 md:mb-4">
@@ -33,7 +35,8 @@
                     <h2 class="text-text text-lg md:text-xl lg:text-2xl md:!leading-[45px] font-bold mx-4"> {{
                         cardThT }}</h2>
                 </div>
-                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal">{{ cardThdesc }}</p>
+                <p class="text-text text-base md:text-lg lg:text-xl md:!leading-[35px] font-normal  text-justify">{{
+                    cardThdesc }}</p>
             </div>
         </div>
 

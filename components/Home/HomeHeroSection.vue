@@ -65,7 +65,7 @@
                         class="size-[45px] md:size-[60px]">
                 </div>
             </div>
-            <p class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px]"
+            <p class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px] "
                 id="hook">بخبرة
                 تمتد لعشرين
                 عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية متخصصة في مجالي التجارة والاستثمار. نتميز

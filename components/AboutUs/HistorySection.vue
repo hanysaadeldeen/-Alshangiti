@@ -13,7 +13,7 @@
                     :class="item.active ? 'opacity-100' : 'opacity-20'">
                     {{ item.title }}
                 </h1>
-                <p class="text-lg md:text-xl lg:text-2xl font-normal text-[#5E5E5E] transition-all duration-500 ease-in-out"
+                <p class="text-lg md:text-xl text-justify lg:text-2xl font-normal text-[#5E5E5E] transition-all duration-500 ease-in-out"
                     :class="item.active ? 'opacity-100' : 'opacity-20'">
                     {{ item.desc }}
                 </p>

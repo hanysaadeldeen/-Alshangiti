@@ -27,11 +27,11 @@
                     :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }">
                     <div class="mt-6 flex justify-between items-start lg:items-center max-lg:flex-col max-lg:gap-6">
                         <div class="flex flex-col gap-5">
-                            <p class="text-lg md:text-xl text-white font-normal pl-4 max-w-[656px]">
+                            <p class="text-lg md:text-xl text-white font-normal pl-4 max-w-[656px] text-justify">
                                 {{ descriptionToogle }}
                             </p>
 
-                            <div class="flex gap-3 md:gap-6 justify-start items-center max-md:flex-col ">
+                            <div class="flex gap-3 md:gap-6 justify-start items-center flex-wrap ">
                                 <nuxt-link :to="link">
                                     <button
                                         class="w-fit relative overflow-hidden border-[2px] max-md:w-full  min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white  hover:text-secondary border-white hover:border-secondary">
@@ -62,7 +62,7 @@
                         <div class="md:pr-4 md:border-r  border-primary-50 max-w-[466px]">
                             <div class="flex gap-x-2 gap-y-4 justify-start flex-wrap">
                                 <div v-for="value in Details"
-                                    class="rounded-full bg-primary-50 text-text py-2 px-4 text-sm w-fit max-md:w-full max-md:text-center">
+                                    class="rounded-full  bg-primary-50 text-text py-2 px-4 text-sm w-fit  max-md:text-center">
                                     {{ value }}
                                 </div>
 

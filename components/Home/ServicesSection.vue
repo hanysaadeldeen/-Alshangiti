@@ -5,7 +5,7 @@
                 <h1 class="text-text mb-2 font-bold text-2xl lg:text-[40px] lg:!leading-[72px] max-w-[624px]">
                     كيف يمكننا مساعدتك ؟
                 </h1>
-                <p class="text-[#5E5E5E] text-lg md:text-xl lg:text-2xl font-normal max-w-[624px]">
+                <p class="text-[#5E5E5E] text-lg md:text-xl lg:text-2xl font-normal max-w-[624px] text-justify">
                     خدمات قانونية متخصصة تغطي كافة احتياجات أعمالكم في السعودية، بدعم فريق يتمتع بخبرة 20 عاماً.
                 </p>
             </div>

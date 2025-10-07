@@ -7,7 +7,7 @@
             </h1>
             <div class="flex  gap-4 justify-start   flex-wrap max-w-[1152px]">
                 <div v-for="value in details"
-                    class="rounded-full bg-primary-500 text-white py-3 px-6 text-xl md:text-2xl w-fit max-md:w-full max-md:text-center">
+                    class="rounded-full bg-primary-500 text-white py-3 px-6 text-xl md:text-2xl w-fit  max-md:text-center">
                     {{ value }}
                 </div>
             </div>
