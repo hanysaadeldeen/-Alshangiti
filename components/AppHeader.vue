@@ -73,7 +73,7 @@
                                     </nuxt-link>
                                 </li>
                             </ul>
-                            <LanguageSwitcher />
+                            <!-- <LanguageSwitcher /> -->
                         </div>
                     </div>
                     <div class="lg:hidden text-2xl cursor-pointer sm:text-3xl">
@@ -168,10 +168,9 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="mt-5 justify-between flex-col ">
+                        <!-- <div class="mt-5 justify-between flex-col ">
                             <LanguageSwitcher isWhite />
-
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </transition>

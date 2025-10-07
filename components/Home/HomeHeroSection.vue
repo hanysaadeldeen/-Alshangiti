@@ -35,28 +35,28 @@
                     نموّ أعمالك
                     في السوق السعودي</p>
                 <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
-                    <nuxt-link to="/book-consultation">
+                    <nuxt-link to="/contact-us">
                         <button
                             class="w-fit h-full border-[2px] border-primary-500 relative overflow-hidden max-md:w-full min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
                             <span
                                 class=" text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                                احجز استشارة قانونية</span>
+                                اطلب عرض مالي</span>
                             <span
                                 class="absolute -bottom-10  text-sm lg:text-base font-bold  group-hover:bottom-0 group-hover:-translate-y-1/2  left-1/2 w-full -translate-x-1/2  transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                احجز استشارة قانونية</span>
+                                اطلب عرض مالي</span>
                         </button>
                     </nuxt-link>
-                    <nuxt-link to="/contact-us">
+                    <a href="https://mohsl.com/" target="_blank">
                         <button
                             class="w-fit relative overflow-hidden border-[2px] max-md:w-full  min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white  hover:text-secondary border-white hover:border-secondary">
                             <span
                                 class="  text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                                اطلب عرض مالي</span>
+                                خدمة التحصيل</span>
                             <span
                                 class="absolute -bottom-10  text-sm lg:text-base font-bold  group-hover:bottom-0 group-hover:-translate-y-1/2 w-full  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                اطلب عرض مالي</span>
+                                خدمة التحصيل</span>
                         </button>
-                    </nuxt-link>
+                    </a>
                 </div>
             </div>
             <div class="flex justify-center items-center  w-fit mx-auto cursor-pointer">
