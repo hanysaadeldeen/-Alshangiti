@@ -31,7 +31,7 @@
                     <h2 class="text-text font-bold text-lg md:text-xl leading-6 md:leading-7">
                         {{ blog.title }}
                     </h2>
-                    <p class="text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6">
+                    <p class="text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6">
                         {{ blog.desc }}
                     </p>
                     <!-- <div class="flex justify-between items-center mt-4">

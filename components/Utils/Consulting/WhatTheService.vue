@@ -6,7 +6,7 @@
                 {{
                     title }}
             </h1>
-            <p class="text-text text-lg md:text-xl lg:text-2xl font-normal flex-col  max-w-[1164px]">
+            <p class="text-text text-lg md:text-xl lg:text-2xl font-normal flex-col  max-w-[1164px] text-justify">
                 {{ desc }}
             </p>
         </div>

@@ -118,14 +118,7 @@ const sections = [
         title: "privacy.sectionEight.title",
         description: "privacy.sectionEight.description",
     },
-    {
-        id: "Data_Contact",
-        title: "privacy.sectionNine.title",
-        content: [
-            "privacy.sectionNine.data.itemOne",
-            "privacy.sectionNine.data.itemTwo"
-        ],
-    },
+
 ];
 
 const scrollToSection = (sectionId) => {

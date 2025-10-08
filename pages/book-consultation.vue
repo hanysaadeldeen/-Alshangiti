@@ -5,7 +5,8 @@
                 <h1 class="text-[32px] md:text-[40px] lg:text-[52px]  text-text font-bold mb-2">
                     احجز موعد استشارتك القانونية
                 </h1>
-                <p class="text-[#5E5E5E] font-normal text-lg md:text-xl lg:text-2xl">يسعدنا في أن نكون شريكك القانوني.
+                <p class="text-[#5E5E5E] font-normal text-lg md:text-xl lg:text-2xl text-justify">يسعدنا في أن نكون
+                    شريكك القانوني.
 
 
                     سواء كنت مقبلاً على مشروع جديد، أو تواجه تحدياً قانونياً، أو تحتاج إلى رأي خبير حول قرار مهم، فإن

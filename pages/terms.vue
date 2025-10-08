@@ -112,14 +112,7 @@ const sections = [
         title: "terms.sectionEight.title",
         description: "terms.sectionEight.description",
     },
-    {
-        id: "Data_Contact",
-        title: "terms.sectionNine.title",
-        content: [
-            "terms.sectionNine.data.itemOne",
-            "terms.sectionNine.data.itemTwo"
-        ],
-    },
+
 ];
 
 const scrollToSection = (sectionId) => {

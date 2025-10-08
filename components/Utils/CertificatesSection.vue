@@ -4,7 +4,7 @@
         <div
             class="container mx-auto  max-w-[1315px] flex justify-between items-center max-lg:flex-col max-md:gap-6 max-lg:gap-16">
             <h1
-                class="text-text text-2xl md:text-3xl lg:text-[40px] lg:!leading-[72px] font-bold max-w-[602px] max-lg:text-center">
+                class=" text-text text-2xl md:text-3xl lg:text-[40px] lg:!leading-[72px] font-bold max-w-[602px] max-lg:text-center">
                 موثقون
                 ومعتمدون
                 لتقديم خدمات قانونية موثوقة وآمنة</h1>
