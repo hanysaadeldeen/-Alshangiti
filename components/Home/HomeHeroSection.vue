@@ -28,12 +28,12 @@
             <div class="max-w-[898px] mx-auto">
                 <h1
                     class="text-white font-bold mb-5 text-3xl text-center md:text-5xl lg:text-[64px] lg:!leading-[100px]">
-                    الشريك
-                    القانوني لرحلة الاستثمار</h1>
-                <p class="text-white font-normal text-lg md:text-xl text-center">حلول قانونية استباقية تحمي أصولك
-                    وتضمن
-                    نموّ أعمالك
-                    في السوق السعودي</p>
+
+                    {{ $t("homePage.home.hero.headline") }}
+                </h1>
+                <p class="text-white font-normal text-lg md:text-xl text-center">
+                    {{ $t("homePage.home.hero.subtext") }}
+                </p>
                 <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
                     <nuxt-link to="/contact-us">
                         <button

@@ -5,7 +5,8 @@
                 <img src="~/assets/img/pannel/table.webp" alt="table" class="w-full h-full  object-cover brightness-50">
             </div>
             <div class="mx-auto max-w-[1315px] relative z-10 max-2xl:px-6">
-                <h1 class="text-[32px] md:text-[40px] lg:text-[52px] lg:!leading-[52px] text-white font-bold">من نحن
+                <h1 class="text-[32px] md:text-[40px] lg:text-[52px] lg:!leading-[52px] text-white font-bold">
+                    {{ $t("pages.aboutUs") }}
                 </h1>
             </div>
         </div>

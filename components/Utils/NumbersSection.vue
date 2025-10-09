@@ -6,9 +6,10 @@
                 <div class="Card boxShadow py-10 px-8 flex flex-col gap-4 bg-white rounded-3xl"
                     v-for="(state, index) in Numbers" ref="counterElements" :key="index">
                     <h1 class="text-text font-bold text-5xl lg:text-6xl lg:!leading-[84px] text-center">{{ state.value
-                        }}+
+                    }}+
                     </h1>
-                    <p class="md:mb-6 text-[#777777] text-lg md:text-xl font-normal text-center">{{ state.text }}</p>
+                    <p class="md:mb-6 text-[#777777] text-lg md:text-xl font-normal text-center">{{ $t(state.text) }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -20,29 +21,27 @@
 
 const Numbers = reactive([
     {
-        text: "سنة في مجال المحاماة واستشارات الأعمال",
+        text: "homePage.features.stats.experience",
         value: 0,
         targetValue: 20
     },
     {
-        text: "قضية ومنازعة تم إدارتها وتسويتها بنجاح",
+        text: "homePage.features.stats.cases",
         value: 0,
         targetValue: 2000
-
     },
     {
-        text: "عميل راضٍ من قطاعات الأعمال والاستثمار",
+        text: "homePage.features.stats.clients",
         value: 0,
         targetValue: 200
-
     }
 ]);
 const counterElements = ref([]);
 
-const interval = 1000;
+const interval = 500;
 
 const updateCounter = (stat: any) => {
-    let startValue = 0;
+    let startValue = stat.targetValue > 1000 ? 1500 : 0;
     const endValue = stat.targetValue;
     const duration = Math.floor(interval / endValue);
     const counter = setInterval(() => {

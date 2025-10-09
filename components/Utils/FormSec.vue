@@ -1,16 +1,13 @@
 <template>
     <div
         class="bg-white boxShadow w-full md:max-w-[500px]  rounded-xl py-6 lg:py-8 px-10  lg:px-14 lg:max-w-[616px] relative ">
-
-        <!-- <div class="absolute top-0 left-0 w-full h-full">
-            <img src="~/assets/img/footerGroup.svg" alt="footerGroup" class="w-full h-full object-cover z-0">
-        </div> -->
-        <!-- <h1 class="text-xl md:text-2xl lg:text-3xl font-normal mb-7 text-primary-700"> -->
         <h1 class=" font-normal text-xl md:text-2xl lg:text-[32px] leading-[50px] md:leading-[72px] relative z-10">
-            تواصل مع فريقنا القانوني
+
+            {{ locale === 'ar' ?
+                ' تواصل مع فريقنا القانوني' : 'Contact our legal team' }}
+
         </h1>
         <div class="bg-[#3A3A3A] rounded-full h-0.5 w-full max-w-[85px] mb-7 relative z-10"></div>
-
         <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }"
             class="w-full lg:max-w-[616px] relative z-10 ">
             <div class="flex max-lg:flex-col w-full gap-4 lg:gap-8 mb-6">
@@ -60,11 +57,11 @@
             <div class="flex flex-col w-full  mb-6">
                 <label for="email" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
                     {{
-                        locale === "ar" ? "عنوان البريد الإلكتروني" : "e.g. name@domain.com"
+                        locale === "ar" ? "عنوان البريد الإلكتروني" : " Enter your email address"
                     }}
                 </label>
                 <Field id="email" name="email" type="email" :placeholder="locale === 'en'
-                    ? 'Enter your email address'
+                    ? 'e.g. name@domain.com'
                     : 'أدخل عنوان بريدك الإلكتروني'
                     "
                     class="inputBack py-2 md:py-3 px-2.5 md:px-4 h-[48px] w-full border  focus:outline-none focus:ring-2 focus:ring-Primary"
@@ -85,11 +82,14 @@
             </div>
             <Button title="إرسال" />
             <div class="mt-5 text-text text-sm font-normal">
-                من خلال إرسال استفسارك، فإنك توافق على الخاصة
+                {{ locale === 'ar' ?
+                    'من خلال إرسال استفسارك، فإنك توافق على ' : 'By submitting your inquiry, you agree to the '
+                }}
                 <nuxt-link to="privacy">
-                    <span class="text-primary-500 underline">سياسة
-                        الخصوصية</span>
-                </nuxt-link> بنا.
+                    <span class="text-primary-500 underline">
+                        {{ $t("pages.privacy") }}
+                    </span>
+                </nuxt-link>
             </div>
         </Form>
     </div>

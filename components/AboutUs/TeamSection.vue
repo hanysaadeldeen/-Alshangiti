@@ -1,9 +1,14 @@
 <template>
     <div class="TeamSection relative">
         <div class="pt-[100px] text-center relative z-10">
-            <h1 class="text-white font-bold text-xl md:text-2xl lg:text-[40px] lg:!leading-[72px]">فريقنا القانوني
+            <h1 class="text-white font-bold text-xl md:text-2xl lg:text-[40px] lg:!leading-[72px]">
+                {{ $t("about.team") }}
             </h1>
-            <p class="text-[#EFF2EF] text-lg md:text-xl lg:text-2xl">خبرة متكاملة وشغف بالتميز</p>
+            <p class="text-[#EFF2EF] text-lg md:text-xl lg:text-2xl">
+
+                {{ locale === 'ar' ? 'خبرة متكاملة وشغف بالتميز' : 'Comprehensive experience and passion for excellence'
+                }}
+            </p>
         </div>
         <div class=" bg-primary-500 absolute bottom-0 left-0 w-full h-full">
             <div class="relative h-full">
@@ -173,6 +178,7 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Keyboard, } from "swiper/modules";

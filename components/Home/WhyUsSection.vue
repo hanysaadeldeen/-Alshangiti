@@ -3,9 +3,11 @@
         <div class="sectionTitle">
             <h1
                 class="text-text font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2 text-center">
-                ماذا يميزنا
+                {{ $t("homePage.features.title") }}
             </h1>
-            <p class="text-2xl font-normal text-[#5E5E5E] text-center">حلول قانونية دقيقة تدعم نجاحك وتحقق أهدافك</p>
+            <p class="text-2xl font-normal text-[#5E5E5E] text-center">
+                {{ $t("homePage.features.desc") }}
+            </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-20">
             <div class="card boxShadow py-8 px-4 rounded-3xl flex flex-col justify-center items-center gap-4"
@@ -14,7 +16,7 @@
                     <img :src="card.img" :alt="card.title" width="80" height="80" class="w-full max-w-full"
                         loading="lazy" />
                 </div>
-                <p class="text-text text-base font-bold text-center">{{ card.title }}</p>
+                <p class="text-text text-base font-bold text-center">{{ $t(card.title) }}</p>
             </div>
         </div>
     </section>
@@ -29,22 +31,22 @@ import DataSecurity from "../../assets/img/WhyUs/DataSecurity.svg"
 const Cards = [
     {
         id: 1,
-        title: "سرعة الاستجابة والدعم الفوري",
+        title: "homePage.features.points[0]",
         img: Headset
     },
     {
         id: 2,
-        title: "السرية التامة والأمان",
+        title: "homePage.features.points[1]",
         img: DataSecurity
     },
     {
         id: 3,
-        title: "الجودة والدقة في التنفيذ",
+        title: "homePage.features.points[2]",
         img: Goals
     },
     {
         id: 4,
-        title: "دعم متكامل بلغتين (عربي/إنجليزي)",
+        title: "homePage.features.points[3]",
         img: GlobalEducation
     }
 ]

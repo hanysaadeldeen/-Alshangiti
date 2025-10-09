@@ -1,7 +1,7 @@
 <template>
     <main class="privacy  relative ">
 
-        <header-img-section :img="ConsultingContracts" title="سياسة الخصوصية" />
+        <header-img-section :img="ConsultingContracts" title="pages.privacy" />
 
         <section class="relative z-20  max-w-[1315px] mx-auto mt-[120px]">
             <div class="relative container max-sm:px-4 mx-auto px-2">

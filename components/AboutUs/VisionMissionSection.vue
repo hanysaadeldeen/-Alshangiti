@@ -13,10 +13,13 @@
                         </svg>
 
                     </div>
-                    <h1 class="text-white font-bold text-2xl md:text-[40px] md:leading-[72px]  mb-4 md:mb-6">رؤيتنا
+                    <h1 class="text-white font-bold text-2xl md:text-[40px] md:leading-[72px]  mb-4 md:mb-6">
+                        {{ $t("about.visionTitle") }}
+
                     </h1>
-                    <p class="md:mb-6 text-white text-lg md:text-xl font-normal text-justify">
-                        أن تكون المرجع للخدمات القانونية وإدارة المعرفة القانونية (المحلية والعالمية) في قطاع الأعمال.
+                    <p class="md:mb-6 text-white text-lg md:text-xl font-normal max-sm:text-justify">
+
+                        {{ $t("about.visionDesc") }}
 
                     </p>
                 </div>
@@ -36,11 +39,13 @@
                         </svg>
 
                     </div>
-                    <h1 class="text-white font-bold text-2xl md:text-[40px] md:leading-[72px]  mb-4 md:mb-6">رسالتنا
+                    <h1 class="text-white font-bold text-2xl md:text-[40px] md:leading-[72px]  mb-4 md:mb-6">
+                        {{ $t("about.missionTitle") }}
+
                     </h1>
-                    <p class="md:mb-6 text-white text-lg md:text-xl font-normal  text-justify">الشريك القانوني في رحلة
-                        المستثمر
-                        المحلي والدولي.</p>
+                    <p class="md:mb-6 text-white text-lg md:text-xl font-normal  max-sm:text-justify">
+                        {{ $t("about.missionDesc") }}
+                    </p>
                 </div>
             </div>
         </div>

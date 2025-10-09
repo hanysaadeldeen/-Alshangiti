@@ -2,7 +2,7 @@
     <div class="relative border-b border-[#D3D3D3] py-[60px] ">
         <div class="absolute top-0 left-0 h-full w-full bg-text transition-all ease-in-out duration-300"
             :class="isOpen ? 'opacity-100' : 'opacity-0'">
-            <img :src="img" :alt="title" class="w-full h-full object-cover opacity-20">
+            <img :src="img" :alt="$t(title)" class="w-full h-full object-cover opacity-20">
         </div>
         <div class="max-w-[1315px] mx-auto  max-2xl:px-6 flex justify-between items-center relative z-20">
             <div class="w-full ">
@@ -10,11 +10,11 @@
                     <div>
                         <h1 class=" font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] mb-1 transition-all ease-in-out duration-300"
                             :class="isOpen ? 'text-white' : 'text-text'">
-                            {{ title }}
+                            {{ $t(title) }}
                         </h1>
                         <p class=" text-lg md:text-xl font-normal transition-all ease-in-out duration-300"
                             :class="isOpen ? 'text-white' : 'text-[#5E5E5E]'">
-                            {{ description }}
+                            {{ $t(description) }}
                         </p>
 
                     </div>
@@ -27,8 +27,9 @@
                     :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }">
                     <div class="mt-6 flex justify-between items-start lg:items-center max-lg:flex-col max-lg:gap-6">
                         <div class="flex flex-col gap-5">
-                            <p class="text-lg md:text-xl text-white font-normal pl-4 max-w-[656px] text-justify">
-                                {{ descriptionToogle }}
+                            <p class="text-lg md:text-xl text-white font-normal max-w-[656px] text-justify"
+                                :class="locale === 'ar' ? ' pl-4' : ' pr-4'">
+                                {{ $t(descriptionToogle) }}
                             </p>
 
                             <div class="flex gap-3 md:gap-6 justify-start items-center flex-wrap ">
@@ -59,11 +60,12 @@
                             </div>
                         </div>
 
-                        <div class="md:pr-4 md:border-r  border-primary-50 max-w-[466px]">
+                        <div class="  border-primary-50 max-w-[466px]"
+                            :class="locale === 'ar' ? ' md:pr-4 md:border-r' : ' md:pl-4 md:border-l'">
                             <div class="flex gap-x-2 gap-y-4 justify-start flex-wrap">
                                 <div v-for="value in Details"
                                     class="rounded-full  bg-primary-50 text-text py-2 px-4 text-sm w-fit  max-md:text-center">
-                                    {{ value }}
+                                    {{ $t(value) }}
                                 </div>
 
                             </div>
@@ -80,6 +82,7 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 
 defineProps<{
     img: string

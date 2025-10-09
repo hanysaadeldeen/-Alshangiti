@@ -34,7 +34,7 @@
                             <div class="absolute top-1/2 -translate-y-1/2 -right-10">
                                 <img src="~/assets/img/date.svg" alt="date" width="40" height="40" class="-rotate-6 ">
                             </div>
-                            <p>منذ</p>
+                            <p>{{ locale === 'ar' ? 'منذ' : 'since ' }}</p>
                             <p>2005</p>
                             <div class="absolute top-1/2 -translate-y-1/2 -left-10">
                                 <img src="~/assets/img/date.svg" alt="date" width="40" height="40"
@@ -70,22 +70,28 @@
                 </div>
                 <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
                     <h1 class="text-white text-base font-medium mb-6">
-                        استكشف</h1>
+
+                        {{ locale === 'ar' ? 'استكشف' : 'Explore' }}
+                    </h1>
                     <nav>
                         <ul>
                             <li :class="{ 'active': adjustedPath === '/about-us' }">
                                 <nuxt-link :to="localePath('/about-us')">
-                                    من نحن
+
+                                    {{ $t("pages.aboutUs") }}
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath.includes('/blogs') }" class="my-1">
                                 <div>
-                                    المدونة
+
+                                    {{ $t("pages.blog") }}
+
                                 </div>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/contact-us' }">
                                 <nuxt-link :to="localePath('/contact-us')">
-                                    تواصل معنا
+                                    {{ $t("pages.contactUs") }}
+
                                 </nuxt-link>
                             </li>
 
@@ -94,23 +100,23 @@
                 </div>
                 <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
                     <h1 class="text-white text-base font-medium mb-6">
-                        خدماتنا
+                        {{ $t("pages.service") }}
                     </h1>
                     <nav class="text-white">
                         <ul>
                             <li :class="{ 'active': adjustedPath === '/consulting-arbitration' }">
                                 <nuxt-link :to="localePath('/consulting-arbitration')">
-                                    خدمات التقاضي و التحكيم
+                                    {{ $t("pages.contracts") }}
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/consulting-contracts' }" class="my-4">
                                 <nuxt-link :to="localePath('/consulting-contracts')">
-                                    خدمات الاستشارات و العقود
+                                    {{ $t("pages.litigation") }}
                                 </nuxt-link>
                             </li>
                             <li :class="{ 'active': adjustedPath === '/consulting-projects' }">
                                 <nuxt-link :to="localePath('/consulting-projects')">
-                                    خدمات المشاريع
+                                    {{ $t("pages.projects") }}
                                 </nuxt-link>
                             </li>
 
@@ -119,26 +125,38 @@
                     </nav>
                 </div>
                 <div class="">
-                    <h1 class="text-white text-base font-medium mb-6 border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
+                    <!-- <h1 class="text-white text-base font-medium mb-6 border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
                         خبرة في قطاع الأعمال <span class="text-[#EEC882]">
                             منذ 2005
                         </span>
-                    </h1>
-                    <nav>
+                    </h1> -->
+                    <div class="text-white text-base font-medium mb-6 capitalize  border-[#EEC882]  py-2.5"
+                        :class="locale === 'ar' ? 'border-r-[2.5px] pr-2.5' : 'border-l-[2.5px] pl-2.5'">
+
+                        <p>
+                            <span v-if="locale === 'ar'">
+                                خبرة في قطاع الأعمال
+                                <span class="text-[#EEC882]">منذ 2005</span>
+                            </span>
+                            <span v-else>
+                                Business experience
+                                <span class="text-[#EEC882]">since 2005</span>
+                            </span>
+                        </p>
+
+                    </div>
+                    <nav class="max-w-[350px]">
                         <ul>
-
-
                             <li class="pb-0 flex items-center gap-4 group cursor-pointer">
                                 <a href="https://maps.app.goo.gl/BwhvmWm2MVtbuNcj6?g_st=aw" target="_blank"
                                     class="flex items-center gap-2 group cursor-pointer">
                                     <i
                                         class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
                                     <span>
-                                        <!-- 
-                                        جدة ‑ حي الخالدية ‑ برج ڤيو تاور | الدور التاسع -->
-                                        جدة ‑ حي الخالدية ‑
+                                        <!-- جدة ‑ حي الخالدية ‑
                                         برج جي ڤيو | الطابق 9
-                                        <br> مكتب رقم 904
+                                        <br> مكتب رقم 904 -->
+                                        {{ $t("contact.JeddahLocation") }}
                                     </span>
                                 </a>
                             </li>
@@ -148,14 +166,13 @@
                                     <i
                                         class="fa-solid fa-location-dot  text-TextM group-hover:text-[#EEC882]   transition-all ease-in-out duration-300"></i>
                                     <span>
-
-                                        المدينة المنورة
+                                        {{ $t("contact.Al-Madinah") }}
+                                        <!-- المدينة المنورة
                                         حي العهن
                                         طريق الامير عبد المحسن <br>
                                         المركز الماسي للاعمال
                                         الطابق 2
-                                        مكتب رقم 5
-
+                                        مكتب رقم 5 -->
                                     </span>
                                 </a>
                             </li>
@@ -178,19 +195,24 @@
                     </div>
                 </div>
                 <p class="text-base font-normal text-white">
-                    © 2025 جميع الحقوق محفوظة مكتب Al-Shanqiti بواسطة
+
+
+                    {{ locale === 'ar' ? '© 2025 جميع الحقوق محفوظة مكتب Al-Shanqiti بواسطة' :
+                        'All rights reserved Al-Shanqiti Office by' }}
                     <a href="https://do.com.sa/" target="_blank">
                         DO
                     </a>
                 </p>
                 <div class="flex gap-4 md:gap-6 items-center text-white">
-                    <nuxt-link to="/terms" :class="{ 'active': adjustedPath === '/terms' }">
-                        <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">الشروط
-                            والأحكام</p>
+                    <nuxt-link :to="localePath('/terms')" :class="{ 'active': adjustedPath === '/terms' }">
+                        <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">
+                            {{ $t("pages.terms") }}
+                        </p>
                     </nuxt-link>
-                    <nuxt-link to="/privacy" :class="{ 'active': adjustedPath === '/privacy' }">
-                        <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">سياسة
-                            الخصوصية</p>
+                    <nuxt-link :to="localePath('/privacy')" :class="{ 'active': adjustedPath === '/privacy' }">
+                        <p class="text-base font-normal hover:text-[#EEC882] duration-300 ease-in-out ">
+                            {{ $t("pages.privacy") }}
+                        </p>
                     </nuxt-link>
                 </div>
             </div>

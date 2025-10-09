@@ -11,11 +11,11 @@
                 </div>
                 <h1 class=" mb-10 font-bold text-xl md:text-2xl lg:text-[40px] transition-all duration-500 ease-in-out"
                     :class="item.active ? 'opacity-100' : 'opacity-20'">
-                    {{ item.title }}
+                    {{ $t(item.title) }}
                 </h1>
                 <p class="text-lg md:text-xl text-justify lg:text-2xl font-normal text-[#5E5E5E] transition-all duration-500 ease-in-out"
                     :class="item.active ? 'opacity-100' : 'opacity-20'">
-                    {{ item.desc }}
+                    {{ $t(item.desc) }}
                 </p>
             </div>
         </div>
@@ -27,9 +27,9 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const items = ref([
-    { title: "قبل عام 2005", desc: "بدأت رحلة المؤسس، محمود الشنقيطي، بالعمل في الإدارة القانونية بوزارة التجارة والصناعة في الرياض. خلال هذه الفترة، اكتسب خبرة عميقة في مختلف الأقسام القانونية المرتبطة بقطاع الأعمال.", active: false },
-    { title: "عام 2005", desc: "تأسس محمود الشنقيطي للمحاماة والاستشارات القانونية عام 2005م، وقد حقق اعترافًا وتقديرًا مهنيًا واسعًا، ونموذجا متقدما لفريق محلي يعمل وفقاً للمعايير الدولية في قطاع المحاماة والاستشارات القانونية. إنّ قيادات التحول السعودية من الفئة الشابة ثنائي اللغة محليًا ودوليًا، وسنحافظ على نفس هذا الخط العمري بفريق في أغلبه من الجيل الجديد الديناميكي، والذي يتميز بتبسيط عمله والاختصار وتنفيذ الخدمة بذكاء مما ينعكس على مناولة الخدمة بقيمة عادلة. ", active: false },
-    { title: "منذ عام 2005 وحتى الآن", desc: "نعمل بشكل يومي على تعميق معرفتنا النظرية وتطبيقاتها العملية في مسارنا مستلهمين فلسفة قطاع الأعمال بتحويل خامتنا المصقولة الى منحوتة فريدة.", active: false },
+    { title: "about.before2005.title", desc: "about.before2005.content", active: false },
+    { title: "about.in2005.title", desc: "about.in2005.content", active: false },
+    { title: "about.since2005.title", desc: "about.since2005.content", active: false },
 ]);
 
 const historyRefs = ref([]);

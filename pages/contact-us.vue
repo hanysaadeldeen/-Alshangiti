@@ -2,13 +2,18 @@
     <main class="contactPage   max-xl:px-6">
         <div class="w-full max-w-[1315px] mx-auto mt-[60px]  md:mt-[120px]">
             <div class="text-center mb-10 md:mb-20 max-w-[1078px] mx-auto">
-                <h1 class="text-[32px] md:text-[40px] lg:text-[52px]  text-text font-bold mb-2">تواصل
-                    معنا
+                <h1 class="text-[32px] md:text-[40px] lg:text-[52px]  text-text font-bold mb-2">
+                    {{ $t("contact.title") }}
                 </h1>
-                <p class="text-[#5E5E5E] font-normal text-lg md:text-xl lg:text-2xl">يسعدنا في أن نكون شريكك القانوني.
-                    سواء كانت
-                    لديك استفسارات حول خدماتنا، أو تحتاج إلى استشارة قانونية، أو ترغب في بدء شراكة جديدة، فإن فريقنا على
-                    أتم الاستعداد لتقديم المساعدة.</p>
+                <p v-if="locale === 'ar'" class="text-[#5E5E5E] font-normal text-lg md:text-xl lg:text-2xl">
+                    سواء كانت لديك استفسارات حول خدماتنا، أو تحتاج إلى استشارة قانونية، أو ترغب في بدء شراكة جديدة، فإن
+                    فريقنا على أتم الاستعداد لتقديم المساعدة.
+                </p>
+                <p v-if="locale === 'en'" class="text-[#5E5E5E] font-normal text-lg md:text-xl lg:text-2xl">
+                    We are happy to be your legal partner. Whether you have questions about our services, need legal
+                    advice, or are looking to start a new partnership, our team is ready to help.
+
+                </p>
             </div>
             <div class="form flex md:gap-16 max-md:flex-col justify-between mb-16 md:mb-[120px] gap-10">
                 <FormSec />
@@ -29,11 +34,9 @@
                                     </svg>
                                 </div>
                                 <p class="text-black font-normal text-base md:text-lg">
-
-                                    جدة ‑ حي الخالدية ‑ برج جي ڤيو | الطابق 9 – مكتب رقم 904
+                                    {{ $t("contact.JeddahLocation") }}
                                 </p>
                             </a>
-
                         </div>
                     </div>
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
@@ -52,21 +55,15 @@
                                     </svg>
                                 </div>
                                 <p class="text-black font-normal text-base md:text-lg">
-                                    المدينة المنورة - حي العهن - طريق الامير عبد المحسن - المركز الماسي للأعمال - الطابق
-                                    2 - مكتب رقم 5
+                                    {{ $t("contact.Al-Madinah") }}
                                 </p>
                             </a>
-
                         </div>
                     </div>
-
-
                     <div class="boxShadow flex items-center justify-between rounded-2xl p-4 md:p-6 lg:p-8">
                         <div>
-
                             <a href='https://wa.me/966126065682' target="_blank"
                                 class="flex items-center justify-center gap-4 cursor-pointer">
-
                                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -78,7 +75,6 @@
                                         stroke="#617961" stroke-width="2.66667" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-
                                 <p class="text-black font-normal  text-base md:text-lg" dir="ltr">
                                     +966 126065682
                                 </p>
@@ -100,29 +96,20 @@
                                         stroke="#EEC882" stroke-width="1.77778" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-
-
                                 <p class="text-black font-normal text-base md:text-lg">
-
                                     info@shangiti.com
                                 </p>
                             </a>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
-
-
         </div>
     </main>
-
 </template>
 
 <script setup lang="ts">
-
+const { locale } = useI18n()
 
 const openMenu = ref(false)
 

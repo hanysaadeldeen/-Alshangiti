@@ -1,3 +1,303 @@
 {
-  "welcome": "welcome"
+  "pages": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "service": "Service",
+    "contracts": "Contracts and Consulting",
+    "litigation": "Litigation and Arbitration",
+    "projects": "Project Services",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "privacy": "Privacy",
+    "terms": "Terms and Conditions"
+  },
+  "homePage": {
+    "home": {
+      "title": "Home",
+      "hero": {
+        "headline": "THE LEGAL PARTNER FOR THE INVESTMENT JOURNEY",
+        "subtext": "Proactive Legal Solutions that Safeguard Your Assets and Empower Sustainable Growth in the Saudi Market"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "contentOne": "ALSHANGITI & ASSOCIATES LAW FIRM was established in 2005. Since then, the firm has gained widespread professional recognition and appreciation, and introduced an advanced model of local team-effectiveness, which works in accordance with international standards in the field of litigation and legal consultations. ",
+      "contentTwo": ". Just as the leaders of Saudi’s strategic transformation on the national and international stages are bilingual young ones, ALSHANGITI & ASSOCIATES LAW FIRM will maintain this same age line. Therefore, our team is of the new dynamic generation, which is characterized by simplifying its work, shortening it, and executing the service intelligently.",
+      "contentThree": "This will be reflected in the service handling with competitive value. We will also work on a daily basis to deepen our theoretical knowledge and its practical applications in our path, inspired by the business philosophy of transforming our polished material into a unique sculpture.",
+      "cta": "Know more about us…"
+    },
+    "features": {
+      "title": "What Distinguishes Us",
+      "desc": "Tailored, precise legal solutions that propel your success and help you achieve your strategic objectives.",
+      "points": [
+        "Swift responsiveness and immediate, dependable support.",
+        "Uncompromising confidentiality and robust security.",
+        "Excellence and meticulous precision in execution.",
+        "Comprehensive bilingual support (Arabic / English)."
+      ],
+      "stats": {
+        "experience": "years of distinguished experience in legal practice and business consultancy.",
+        "clients": "satisfied clients across commercial and investment sectors.",
+        "cases": "cases and disputes expertly managed and successfully resolved."
+      }
+    },
+    "services": {
+      "title": "How Can We Help You?",
+      "intro": "Specialised legal services designed to meet every aspect of your business legal needs in Saudi Arabia — supported by a team with over 20 years of proven expertise.",
+      "services": [
+        {
+          "title": "1. Litigation and Arbitration",
+          "description": "Litigation - Arbitration - Dispute Resolution",
+          "descriptionToggle": "We provide strong legal representation before all Saudi courts, from the primary court to the Supreme Court. We also offer local and international arbitration, dispute mediation, and effective debt collection services.",
+          "img": "cta",
+          "details": [
+            "Administrative Cases",
+            "Commercial Cases",
+            "Construction Cases",
+            "Labor Cases",
+            "Customs Cases",
+            "Competition Cases",
+            "International Cases",
+            "Arbitration",
+            "Economic Cases",
+            "Civil Cases",
+            "Debt Collection"
+          ],
+          "link": "consulting-arbitration"
+        },
+        {
+          "title": "2. Consulting and Contracts",
+          "description": "Contract Drafting - Legal Review - Preventive Consulting",
+          "descriptionToggle": "Our legal recommendations are based on precise and well-founded advice from experienced legal practitioners. We ensure contracts are professionally drafted, reviewed, and analyzed in both Arabic and English, providing preventive and strategic legal consultation throughout the business journey.",
+          "img": "ConsultingContracts",
+          "details": [
+            "Contract Drafting",
+            "Agreement Review",
+            "Legal Consultation",
+            "Contractual Dispute Resolution",
+            "Employment & Partnership Contracts",
+            "Legal Negotiation",
+            "Risk Management",
+            "Rights & Obligations Protection"
+          ],
+          "link": "consulting-contracts"
+        },
+        {
+          "title": "3. Project Services",
+          "description": "Establishment - Mergers - Governance - Licensing",
+          "descriptionToggle": "Between defined procedural stages lies a crucial business domain known as project services, which may include investment ideas, intellectual and value-based elements such as trademarks and models, as well as ensuring growth continuity through brand protection and exclusive agency or franchise operations.",
+          "img": "table",
+          "details": [
+            "Licenses and Registrations",
+            "Investment and Deals",
+            "Intellectual Property",
+            "Logistics Services"
+          ],
+          "link": "consulting-projects"
+        }
+      ]
+    },
+    "licenses": {
+      "title": "Licensing & Accreditation",
+      "subtitle": "Authorised and accredited to deliver reliable and secure legal services.",
+      "items": {
+        "moj": "Ministry of Justice Licence No.",
+        "sba": "Saudi Bar Association Licence No."
+      },
+      "blog": "Our Blog"
+    }
+  },
+  "about": {
+    "before2005": {
+      "title": "Before 2005",
+      "content": "The journey of our founder, Mr. Mahmoud Alshangiti, began within the Legal Department of the Ministry of Commerce and Industry in Riyadh. During this period, he acquired deep and comprehensive experience across the various legal divisions associated with the business sector."
+    },
+    "in2005": {
+      "title": "In 2005",
+      "content": "ALSHANGITI & ASSOCIATES LAW FIRM was established in 2005, earning broad professional recognition and distinction as a pioneering Saudi law firm operating in line with international standards. The firm embodies Saudi Arabia’s emerging generation of bilingual legal professionals, locally and internationally, and remains committed to preserving this dynamic and youthful character within its team. Our lawyers are distinguished by their clarity, efficiency, and intelligence in delivering services that reflect genuine value and professionalism."
+    },
+    "since2005": {
+      "title": "Since 2005 until now",
+      "content": "Each day, we continue to deepen our theoretical understanding and enhance its practical application—drawing inspiration from the business sector’s philosophy of transforming refined raw talent into a uniquely crafted masterpiece."
+    },
+    "team": "Our Legal Team",
+    "visionTitle": "Our Vision: ",
+    "visionDesc": "To be the reference for legal services and management of documentary legal knowledge in the Business Sector.",
+    "missionTitle": "Our Mission:",
+    "missionDesc": " To be the legal partner in the local and international investor journey.",
+    "values": {
+      "title": "Our Core Values",
+      "items": [
+        {
+          "name": "Integrity",
+          "description": "A steadfast commitment to the principles of professional conduct and institutional compliance."
+        },
+        {
+          "name": "Responsibility",
+          "description": "Cultivating a culture of accountability through trust, empowerment, and high ethical standards—ensuring that our team’s passion remains grounded in purpose and excellence."
+        },
+        {
+          "name": "Skills",
+          "description": "Professional and creative team that manages knowledge, develops, and innovates business models and legal services in the Business Sector."
+        },
+        {
+          "name": "Flexibility",
+          "description": "Continuous and predictive attention to changing local and international business environments, and creating a flexible, global-aligned practical integration into methodology and practice."
+        }
+      ]
+    },
+    "connect": "Connect with Our Legal Team",
+    "explore": "Explore",
+    "services": {
+      "title": "Our Services",
+      "items": [
+        "Litigation and Arbitration Services",
+        "Advisory and Contract Services",
+        "Projects and Commercial Ventures"
+      ]
+    },
+    "experience": "Expertise in the Business Sector since 2005.",
+    "locations": {
+      "jeddah": "Jeddah: Al-Khalidiyah District, Prince Saud Al-Faisal Street, J View Tower, 9th Floor, Office No. 904.",
+      "madinah": "Al-Madinah Al-Munawarah: Al-Ahn District, Prince Abdulmohsin Road, Al-Masi Business Centre, 2nd Floor, Office No. 5."
+    }
+  },
+  "services": {
+    "mainTitle": "Our Services",
+    "projectServices": {
+      "title": "Project Services",
+      "question": "What are Project Services?",
+      "descriptionOne": "A particularly important scope for The Business Sector located by and between two times and a specific procedural sequence, which professionally described as projects. Some of them may be an investment idea accompanied by what is intellectual and valuable, such as trademarks and designs, and what guarantees continuity and growth, such as protecting products from imitation and exclusivity of working in projects through agencies and franchising. Among them, too, are procedural ones, such as issuing the necessary licenses and records to ensure the establishment and operation of commercial facilities legally. Also, some of them guarantee the integrity of commercial businesses, such as mergers, acquisitions, and financing to ensure the continuity of facilities in accordance with what Saudi laws require. ",
+      "descriptionTwo": "These legal projects are the most important methods of legally preserving the value and gains of commercial and investment projects, and an integral component of all stages of the investment journey. Their ownership must be documented in accordance with what the law specifies, along with a legal opinion on the investor’s business, and compliance audited in accordance with the requirements of investment laws. We employ our in-depth experience to support our clients in all Legal and strategic aspects related to their projects in The Business Sector.",
+      "details": "Our Detailed Services",
+      "cta": "You are one step away from complete legal assurance."
+    },
+    "litigation": {
+      "title": "Litigation and Arbitration",
+      "question": "What Are Litigation and Arbitration Services?",
+      "description": [
+        "Litigation and arbitration services involve legal representation provided to individuals and companies to resolve disputes efficiently and effectively. This includes advocacy before courts of all types and levels, as well as comprehensive support in arbitration proceedings before specialized tribunals and institutions.",
+        "Under the right granted to us by the Saudi Code of Law Practice, we have worked since our first year on accumulated applications in the Saudi market. This enhanced our legal skills in the field of litigation services and enabled us to successfully manage and settle many disputes. Therefore, we at Alshangiti & Associates Law Firm aim to employ our experience to support our clients by litigating before courts, quasi-judicial bodies, arbitration centers, and panels.",
+        "Litigation before the Saudi judiciary requires mastery of both formal and substantive aspects due to its unique nature. The main legal documents, such as the judiciary system, undergo rapid changes due to restructuring classifications of cases and courts at all levels. Complementary principles, decisions, and regulations issued by various judicial authorities may not always be accessible to non-specialists.",
+        "One of the most common misconceptions is assigning litigation to an unlicensed local provider or an unqualified foreign one unfamiliar with legislative and structural developments. Some cases may seem complex to outsiders but are straightforward for us as a specialized provider. Conversely, we can simplify complex matters. Therefore, the decision to assign such tasks must follow sound governance.",
+        "Through our extensive professional experience managing disputes, documented in our (Set of Rulings) publication, each ruling includes the claim statement, defense memoranda, applicable laws, and judges’ reasoning. This internal knowledge base ensures our reliability and depth of understanding.",
+        "After more than 20 years of providing dispute management services in the business sector, we have developed deep familiarity with commercial, administrative, labor, and criminal courts, as well as administrative committees with judicial authority, where institutions often appear to protect their activities.",
+        "Our efforts extend beyond courtroom litigation to professional mediation, settlements, and arbitration representation in accordance with agreed terms or arbitration clauses.",
+        "We prioritize the quality of defense strategies, implement them carefully, communicate them transparently, and collaborate with clients through periodic reports and pre-submission reviews of pleadings and memoranda."
+      ],
+      "details": "Our Detailed Services",
+      "cta": "Don’t let disputes escalate — contact us today."
+    },
+    "contracts": {
+      "title": "Contracts and Consulting",
+      "question": "What Are Advisory and Contract Services?",
+      "intro": "Advisory and contract services form a fundamental pillar of any commercial enterprise. They provide both preventive and supportive legal protection. This service encompasses two main dimensions:",
+      "consulting": {
+        "title": "Legal Consultation",
+        "text": "Legal consultations are the second family of the profession and, at the same time, it is the central hub of all branches of the law. It has a variety of patterns and interfere with all vertical and horizontal levels, and this interference shall be controlled, whether it was within this family or outside it."
+      },
+      "contracts": {
+        "title": "Contracts",
+        "text": "Contracts in Saudi Arabia often intersect with the principles of Islamic jurisprudence. Therefore, our team works diligently to prepare, draft, review, and analyze contracts throughout the investment journey in both Arabic and English, tailored to the local environment. The primary objective is preventive protection of commercial entities and minimizing contractual dispute risks."
+      },
+      "details": "Our Detailed Services",
+      "cta": "Do not wait until a dispute arises. Request our service today and start your business journey with complete legal assurance.",
+      "buttons": {
+        "requestService": "Request Service",
+        "bookConsultation": "Book a Legal Consultation"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "JeddahLocation": "Jeddah: Al-Khalidiyah District, Prince Saud Al-Faisal Street, J View Tower, 9th Floor, Office No. 904.",
+    "Al-Madinah": "Al-Madinah Al-Munawarah: Al-Ahn District, Prince Abdulmohsin Road, Al-Masi Business Centre, 2nd Floor, Office No. 5."
+  },
+  "privacy": {
+    "heroSection": {
+      "title": "Privacy Policy",
+      "paragraph": "This policy explains how your data is collected and protected by Shangiti according to the highest standards of security and transparency."
+    },
+    "sectionOne": {
+      "title": "1. Introduction",
+      "description": "Shangiti is committed to protecting the privacy of our customers and partners, handling their data with strict confidentiality in accordance with globally recognized security and quality standards."
+    },
+    "sectionTwo": {
+      "title": "2. Information We Collect",
+      "data": {
+        "itemOne": "Personal Data: Name, email address, phone number.",
+        "itemTwo": "Sector or Solution Data: Such as type of establishment or service required.",
+        "itemThree": "Technical Data: IP address and browsing history on the website."
+      }
+    },
+    "sectionThree": {
+      "title": "3. How We Use the Information",
+      "data": {
+        "itemOne": "Providing disinfection solutions and ozone technologies.",
+        "itemTwo": "Communicating with customers regarding orders or inquiries.",
+        "itemThree": "Continuously improving the website experience and developing services."
+      }
+    },
+    "sectionFour": {
+      "title": "4. Data Protection",
+      "description": "We use advanced security systems and technical and administrative procedures to protect your data from unauthorized access, modification, or deletion."
+    },
+    "sectionFive": {
+      "title": "5. Information Sharing",
+      "description": "We do not share your data with any third party except when necessary to deliver the service or to comply with local and international laws."
+    },
+    "sectionSix": {
+      "title": "6. User Rights",
+      "description": "You may request to view, modify, or delete your personal data by contacting us directly."
+    },
+    "sectionSeven": {
+      "title": "7. Cookies",
+      "description": "Our website uses cookies to enhance browsing experience and better understand customer needs."
+    },
+    "sectionEight": {
+      "title": "8. Changes to This Policy",
+      "description": "We may update this privacy policy from time to time, and any changes will be clearly and transparently posted here."
+    }
+  },
+  "terms": {
+    "heroSection": {
+      "title": "Terms & Conditions",
+      "paragraph": "These terms define the rules and conditions governing your use of Shangiti’s website and services."
+    },
+    "sectionOne": {
+      "title": "1. Introduction",
+      "description": "These terms govern your use of Shangiti’s website and services. Accessing or using the site constitutes your agreement to these terms."
+    },
+    "sectionTwo": {
+      "title": "2. Acceptance of Terms",
+      "description": "By using Shangiti’s website, you agree to comply with all the terms and conditions stated herein."
+    },
+    "sectionThree": {
+      "title": "3. Website Usage",
+      "data": {
+        "itemOne": "Legal and Legitimate Use: You must use the site lawfully.",
+        "itemTwo": "No Copying or Reuse: You may not copy or reuse any content without written permission from Shangiti."
+      }
+    },
+    "sectionFour": {
+      "title": "4. Intellectual Property Rights",
+      "description": "All texts, designs, images, devices, and logos are owned by Shangiti and protected under local and international laws."
+    },
+    "sectionFive": {
+      "title": "5. Limitation of Liability",
+      "description": "Shangiti is not liable for any direct or indirect damages resulting from the use of the website or its technologies."
+    },
+    "sectionSix": {
+      "title": "6. Services",
+      "description": "The provision of devices and services is subject to contracts or agreements signed with clients or sectors."
+    },
+    "sectionSeven": {
+      "title": "7. Changes to Terms",
+      "description": "Shangiti reserves the right to modify these terms at any time. The updated version will be posted on this page."
+    },
+    "sectionEight": {
+      "title": "8. Governing Law",
+      "description": "These terms are governed by the laws of the Kingdom of Saudi Arabia."
+    }
+  }
 }

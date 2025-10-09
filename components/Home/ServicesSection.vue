@@ -3,10 +3,12 @@
         <div class="border-b border-[#D3D3D3] pb-[76px]">
             <div class="max-w-[1315px] mx-auto  max-2xl:px-6">
                 <h1 class="text-text mb-2 font-bold text-2xl lg:text-[40px] lg:!leading-[72px] max-w-[624px]">
-                    كيف يمكننا مساعدتك ؟
+
+                    {{ $t("homePage.services.title") }}
                 </h1>
                 <p class="text-[#5E5E5E] text-lg md:text-xl lg:text-2xl font-normal max-w-[624px] text-justify">
-                    خدمات قانونية متخصصة تغطي كافة احتياجات أعمالكم في السعودية، بدعم فريق يتمتع بخبرة 20 عاماً.
+                    {{ $t("homePage.services.intro") }}
+
                 </p>
             </div>
         </div>
@@ -26,55 +28,55 @@ import table from "../../assets/img/pannel/table.webp"
 
 const Services = [
     {
-        title: "1. التقاضي والتحكيم",
-        description: "التقاضي - التحكيم - تسوية المنازعات",
-        descriptionToogle: "نوفر تمثيلاً قانونياً قوياً في كافة المحاكم السعودية بجميع درجاتها، بدءاً من المحكمة الابتدائية ووصولاً إلى المحكمة العليا. نقدم أيضاً خدمات التحكيم المحلي والدولي، وإدارة المنازعات عبر الوساطة والتسوية الودية، ومتابعة تحصيل الديون والمستحقات المالية بكل فعالية.",
+        title: "homePage.services.services[0].title",
+        description: "homePage.services.services[0].description",
+        descriptionToogle: "homePage.services.services[0].descriptionToggle",
         img: cta,
         Details: [
-            "القضايا الإدارية",
-            "القضايا التجارية",
-            "القضايا الإنشائية",
-            "القضايا العمالية",
-            "القضايا الجمركية",
-            "قضايا المنافسة",
-            "القضايا الدولية",
-            "التحكيم",
-            "القضايا الاقتصادية",
-            "القضايا المدنية",
-            "التحصيل",
+            "homePage.services.services[0].details[0]",
+            "homePage.services.services[0].details[1]",
+            "homePage.services.services[0].details[2]",
+            "homePage.services.services[0].details[3]",
+            "homePage.services.services[0].details[4]",
+            "homePage.services.services[0].details[5]",
+            "homePage.services.services[0].details[6]",
+            "homePage.services.services[0].details[7]",
+            "homePage.services.services[0].details[8]",
+            "homePage.services.services[0].details[9]",
+            "homePage.services.services[0].details[10]",
         ],
         link: "consulting-arbitration"
     },
     {
-        title: "2. الاستشارات والعقود",
-        description: "صياغة العقود . المراجعة القانونية . الاستشارات الوقائية",
-        descriptionToogle: "ترتكز توصياتنا كخبراء للقانون التطبيقي على دقة المشورة القانونية المعطاة من ذوي الباع الطويل، لأنها تنهض على أصول فنية في إعدادها، بفهم الوقائع واستجلاب التشريعات المناسبة، وصولا إلى الرأي الاستشاري الأمثل، ونؤكد أن الأصول الفنية منفردة لا تحقق الغاية المنشودة؛ فكلما كان الفهم أقرب للتجارب والخبرات كلما كانت الخلاصة أكثر صلابة. إن هذه التوصيات هي شعارنا في تقديم خدماتنا الاستشارية والتي تشمل اللغتين العربية والانجليزية. كما ترتكز توصياتنا على سلامة وثيقة العقد لأن النص العقدي أساس في الالتزامات والواجبات وفقا لإرادة الأطراف.",
+        title: "homePage.services.services[1].title",
+        description: "homePage.services.services[1].description",
+        descriptionToogle: "homePage.services.services[1].descriptionToggle",
         img: ConsultingContracts,
         Details: [
-            "صياغة العقود",
-            "مراجعة الاتفاقيات",
-            "الاستشارات القانونية",
-            "حل النزاعات التعاقدية",
-            "عقود العمل والشراكات",
-            "التفاوض القانوني",
-            "إدارة المخاطر",
-            "حماية الحقوق والالتزامات",
+            "homePage.services.services[1].details[0]",
+            "homePage.services.services[1].details[1]",
+            "homePage.services.services[1].details[2]",
+            "homePage.services.services[1].details[3]",
+            "homePage.services.services[1].details[4]",
+            "homePage.services.services[1].details[5]",
+            "homePage.services.services[1].details[6]",
+            "homePage.services.services[1].details[7]",
         ],
         link: "consulting-contracts"
     },
 
     {
-        title: "3. خدمات المشاريع",
-        description: "التأسيس . الاندماج . الحوكمة . التراخيص",
-        descriptionToogle: "ما بين زمنين وتسلسل إجرائي محدد، يقع نطاق بالغ الأهمية لقطاع الأعمال يوصف مهنيا بالمشاريع، والتي قد تكون فكرة استثمارية يرافقها ما هو ذهني وقيمي، كالعلامات والنماذج، وما يضمن الاستمرار والنمو، كحماية المنتجات من التقليد وحصرية العمل في المشاريع عن طريق الوكالات والامتياز. ",
+        title: "homePage.services.services[2].title",
+        description: "homePage.services.services[2].description",
+        descriptionToogle: "homePage.services.services[2].descriptionToggle",
         img: table,
         Details: [
-            "السجلات و التراخيص",
-            "الاستثمار و الصفقات",
-            "الملكية الفكرية",
-            "الخدمات اللوجيستية",
+            "homePage.services.services[2].details[0]",
+            "homePage.services.services[2].details[1]",
+            "homePage.services.services[2].details[2]",
+            "homePage.services.services[2].details[3]",
         ],
-        link: "consulting-projects"
+        link: "consulting-arbitration"
     },
 ]
 </script>

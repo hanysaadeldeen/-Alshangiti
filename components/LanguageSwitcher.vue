@@ -26,10 +26,10 @@ const currentLocale = ref(locale.value);
 
 
 const switchLanguage = async () => {
-  // const newLocale = currentLocale.value === "en" ? "ar" : "en";
-  // document.documentElement.dir = newLocale === "ar" ? "rtl" : "ltr";
-  // currentLocale.value = newLocale;
-  // await setLocale(newLocale);
+  const newLocale = currentLocale.value === "en" ? "ar" : "en";
+  document.documentElement.dir = newLocale === "ar" ? "rtl" : "ltr";
+  currentLocale.value = newLocale;
+  await setLocale(newLocale);
 };
 </script>
 

@@ -6,28 +6,39 @@
                 <div class="flex items-center justify-between ">
                     <div class="flex items-center justify-between gap-6">
                         <nuxt-link :to="localePath('index')" class="block relative ">
-                            <img src="~/assets/img/Logo.svg" :class="locale === 'ar' ? '' : 'hidden'"
-                                class="h-[40px] md:h-[50px] w-fit  xl:h-[57px] relative " alt="alshangiti" height="57px"
-                                width="220" loading="eager" fetchpriority="high" />
+                            <img src="~/assets/img/Logo.svg" class="h-[40px] md:h-[50px] w-fit  xl:h-[57px] relative "
+                                alt="alshangiti" height="57px" width="220" loading="eager" fetchpriority="high" />
                         </nuxt-link>
-                        <h1
-                            class="hidden md:inline text-white text-base font-medium  border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
-                            خبرة في قطاع الأعمال <span class="text-[#EEC882]">
-                                منذ 2005
-                            </span>
-                        </h1>
+                        <div class="hidden md:inline text-white text-base font-medium capitalize  border-[#EEC882]  py-2.5"
+                            :class="locale === 'ar' ? 'border-r-[2.5px] pr-2.5' : 'border-l-[2.5px] pl-2.5'">
+
+                            <p>
+                                <span v-if="locale === 'ar'">
+                                    خبرة في قطاع الأعمال
+                                    <span class="text-[#EEC882]">منذ 2005</span>
+                                </span>
+                                <span v-else>
+                                    Business experience
+                                    <span class="text-[#EEC882]">since 2005</span>
+                                </span>
+                            </p>
+
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between gap-6 ">
+                    <div class="flex items-center justify-between  ">
 
 
                         <nav class="relative hidden lg:block h-full">
                             <ul class="flex items-center">
                                 <li :class="adjustedPath === '/' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('index')">الرئيسية</nuxt-link>
+                                    <nuxt-link :to="localePath('index')">
+                                        {{ $t("pages.home") }}
+                                    </nuxt-link>
                                 </li>
-
                                 <li :class="adjustedPath === '/about-us' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('about-us')">من نحن</nuxt-link>
+                                    <nuxt-link :to="localePath('about-us')">
+                                        {{ $t("pages.aboutUs") }}
+                                    </nuxt-link>
                                 </li>
 
                                 <!-- هنا: اجعل الـ li هو الـ relative و استخدم group لعرض القائمة عند hover -->
@@ -36,7 +47,8 @@
 
                                         <span class="cursor-pointer"
                                             :class="adjustedPath.includes('consulting') ? 'active' : ''">
-                                            خدماتنا
+                                            {{ $t("pages.service") }}
+
                                         </span>
                                         <i class="fa-solid fa-chevron-up text-white transition-all ease-in-out duration-300"
                                             :class="!openMenu ? '-rotate-180' : 'rotate-0'"></i>
@@ -45,23 +57,26 @@
                                     <div class=" absolute top-[60px] xl:top-[66px] right-0 mt-2 w-fit min-w-[220px] p-6 flex flex-col
                                         items-start bg-primary-600 z-50 transform transition-all duration-200"
                                         :class="openMenu ? 'opacity-100 visible translate-y-0' : 'opacity-100 invisible -translate-y-2'">
-                                        <nuxt-link @click="openMenu = false" to="consulting-contracts"
+                                        <nuxt-link @click="openMenu = false" :to="localePath('consulting-contracts')"
                                             class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                            الاستشارات والعقود
+                                            {{ $t("pages.contracts") }}
                                         </nuxt-link>
-                                        <nuxt-link @click="openMenu = false" to="consulting-arbitration"
+                                        <nuxt-link @click="openMenu = false" :to="localePath('consulting-arbitration')"
                                             class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                            التقاضي والتحكيم
+                                            {{ $t("pages.litigation") }}
                                         </nuxt-link>
-                                        <nuxt-link @click="openMenu = false" to="consulting-projects"
+                                        <nuxt-link @click="openMenu = false" :to="localePath('consulting-projects')"
                                             class="block py-3 text-white hover:text-secondary font-medium text-base">
-                                            خدمات المشاريع
+                                            {{ $t("pages.projects") }}
                                         </nuxt-link>
                                     </div>
                                 </li>
 
                                 <li :class="adjustedPath === '/blogs' ? 'active' : ''">
-                                    <nuxt-link :to="localePath('blogs')">المدونة</nuxt-link>
+                                    <nuxt-link :to="localePath('blogs')">
+                                        {{ $t("pages.blog") }}
+
+                                    </nuxt-link>
                                 </li>
                             </ul>
                         </nav>
@@ -69,11 +84,12 @@
                             <ul>
                                 <li :class="adjustedPath === '/contact-us' ? 'active' : ''">
                                     <nuxt-link :to="localePath('contact-us')">
-                                        تواصل معنا
+                                        {{ $t("pages.contactUs") }}
+
                                     </nuxt-link>
                                 </li>
                             </ul>
-                            <!-- <LanguageSwitcher /> -->
+                            <LanguageSwitcher />
                         </div>
                     </div>
                     <div class="lg:hidden text-2xl cursor-pointer sm:text-3xl">
@@ -168,9 +184,9 @@
                                 </li>
                             </ul>
                         </nav>
-                        <!-- <div class="mt-5 justify-between flex-col ">
+                        <div class="mt-5 justify-between flex-col ">
                             <LanguageSwitcher isWhite />
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </transition>

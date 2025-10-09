@@ -3,10 +3,14 @@
         <div class="sectionTitle mb-24 flex gap-4 md:gap-6 sm:items-end justify-between  max-sm:flex-col">
             <div>
                 <h1 class="text-text font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2 ">
-                    مدونتنا
+
+                    {{ $t("homePage.licenses.blog") }}
                 </h1>
                 <p class="text-2xl font-normal text-[#5E5E5E]">
-                    مرجعك الشامل لأبرز الموضوعات القانونية
+
+                    {{ locale === 'ar' ? ' مرجعك الشامل لأبرز الموضوعات القانونية'
+                        : 'Your comprehensive reference for the most important legal topics' }}
+
                 </p>
             </div>
             <div class="flex gap-4 items-center  justify-end max-md:justify-start">
@@ -14,10 +18,11 @@
                     class="relative overflow-hidden border w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent">
                     <span
                         class="text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                        عرض الكل</span>
+                        {{ locale === 'ar' ? ' عرض الكل' : 'View All' }}
+                    </span>
                     <span
                         class="absolute w-full -bottom-10 text-sm lg:text-base font-medium  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                        عرض الكل</span>
+                        {{ locale === 'ar' ? ' عرض الكل' : 'View All' }}</span>
                 </button>
             </div>
         </div>
@@ -34,10 +39,6 @@
                     <p class="text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6">
                         {{ blog.desc }}
                     </p>
-                    <!-- <div class="flex justify-between items-center mt-4">
-                        <span class="text-primary-500 font-bold text-sm md:text-base">اقرأ المزيد</span>
-                        <span class="text-[#A1A1A1] font-normal text-sm md:text-base">{{ blog.date }}</span>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -46,6 +47,8 @@
 </template>
 
 <script setup lang="ts">
+
+const { locale } = useI18n()
 
 import Blog1 from "../../assets/img/Blog/blog1.svg"
 import Blog2 from "../../assets/img/Blog/blog1.jpg"

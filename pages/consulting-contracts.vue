@@ -1,16 +1,12 @@
 <template>
     <div>
-        <header-img-section :img="ConsultingContracts" title="الاستشارات والعقود" />
-        <WhatTheService title="ما هي خدمات الاستشارات والعقود ؟"
-            desc="خدمة الاستشارات والعقود هي ركيزة أساسية لأي عمل تجاري، حيث تعمل على توفير الحماية القانونية الوقائية والداعمة. تشمل هذه الخدمة جانبيَن أساسيين:"
-            cardOTitle="الاستشارات القانونية: "
-            cardOdesc="هي العائلة الثانية في المهنة وفي ذات الوقت هي الشريان المغذي لجميع عوائل القانون مهما نزلت وتوسعت، تعمل بأنماط متنوعة وتتداخل في جميع المستويات العمودية والأفقية، ويجب التحكم في هذا التدخل سواء كان داخل العائلة أو خارجها."
-            cardTTitle="إعداد وصياغة العقود: "
-            cardTdesc="
-إن العقد على أرض الواقع السعودي يتقاطع بشكل كبير مع أحكام الفقه الإسلامي ولهذا يعمل فريقنا جاهدًا على إعداد وصياغة ومراجعة وتحليل كافة العقود طوال رحلة الاستثمار باللغتين العربية والانجليزية وفقاً لبيئتها المحلية. وبطبيعة الحال إن الهدف الأسمى من تنظيم العقود هو توفير دور وقائي بحماية المنشآت التجارية وتقليل مخاطر المنازعات العقدية." />
-        <DetailedServiceSection title="خدماتنا التفصيلية" :details="Details" />
-        <CTASection title="لا تنتظر حتى تواجه نزاعًا , اطلب خدمتنا الآن وابدأ عملك بأمان قانوني كامل"
-            buttonO="اطلب خدمة" buttonT="احجز استشارة قانونية" :img="cta" />
+        <header-img-section :img="ConsultingContracts" title="services.contracts.title" />
+        <WhatTheService title="services.contracts.question" desc="services.contracts.intro"
+            cardOTitle="services.contracts.consulting.title" cardOdesc="services.contracts.consulting.text"
+            cardTTitle="services.contracts.contracts.title" cardTdesc="services.contracts.contracts.text" />
+        <DetailedServiceSection title="services.contracts.details" :details="Details" />
+        <CTASection title="services.contracts.cta" buttonO="services.contracts.buttons.requestService"
+            buttonT="services.contracts.buttons.bookConsultation" :img="cta" />
         <!-- <OtherServicesSection /> -->
     </div>
 </template>
