@@ -48,10 +48,12 @@
                                 class="relative overflow-hidden max-[390px]:w-full sm:w-fit border-[2px]  px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                                 <span
                                     class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                    اطلب عرض مالي</span>
+                                    {{ locale === 'ar' ? 'اطلب عرض مالي' : 'Get a Quote' }}
+                                </span>
                                 <span
                                     class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
-                                    اطلب عرض مالي</span>
+                                    {{ locale === 'ar' ? 'اطلب عرض مالي' : 'Get a Quote' }}
+                                </span>
                             </button>
                         </nuxt-link>
 
@@ -60,10 +62,14 @@
                                 class="relative overflow-hidden border-[2px] max-[390px]:w-full sm:w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary  border-secondary">
                                 <span
                                     class=" text-sm lg:text-base  group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                    خدمة التحصيل</span>
+                                    {{ locale === 'ar' ? 'خدمة التحصيل' : 'Collection services' }}
+
+
+                                </span>
                                 <span
                                     class="absolute w-full -bottom-10 text-sm lg:text-base  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-primary-700 ">
-                                    خدمة التحصيل</span>
+                                    {{ locale === 'ar' ? 'خدمة التحصيل' : 'Collection services' }}
+                                </span>
                             </button>
                         </a>
                     </div>

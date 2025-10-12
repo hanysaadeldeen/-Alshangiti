@@ -33,27 +33,31 @@
                             </p>
 
                             <div class="flex gap-3 md:gap-6 justify-start items-center flex-wrap ">
-                                <nuxt-link :to="link">
+                                <nuxt-link :to="$localePath(link)">
                                     <button
                                         class="w-fit relative overflow-hidden border-[2px] max-md:w-full  min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white  hover:text-secondary border-white hover:border-secondary">
                                         <span
                                             class="  text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                                            عرض المزيد من التفاصيل
+                                            {{ locale === 'ar' ? 'عرض المزيد من التفاصيل' : 'Show more details' }}
+
                                         </span>
                                         <span
                                             class="absolute -bottom-10  text-sm lg:text-base font-bold  group-hover:bottom-0 group-hover:-translate-y-1/2 w-full  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                            عرض المزيد من التفاصيل
+
+                                            {{ locale === 'ar' ? 'عرض المزيد من التفاصيل' : 'Show more details' }}
                                         </span>
                                     </button> </nuxt-link>
-                                <nuxt-link to="contact-us">
+                                <nuxt-link :to="$localePath('contact-us')">
                                     <button
                                         class="border-[2px] border-primary-500 border-transparent relative overflow-hidden  max-md:w-full min-w-[120px] w-fit  px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
                                         <span
                                             class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer  ease-in-out text-white">
-                                            اطلب خدمة</span>
+                                            {{ locale === 'ar' ? ' اطلب خدمة' : 'Request service' }}
+
+                                        </span>
                                         <span
                                             class="absolute w-full -bottom-10 text-sm lg:text-base font-bold  group-hover:-bottom-0 group-hover:-translate-y-1/2  left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer  ease-in-out text-secondary">
-                                            اطلب خدمة</span>
+                                            {{ locale === 'ar' ? ' اطلب خدمة' : 'Request service' }}</span>
                                     </button>
                                 </nuxt-link>
 

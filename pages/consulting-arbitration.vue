@@ -36,7 +36,7 @@
                 </span>
             </p>
         </WhatTheService>
-        <DetailedServiceSection title="services.litigation.details" :details="Details" />
+        <DetailedServiceSection title="services.litigation.details" :details="locale === 'ar' ? detailsAr : detailsEn" />
         <CTASection title="services.litigation.cta" buttonO="اطلب خدمة" buttonT="احجز استشارة قانونية"
             :img="arbitration" />
         <!-- <OtherServicesSection /> -->
@@ -46,7 +46,10 @@
 
 
 <script setup lang="ts">
-const Details = [
+
+const { locale } = useI18n()
+
+const detailsAr = [
     "القضايا الإدارية",
     "القضايا التجارية",
     "القضايا الإنشائية",
@@ -59,6 +62,21 @@ const Details = [
     "القضايا المدنية",
     "التحصيل",
 ]
+
+const detailsEn = [
+    "Administrative Disputes",
+    "Commercial Disputes",
+    "Construction Disputes",
+    "Labor and Employment Disputes",
+    "Customs Litigation",
+    "Competition Disputes",
+    "International Disputes",
+    "Arbitration",
+    "Economic Disputes",
+    "Civil Disputes",
+    "Debt Collection",
+]
+
 import ConsultingContracts from "../assets/img/pannel/cta.webp"
 import arbitration from "../assets/img/pannel/arbitration.webp"
 
