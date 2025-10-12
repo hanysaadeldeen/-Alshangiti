@@ -15,7 +15,7 @@
                         <img src="~/assets/img/date.svg" alt="date" width="50" height="50"
                             class="max-sm:w-[35px] -rotate-6 ">
                     </div>
-                    <p>منذ</p>
+                    <p>{{ locale === 'ar' ? 'منذ' : "since" }}</p>
                     <p>2005</p>
                     <div class="absolute top-1/2 -translate-y-1/2  -left-8 sm:-left-10">
                         <img src="~/assets/img/date.svg" alt="date" width="50" height="50"
@@ -35,7 +35,7 @@
                     {{ $t("homePage.home.hero.subtext") }}
                 </p>
                 <div class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10">
-                    <nuxt-link to="/contact-us">
+                    <nuxt-link :to="$localePath('contact-us')">
                         <button
                             class="w-fit h-full border-[2px] border-primary-500 relative overflow-hidden max-md:w-full min-w-[191px]  py-2 px-5  flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 ">
                             <span
@@ -79,6 +79,7 @@
 </template>
 
 <script setup lang="ts">
+const locale = useI18n().locale;
 
 const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

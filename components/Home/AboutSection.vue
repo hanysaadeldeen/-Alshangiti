@@ -33,7 +33,6 @@
                     </div>
 
 
-                    <!-- Button -->
                     <div class="flex justify-center md:justify-start">
                         <nuxt-link to="/about-us">
 

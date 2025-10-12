@@ -23,7 +23,7 @@
                         :class="{ '!border-red-500': errors.FullName }" />
                     <span class="text-red-500 text-sm">{{
                         errors.FullName
-                    }}</span>
+                        }}</span>
                 </div>
                 <div class="flex flex-col w-full lg:max-w-[304px]">
                     <label for="LastName" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
@@ -37,7 +37,7 @@
                         :class="{ '!border-red-500': errors.LastName }" />
                     <span class="text-red-500 text-sm">{{
                         errors.LastName
-                    }}</span>
+                        }}</span>
                 </div>
             </div>
             <div class="flex flex-col w-full  mb-6">
@@ -52,7 +52,7 @@
                     :class="{ '!border-red-500': errors.phoneNumber }" />
                 <span class="text-red-500 text-sm">{{
                     errors.phoneNumber
-                }}</span>
+                    }}</span>
             </div>
             <div class="flex flex-col w-full  mb-6">
                 <label for="email" class="text-text  w-fit font-normal text-sm mb-2 cursor-pointer inline-block">
@@ -80,12 +80,12 @@
                     :class="{ '!border-red-500': errors.message }" />
                 <span class="text-red-500 text-sm">{{ errors.message }}</span>
             </div>
-            <Button title="إرسال" />
+            <Button />
             <div class="mt-5 text-text text-sm font-normal">
                 {{ locale === 'ar' ?
                     'من خلال إرسال استفسارك، فإنك توافق على ' : 'By submitting your inquiry, you agree to the '
                 }}
-                <nuxt-link to="privacy">
+                <nuxt-link :to="localpath('/privacy')">
                     <span class="text-primary-500 underline">
                         {{ $t("pages.privacy") }}
                     </span>
@@ -97,7 +97,7 @@
 
 <script setup lang="ts">
 const { locale } = useI18n()
-
+const localpath = useLocalePath();
 import { Form, Field } from "vee-validate";
 import * as yup from "yup";
 const isOpenSuccess = ref(false);
