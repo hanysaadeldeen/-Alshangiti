@@ -1,10 +1,10 @@
 <template>
     <section class="History mx-auto max-w-[1315px] max-2xl:px-10">
-        <div
-            class="relative flex flex-col gap-[119px] max-w-[1096px] border-r-[5px] pr-[38px] border-primary-200 pb-[157px]">
+        <div class="relative flex flex-col gap-[119px] max-w-[1096px]  border-primary-200 pb-[157px]"
+            :class="locale === 'ar' ? 'border-r-[5px] pr-[38px]' : 'border-l-[5px] pl-[38px]'">
             <div v-for="(item, i) in items" :key="i" ref="historyRefs" class="relative ">
-                <div
-                    class="size-8 rounded-full absolute bg-primary-200 -right-[56px] flex justify-center items-center ">
+                <div class="size-8 rounded-full absolute bg-primary-200  flex justify-center items-center "
+                    :class="locale === 'ar' ? '-right-[56px]' : '-left-[56px]'">
                     <div class="size-5 rounded-full  transition-all duration-9000 ease-in-out"
                         :class="item.active ? 'bg-primary-500' : 'bg-white'">
                     </div>
@@ -25,6 +25,8 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const { locale } = useI18n();
 
 const items = ref([
     { title: "about.before2005.title", desc: "about.before2005.content", active: false },

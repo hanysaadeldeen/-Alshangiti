@@ -2,17 +2,17 @@
     <div>
         <header-img-section :img="ConsultingContracts" title="services.litigation.title" />
         <WhatTheService title="services.litigation.question">
-            <p class="text-text text-lg md:text-xl  font-normal flex flex-col  max-w-[1164px]">
+            <div class="text-text text-lg md:text-xl  font-normal flex flex-col  max-w-[1164px] ">
 
-                <span class="block  text-justify">
+                <span class="">
                     {{ $t("services.litigation.description[0]") }}
                 </span>
                 <br>
-                <span class="block  text-justify">
+                <span class="">
                     {{ $t("services.litigation.description[1]") }}
                 </span>
                 <br>
-                <span class="block  text-justify">
+                <span class="  text-justify">
                     {{ $t("services.litigation.description[2]") }}
                 </span>
                 <br>
@@ -31,12 +31,14 @@
                 <span class=" text-justify">
                     {{ $t("services.litigation.description[6]") }}
                 </span>
+                <br>
                 <span class=" text-justify">
                     {{ $t("services.litigation.description[7]") }}
                 </span>
-            </p>
+            </div>
         </WhatTheService>
-        <DetailedServiceSection title="services.litigation.details" :details="locale === 'ar' ? detailsAr : detailsEn" />
+        <DetailedServiceSection title="services.litigation.details"
+            :details="locale === 'ar' ? detailsAr : detailsEn" />
         <CTASection title="services.litigation.cta" buttonO="اطلب خدمة" buttonT="احجز استشارة قانونية"
             :img="arbitration" />
         <!-- <OtherServicesSection /> -->

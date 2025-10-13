@@ -20,11 +20,7 @@
 <script setup lang="ts">
 
 const Numbers = reactive([
-    {
-        text: "homePage.features.stats.experience",
-        value: 0,
-        targetValue: 20
-    },
+
     {
         text: "homePage.features.stats.cases",
         value: 0,
@@ -34,7 +30,12 @@ const Numbers = reactive([
         text: "homePage.features.stats.clients",
         value: 0,
         targetValue: 200
-    }
+    },
+    {
+        text: "homePage.features.stats.experience",
+        value: 0,
+        targetValue: 20
+    },
 ]);
 const counterElements = ref([]);
 
