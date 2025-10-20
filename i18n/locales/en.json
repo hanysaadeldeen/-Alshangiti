@@ -3,6 +3,7 @@
     "home": "Home",
     "aboutUs": "About Us",
     "service": "Service",
+    "footerService": "Our Services",
     "contracts": "Contracts and Consulting",
     "litigation": "Litigation and Arbitration",
     "projects": "Project Services",
@@ -68,7 +69,7 @@
         {
           "title": "2. Consulting and Contracts",
           "description": "Contract Drafting - Legal Review - Preventive Consulting",
-          "descriptionToggle": "Our legal recommendations are based on precise and well-founded advice from experienced legal practitioners. We ensure contracts are professionally drafted, reviewed, and analyzed in both Arabic and English, providing preventive and strategic legal consultation throughout the business journey.",
+          "descriptionToggle": "As legal experts in the applications of the law, our recommendations are based on the accuracy of legal advice given by experienced professionals. This is because it is based on technical principles in its preparation, by understanding the facts and bringing in appropriate legislation, arriving at the optimal advisory opinion. However, we emphasize that artistic assets alone do not achieve the desired goal. The closer the understanding is to experiences, the more solid the conclusion will be. These recommendations are our motto in providing our consultations services, which include providing them in Arabic and/or English. Our recommendations are also based on the integrity of the contract document, because the contractual text is the basis for obligations and duties in accordance with the will of the parties.",
           "img": "ConsultingContracts",
           "details": [
             "Contract Drafting",
