@@ -52,8 +52,6 @@
                     {{ $t("pages.aboutUs") }}
                   </nuxt-link>
                 </li>
-
-                <!-- هنا: اجعل الـ li هو الـ relative و استخدم group لعرض القائمة عند hover -->
                 <li class="relative group">
                   <div
                     class="flex justify-center items-center gap-2"
@@ -102,9 +100,16 @@
                     >
                       {{ $t("pages.projects") }}
                     </nuxt-link>
+                    <a
+                      href="https://mohsl.com/"
+                      target="_blank"
+                      @click="openMenu = false"
+                      class="block py-3 text-white hover:text-secondary font-medium text-base"
+                    >
+                      {{ $t("pages.collectionservices") }}
+                    </a>
                   </div>
                 </li>
-
                 <li :class="adjustedPath === '/blogs' ? 'active' : ''">
                   <nuxt-link :to="localePath('blogs')">
                     {{ $t("pages.blog") }}
@@ -205,25 +210,33 @@
                     >
                       <nuxt-link
                         @click="[(isSideBar = false), (isOpen = false)]"
-                        to="consulting-contracts"
+                        :to="localePath('consulting-contracts')"
                         class="block py-3 text-white hover:text-secondary font-medium text-base"
                       >
                         {{ $t("pages.contracts") }}
                       </nuxt-link>
                       <nuxt-link
                         @click="[(isSideBar = false), (isOpen = false)]"
-                        to="consulting-arbitration"
+                        :to="localePath('consulting-arbitration')"
                         class="block py-3 text-white hover:text-secondary font-medium text-base"
                       >
                         {{ $t("pages.litigation") }}
                       </nuxt-link>
                       <nuxt-link
                         @click="[(isSideBar = false), (isOpen = false)]"
-                        to="consulting-projects"
+                        :to="localePath('consulting-projects')"
                         class="block py-3 text-white hover:text-secondary font-medium text-base"
                       >
                         {{ $t("pages.projects") }}
                       </nuxt-link>
+                      <a
+                        href="https://mohsl.com/"
+                        target="_blank"
+                        @click="openMenu = false"
+                        class="block py-3 text-white hover:text-secondary font-medium text-base"
+                      >
+                        {{ $t("pages.collectionservices") }}
+                      </a>
                     </div>
                   </div>
                 </ul>

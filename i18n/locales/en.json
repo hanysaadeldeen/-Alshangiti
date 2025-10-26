@@ -7,6 +7,8 @@
     "contracts": "Contracts and Consulting",
     "litigation": "Litigation and Arbitration",
     "projects": "Project Services",
+    "achievement": "Our Achievement",
+    "collectionservices": "Collection services",
     "blog": "Blog",
     "contactUs": "Contact Us",
     "privacy": "Privacy",
@@ -102,8 +104,8 @@
       "title": "Licensing & Accreditation",
       "subtitle": "Authorised and accredited to deliver reliable and secure legal services.",
       "items": {
-        "moj": "Ministry of Justice Licence No.",
-        "sba": "Saudi Bar Association Licence No."
+        "moj": "Ministry of Justice Licence No",
+        "sba": "Saudi Bar Association Licence No"
       },
       "blog": "Our Blog"
     }
@@ -224,6 +226,30 @@
         "bookConsultation": "Book a Legal Consultation"
       }
     }
+  },
+  "achievements": {
+    "cases": [
+      {
+        "id": 1,
+        "title": "Legal Leadership in Saudi Arabia’s First Competition Case",
+        "content": "Amid the significant expansion of the Saudi Competition Law across various economic sectors, our legal team represented a client in the first-ever competition case filed in the Kingdom of Saudi Arabia. The case was initiated by a government entity against several companies operating in the medical gases sector, alleging anti-competitive practices such as price fixing, market allocation, and information concealment. This case stands as one of the most prominent anti-monopoly cases subject to the provisions of the Competition Law and its implementing regulations, where fines can reach up to 10% of total annual revenue. Our competition and antitrust legal team thoroughly reviewed the case from both regulatory and commercial perspectives, preparing a detailed defence memorandum grounded in law and supported by a realistic market analysis and procedural context. The advocacy before the specialised Competition Committee successfully refuted the allegations and secured a reduction of the penalty to the minimum limit — achieving a highly satisfactory result for the client. This success was not an isolated event. Our firm has handled numerous similar cases related to commercial competition and anti-monopoly disputes across various sectors, successfully extinguishing financial claims exceeding SAR 37 million. This reflects our firm’s high competence and credibility in representing clients before judicial and regulatory authorities in competition matters within the Kingdom."
+      },
+      {
+        "id": 2,
+        "title": "SAR 100 Million Electromechanical Contract Arbitration",
+        "content": "Our firm represented a Saudi-Canadian first-grade contracting company as a subcontractor for electromechanical works in a government project located in Riyadh and Taif. The arbitration case concerned the non-payment of final statements and additional works, despite the completion and handover of the project. We documented and substantiated the additional works through technical evidence and operational reports (RFI / RFT), while presenting solid legal arguments supported by technical documentation. As a result, the arbitration tribunal issued a ruling in favour of our client, obliging the government entity to pay more than SAR 100 million, covering all financial entitlements under the main and supplementary construction contracts. This case highlights our firm’s expertise in managing complex, technically specialised construction disputes, particularly in government contracting projects, arbitration of electromechanical works, and financial claims for progress payments and variations."
+      },
+      {
+        "id": 3,
+        "title": "Industrial Lubricants Supply Case: SAR 30 Million Recovered",
+        "content": "Our legal team achieved a significant judicial victory for one of the leading energy companies in a contractual dispute valued at over SAR 100 million, relating to the supply of treated industrial lubricants used in power generation systems. We filed a lawsuit supported by strong evidence, including delivery notes, purchase orders, and official correspondence demonstrating our client’s full compliance. The court issued a judgment obliging the defendants to pay over SAR 30 million in outstanding dues. Following the initial ruling, our legal team diligently pursued the case before the Saudi Commercial Court of Appeal, submitting well-founded legal arguments backed by relevant legislation and documentation. This effort led to the affirmation of the initial judgment, ensuring our client’s financial rights were conclusively protected. This success reflects our deep expertise in commercial litigation, industrial supply disputes, and major contract enforcement, underscoring our ability to provide robust and effective legal representation before Saudi commercial courts, particularly in supply, contract, and arbitration cases — consistently achieving optimal outcomes for our clients."
+      },
+      {
+        "id": 4,
+        "title": "Major Labour Dispute Resolved in the Petrochemical Sector",
+        "content": "Our specialised legal team successfully managed a large-scale labour dispute involving 44 employees against a leading company in the petrochemical sector. The dispute arose from a company restructuring process, with the total claims exceeding SAR 15 million. We represented the company before the Labour Office Inspection Division, and subsequently before amicable settlement committees, aiming to protect the company’s interests and achieve the most favourable legal outcome. Our dispute management strategy was built on an in-depth understanding of Saudi Labour Law and extensive experience in employment dispute resolution, enabling us to negotiate effectively and provide innovative legal solutions. Through persistent negotiation and strategic guidance, we reached a comprehensive amicable settlement valued at SAR 9 million, achieving a cost reduction exceeding 40% and extinguishing over SAR 6 million in financial liabilities. This achievement reflects our advanced capabilities in managing labour disputes and our commitment to delivering comprehensive legal advisory services focused on protecting corporate interests and enhancing operational and financial stability."
+      }
+    ]
   },
   "contact": {
     "title": "Contact Us",

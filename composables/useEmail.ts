@@ -10,8 +10,8 @@ export const useEmail = () => {
   }) => {
     try {
       const response = await emailjs.send(
-        "service_kta72db", // ID الخاص بالخدمة من EmailJS
-        "template_0yga2g5", // ID الخاص بالقالب (template)
+        "service_dd4io2n",
+        "template_zd9oprr",
         {
           fullName: formData.FullName,
           email: formData.email,
@@ -19,7 +19,7 @@ export const useEmail = () => {
           subject: formData.subject,
           message: formData.message,
         },
-        "gtQMwdnFpnpuqd312", // Public key من EmailJS
+        "gtQMwdnFpnpuqd312"
       );
       return response;
     } catch (error) {

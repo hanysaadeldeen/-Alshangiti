@@ -166,20 +166,15 @@
                   {{ $t("pages.litigation") }}
                 </nuxt-link>
               </li>
-              <li :class="{ active: adjustedPath === '/consulting-projects' }">
-                <nuxt-link :to="localePath('/consulting-projects')">
-                  {{ $t("pages.projects") }}
-                </nuxt-link>
+              <li>
+                <a href="https://mohsl.com/" target="_blank">
+                  {{ $t("pages.collectionservices") }}
+                </a>
               </li>
             </ul>
           </nav>
         </div>
         <div class="">
-          <!-- <h1 class="text-white text-base font-medium mb-6 border-r-[2.5px] border-[#EEC882] pr-2.5 py-2.5">
-                        خبرة في قطاع الأعمال <span class="text-[#EEC882]">
-                            منذ 2005
-                        </span>
-                    </h1> -->
           <div
             class="text-white text-base font-medium mb-6 capitalize border-[#EEC882] py-2.5"
             :class="
@@ -190,11 +185,11 @@
           >
             <p>
               <span v-if="locale === 'ar'">
-                خبرة في قطاع الأعمال
+                خبرة في قطاع الأعمال B2B
                 <span class="text-[#EEC882]">منذ 2005</span>
               </span>
               <span v-else>
-                Expertise in the business sector
+                Expertise in the B2B business sector
                 <span class="text-[#EEC882]">since 2005</span>
               </span>
             </p>
@@ -211,9 +206,6 @@
                     class="fa-solid fa-location-dot text-TextM group-hover:text-[#EEC882] transition-all ease-in-out duration-300"
                   ></i>
                   <span>
-                    <!-- جدة ‑ حي الخالدية ‑
-                                        برج جي ڤيو | الطابق 9
-                                        <br> مكتب رقم 904 -->
                     {{ $t("contact.JeddahLocation") }}
                   </span>
                 </a>
@@ -229,12 +221,6 @@
                   ></i>
                   <span>
                     {{ $t("contact.Al-Madinah") }}
-                    <!-- المدينة المنورة
-                                        حي العهن
-                                        طريق الامير عبد المحسن <br>
-                                        المركز الماسي للاعمال
-                                        الطابق 2
-                                        مكتب رقم 5 -->
                   </span>
                 </a>
               </li>
@@ -269,8 +255,8 @@
         <p class="text-base font-normal text-white">
           {{
             locale === "ar"
-              ? "© 2025 جميع الحقوق محفوظة مكتب Al-Shanqiti بواسطة"
-              : "All rights reserved Al-Shanqiti Office by"
+              ? "© 2025 جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  بواسطة "
+              : "© 2025 All rights reserved to Alshangiti & Associates Law Firm — powered by"
           }}
           <a href="https://do.com.sa/" target="_blank"> DO </a>
         </p>
