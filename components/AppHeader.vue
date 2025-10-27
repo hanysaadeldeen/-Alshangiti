@@ -29,11 +29,11 @@
             >
               <p>
                 <span v-if="locale === 'ar'">
-                  خبرة في قطاع الأعمال
+                  خبرة في قطاع الأعمال B2B
                   <span class="text-[#EEC882]">منذ 2005</span>
                 </span>
                 <span v-else>
-                  Business experience
+                  Expertise in the B2B business sector
                   <span class="text-[#EEC882]">since 2005</span>
                 </span>
               </p>

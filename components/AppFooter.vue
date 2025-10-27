@@ -166,6 +166,14 @@
                   {{ $t("pages.litigation") }}
                 </nuxt-link>
               </li>
+              <li
+                :class="{ active: adjustedPath === '/consulting-projects' }"
+                class="my-4"
+              >
+                <nuxt-link :to="localePath('/consulting-projects')">
+                  {{ $t("pages.projects") }}
+                </nuxt-link>
+              </li>
               <li>
                 <a href="https://mohsl.com/" target="_blank">
                   {{ $t("pages.collectionservices") }}

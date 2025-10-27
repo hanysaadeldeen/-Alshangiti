@@ -52,9 +52,9 @@
         >
           {{ $t("homePage.home.hero.headline") }}
         </h1>
-        <p class="text-white font-normal text-lg md:text-xl text-center">
+        <!-- <p class="text-white font-normal text-lg md:text-xl text-center">
           {{ $t("homePage.home.hero.subtext") }}
-        </p>
+        </p> -->
         <div
           class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10"
         >
