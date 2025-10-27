@@ -3,5 +3,6 @@
     <AppHeader />
     <slot />
     <AppFooter />
+    <WhatsUpScroll />
   </div>
 </template>

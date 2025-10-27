@@ -81,26 +81,28 @@
             </div>
           </div>
           <div class="flex flex-wrap gap-4 md:gap-6 font-bold mt-6">
-            <nuxt-link to="/contact-us" class="max-[390px]:w-full sm:w-fit">
+            <nuxt-link
+              :to="$localePath('our-achievement')"
+              class="max-[390px]:w-full sm:w-fit"
+            >
               <button
                 class="relative overflow-hidden max-[390px]:w-full sm:w-fit border-[2px] px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary border-secondary"
               >
                 <span
                   class="text-sm lg:text-base group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-secondary"
                 >
-                  {{ locale === "ar" ? "اطلب عرض مالي" : "Get a Quote" }}
+                  {{ locale === "ar" ? "استكشف انجازاتنا" : "Our Achievement" }}
                 </span>
                 <span
                   class="absolute w-full -bottom-10 text-sm lg:text-base group-hover:-bottom-0 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer ease-in-out text-primary-700"
                 >
-                  {{ locale === "ar" ? "اطلب عرض مالي" : "Get a Quote" }}
+                  {{ locale === "ar" ? "استكشف انجازاتنا" : "Our Achievement" }}
                 </span>
               </button>
             </nuxt-link>
 
-            <a
-              href="https://mohsl.com/"
-              target="_blank"
+            <nuxt-link
+              :to="$localePath('blogs')"
               class="max-[390px]:w-full sm:w-fit"
             >
               <button
@@ -109,15 +111,15 @@
                 <span
                   class="text-sm lg:text-base group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-secondary"
                 >
-                  {{ locale === "ar" ? "خدمة التحصيل" : "Collection services" }}
+                  {{ $t("pages.blog") }}
                 </span>
                 <span
                   class="absolute w-full -bottom-10 text-sm lg:text-base group-hover:-bottom-0 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer ease-in-out text-primary-700"
                 >
-                  {{ locale === "ar" ? "خدمة التحصيل" : "Collection services" }}
+                  {{ $t("pages.blog") }}
                 </span>
               </button>
-            </a>
+            </nuxt-link>
           </div>
         </div>
         <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
@@ -240,7 +242,7 @@
       <div
         class="flex justify-between flex-wrap items-center gap-4 md:gap-6 pt-6 md:pt-8"
       >
-        <div class="flex flex-wrap gap-3 md:gap-4">
+        <!-- <div class="flex flex-wrap gap-3 md:gap-4">
           <div
             class="flex h-10 w-10 items-center justify-center rounded-full border border-white group cursor-pointer hover:border-[#EEC882] transition-all duration-200 ease-in-out"
             v-for="social in SocialMedia"
@@ -259,7 +261,7 @@
               ></i>
             </a>
           </div>
-        </div>
+        </div> -->
         <p class="text-base font-normal text-white">
           {{
             locale === "ar"

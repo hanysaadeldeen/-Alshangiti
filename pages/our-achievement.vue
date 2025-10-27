@@ -1,7 +1,7 @@
 <template>
   <main class="OurAchievement">
-    <header-img-section :img="achevments" title="pages.aboutUs" />
-    <div class="">
+    <header-img-section :img="achevments" title="pages.achievement" />
+    <div>
       <div
         v-for="(achievement, index) in Achievements"
         :key="achievement.id"
