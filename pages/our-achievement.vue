@@ -1,7 +1,7 @@
 <template>
   <main class="OurAchievement">
     <header-img-section :img="achevments" title="pages.achievement" />
-    <div>
+    <!-- <div>
       <div
         v-for="(achievement, index) in Achievements"
         :key="achievement.id"
@@ -26,7 +26,6 @@
               </h1>
             </div>
           </div>
-
           <div
             class="w-full lg:max-w-[726px] text-base flex flex-col gap-6 md:text-xl lg:text-2xl font-normal text-justify"
             :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'"
@@ -37,6 +36,15 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="section">
+      <OurAchievementCard
+        v-for="(achievement, index) in Achievements"
+        :key="achievement.id"
+        :title="achievement.title"
+        :details="achievement.content"
+        :id="achievement.id"
+      />
     </div>
   </main>
 </template>
@@ -87,17 +95,29 @@ const Achievements = [
     ],
   },
 ];
+
+const isOpen = ref(false);
+const answerHeight = ref(0);
+const answer = ref<HTMLDivElement | null>(null);
+const toggle = async () => {
+  isOpen.value = !isOpen.value;
+
+  await nextTick();
+  if (answer.value) {
+    answerHeight.value = answer.value.scrollHeight;
+  }
+};
 </script>
 
 <style scoped>
 .section {
-  padding: 140px 0;
+  padding: 60px 0;
   margin-top: 0;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 80px 0;
+    padding: 40px 0;
     margin-top: 0;
   }
 }

@@ -52,27 +52,10 @@
         >
           {{ $t("homePage.home.hero.headline") }}
         </h1>
-        <!-- <p class="text-white font-normal text-lg md:text-xl text-center">
-          {{ $t("homePage.home.hero.subtext") }}
-        </p> -->
+
         <div
           class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10"
         >
-          <!-- <button
-            class="w-fit h-full border-[2px] border-primary-500 relative overflow-hidden max-md:w-full min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
-          >
-            <span
-              class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"
-            >
-              {{ locale === "ar" ? "استكشف انجازاتنا" : "Get a Quote" }}
-            </span>
-            <span
-              class="absolute -bottom-10 text-sm lg:text-base font-bold group-hover:bottom-0 group-hover:-translate-y-1/2 left-1/2 w-full -translate-x-1/2 transition-all duration-300 cursor-pointer ease-in-out text-secondary"
-            >
-              {{ locale === "ar" ? "استكشف انجازاتنا" : "Get a Quote" }}
-            </span>
-          </button> -->
-
           <nuxt-link :to="$localePath('our-achievement')">
             <button
               class="w-fit h-full border-[2px] border-primary-500 relative overflow-hidden max-md:w-full min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
@@ -89,24 +72,10 @@
               </span>
             </button>
           </nuxt-link>
-          <!--           
-					<a href="https://mohsl.com/" target="_blank">
-            <button
-              class="w-fit relative overflow-hidden border-[2px] max-md:w-full min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:text-secondary border-white hover:border-secondary"
-            >
-              <span
-                class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"
-              >
-                {{ locale === "ar" ? "خدمة التحصيل" : "Collection services" }}
-              </span>
-              <span
-                class="absolute -bottom-10 text-sm lg:text-base font-bold group-hover:bottom-0 group-hover:-translate-y-1/2 w-full left-1/2 -translate-x-1/2 transition-all duration-300 cursor-pointer ease-in-out text-secondary"
-              >
-                {{ locale === "ar" ? "خدمة التحصيل" : "Collection services" }}
-              </span>
-            </button>
-          </a> -->
         </div>
+        <p class="text-white font-normal text-lg md:text-xl text-center mt-5">
+          {{ $t("homePage.home.hero.subtext") }}
+        </p>
       </div>
       <div
         class="flex justify-center items-center w-fit mx-auto cursor-pointer"
@@ -126,10 +95,10 @@
         class="max-w-[1246px] mx-auto text-white font-bold text-xl md:text-2xl text-center !leading-[45px]"
         id="hook"
       >
-        بخبرة تمتد لعشرين عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً قانونية
-        متخصصة في مجالي التجارة والاستثمار. نتميز بفريق محترف مبتكر، ومرونة في
-        فهم متغيرات السوق، و التزام بأعلى معايير المسؤولية والأخلاقيات المهنية.
-        نحن هنا لندعم نجاحك ونحمي مصالحك من البداية إلى النهاية
+        بخبرة تمتد لأكثر من عشرين عاماً في قلب قطاع الأعمال السعودي، نقدم حلولاً
+        قانونية متخصصة في مجالي التجارة والاستثمار. نتميز بفريق محترف مبتكر،
+        ومرونة في فهم متغيرات السوق، والتزام بأعلى معايير المسؤولية والأخلاقيات
+        المهنية. نحن هنا لندعم نجاحك ونحمي مصالحك من البداية إلى النهاية
       </p>
       <p
         v-if="locale === 'en'"
@@ -141,7 +110,7 @@
         and investment. Our strength lies in an innovative, professional team, a
         deep understanding of market dynamics, and a commitment to the highest
         standards of responsibility and professional ethics. We are here to
-        support your success and protect your interests from start to finish.
+        support your success and protect your interests from start to finish
       </p>
     </div>
   </div>
