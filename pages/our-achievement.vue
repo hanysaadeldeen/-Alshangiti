@@ -44,6 +44,7 @@
         :title="achievement.title"
         :details="achievement.content"
         :id="achievement.id"
+        :defaultToggle="achievement.toggle"
       />
     </div>
   </main>
@@ -63,6 +64,7 @@ const Achievements = [
       "achievements.cases[0].content[2]",
       "achievements.cases[0].content[3]",
     ],
+    toggle: true,
   },
   {
     id: 2,
@@ -72,6 +74,7 @@ const Achievements = [
       "achievements.cases[1].content[1]",
       "achievements.cases[1].content[2]",
     ],
+    toggle: false,
   },
   {
     id: 3,
@@ -82,6 +85,7 @@ const Achievements = [
       "achievements.cases[2].content[2]",
       "achievements.cases[2].content[3]",
     ],
+    toggle: false,
   },
   {
     id: 4,
@@ -93,6 +97,7 @@ const Achievements = [
       "achievements.cases[3].content[3]",
       "achievements.cases[3].content[4]",
     ],
+    toggle: false,
   },
 ];
 

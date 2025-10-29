@@ -5,7 +5,7 @@
         <div class="flex gap-4 items-center justify-between">
           <h1
             @click="toggle"
-            class="text-text font-bold text-lg md:text-xl leading-6 md:leading-7"
+            class="text-text font-bold text-lg md:text-xl cursor-pointer leading-6 md:leading-7"
           >
             {{ $t(title) }}
           </h1>
