@@ -12,15 +12,15 @@
           <div
             class="font-normal text-base md:text-lg mb-6 flex flex-col gap-4"
           >
-            <p class="text-justify">
+            <!-- <p class="text-justify">
               {{ $t("homePage.about.contentOne") }}
-            </p>
+            </p> -->
             <p class="text-justify">
               {{ $t("homePage.about.contentTwo") }}
             </p>
-            <!-- <p class="text-justify">
+            <p class="text-justify">
               {{ $t("homePage.about.contentThree") }}
-            </p> -->
+            </p>
           </div>
           <div class="flex justify-center md:justify-start">
             <nuxt-link to="/about-us">

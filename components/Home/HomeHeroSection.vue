@@ -73,9 +73,6 @@
             </button>
           </nuxt-link>
         </div>
-        <p class="text-white font-normal text-lg md:text-xl text-center mt-5">
-          {{ $t("homePage.home.hero.subtext") }}
-        </p>
       </div>
       <div
         class="flex justify-center items-center w-fit mx-auto cursor-pointer"

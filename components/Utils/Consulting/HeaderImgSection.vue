@@ -13,11 +13,27 @@
       >
         {{ $t(title) }}
       </h1>
+      <p
+        v-if="adjustedPath === '/our-achievement'"
+        class="text-white font-normal text-lg md:text-xl mt-5"
+      >
+        {{ $t("homePage.home.hero.subtext") }}
+      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const route = useRoute();
+const getPathWithoutLocale = (path: string) => {
+  const segments = path.split("/");
+  if (segments[1] && segments[1].length === 2) {
+    return `/${segments.slice(2).join("/")}`;
+  }
+  return path;
+};
+
+const adjustedPath = computed(() => getPathWithoutLocale(route.path));
 defineProps<{
   img: string;
   title: string;
