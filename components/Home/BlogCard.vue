@@ -7,7 +7,7 @@
             @click="toggle"
             class="text-text font-bold text-lg md:text-xl cursor-pointer leading-6 md:leading-7"
           >
-            {{ $t(title) }}
+            {{ title }}
           </h1>
           <div class="p-2 cursor-pointer" @click="toggle">
             <i
@@ -22,7 +22,7 @@
           :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }"
           :class="isOpen ? 'mt-5' : ''"
         >
-          {{ $t(description) }}
+          {{ description }}
         </div>
       </div>
     </div>

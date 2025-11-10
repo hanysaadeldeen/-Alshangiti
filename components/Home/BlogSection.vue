@@ -34,28 +34,19 @@
         </button>
       </div>
     </div>
+    <div v-if="pending" class="py-[60px]">
+      <h1
+        class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
+      >
+        {{ locale === "en" ? "loading.." : "جاري التحميل... " }}
+      </h1>
+    </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20">
-      <!-- <div class="card boxShadow rounded-3xl overflow-hidden cursor-pointer"
-                v-for="blog in locale === 'ar' ? BlogsAr : BlogsEn">
-                <div class="w-full h-full max-h-[220px]">
-                    <img :src="blog.img" :alt="blog.title" width="100%" height="100%"
-                        class="w-full max-w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div class="p-6 flex flex-col gap-4">
-                    <h2 class="text-text font-bold text-lg md:text-xl leading-6 md:leading-7">
-                        {{ blog.title }}
-                    </h2>
-                    <p class="text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6">
-                        {{ blog.desc }}
-                    </p>
-                </div>
-            </div> -->
-
       <blog-card
-        v-for="blog in locale === 'ar' ? BlogsAr : BlogsEn"
+        v-for="blog in data?.results"
         :id="blog.id"
-        :title="blog.title"
-        :description="blog.desc"
+        :title="locale === 'ar' ? blog.title_ar : blog.title_en"
+        :description="locale === 'ar' ? blog.excerpt_ar : blog.excerpt_en"
       />
     </div>
   </section>
@@ -113,6 +104,31 @@ const BlogsEn = [
     date: "September 10, 2023",
   },
 ];
+
+interface Achievement {
+  id: number;
+  title_ar: string;
+  title_en: string;
+  excerpt_ar: string;
+  excerpt_en: string;
+  content_ar: string;
+  content_en: string;
+  featured_image: string;
+}
+
+interface AchievementResponse {
+  results: Achievement[];
+}
+
+const { data, pending, error } = useFetch<AchievementResponse>(
+  "http://37.27.29.234/shangiti/api/blog/blog-posts/",
+  {
+    server: false,
+    lazy: true,
+  }
+);
+
+console.log(data);
 </script>
 
 <style scoped></style>

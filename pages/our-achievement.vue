@@ -58,6 +58,7 @@ const { data, pending, error } = useFetch<AchievementResponse>(
     lazy: true,
   }
 );
+// http://37.27.29.234/shangiti/api/blog/blog-posts/
 </script>
 
 <style scoped>
