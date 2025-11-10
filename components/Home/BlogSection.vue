@@ -55,56 +55,6 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
-import Blog1 from "../../assets/img/Blog/blog1.svg";
-import Blog2 from "../../assets/img/Blog/blog1.jpg";
-import Blog3 from "../../assets/img/Blog/blog2.jpg";
-const BlogsAr = [
-  {
-    id: 1,
-    title: "أهمية الاستشارات القانونية للشركات الناشئة",
-    desc: "تعتبر الاستشارات القانونية من العوامل الأساسية لنجاح الشركات الناشئة، حيث تساعد في تجنب المخاطر القانونية وضمان الامتثال للقوانين واللوائح المحلية والدولية.",
-    img: Blog1,
-    date: "20 سبتمبر 2023",
-  },
-  {
-    id: 2,
-    title: "كيف تختار المحامي المناسب لقضيتك؟",
-    desc: "اختيار المحامي المناسب يمكن أن يكون قرارًا حاسمًا في نجاح قضيتك. تعرف على العوامل التي يجب مراعاتها عند اختيار المحامي.",
-    img: Blog2,
-    date: "15 سبتمبر 2023",
-  },
-  {
-    id: 3,
-    title: "التحديات القانونية في التجارة الإلكترونية",
-    desc: "مع تزايد التجارة الإلكترونية، تواجه الشركات العديد من التحديات القانونية. تعرف على أبرز هذه التحديات وكيفية التعامل معها.",
-    img: Blog3,
-    date: "10 سبتمبر 2023",
-  },
-];
-const BlogsEn = [
-  {
-    id: 1,
-    title: "The Importance of Legal Consultations for Startups",
-    desc: "Legal consultations are one of the key factors for the success of startups. They help avoid legal risks and ensure compliance with local and international laws and regulations.",
-    img: Blog1,
-    date: "September 20, 2023",
-  },
-  {
-    id: 2,
-    title: "How to Choose the Right Lawyer for Your Case?",
-    desc: "Choosing the right lawyer can be a crucial decision in the success of your case. Learn about the important factors you should consider when selecting your lawyer.",
-    img: Blog2,
-    date: "September 15, 2023",
-  },
-  {
-    id: 3,
-    title: "Legal Challenges in E-Commerce",
-    desc: "With the rise of e-commerce, businesses face various legal challenges. Discover the key challenges and how to effectively address them.",
-    img: Blog3,
-    date: "September 10, 2023",
-  },
-];
-
 interface Achievement {
   id: number;
   title_ar: string;
@@ -127,8 +77,6 @@ const { data, pending, error } = useFetch<AchievementResponse>(
     lazy: true,
   }
 );
-
-console.log(data);
 </script>
 
 <style scoped></style>
