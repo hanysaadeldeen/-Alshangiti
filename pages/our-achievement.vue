@@ -52,19 +52,12 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = useFetch<AchievementResponse>(
-  "http://37.27.29.234/shangiti/api/achievements/detailed-achievements/"
+  "http://37.27.29.234/shangiti/api/achievements/detailed-achievements/",
+  {
+    server: false,
+    lazy: true,
+  }
 );
-
-// const isOpen = ref(false);
-// const answerHeight = ref(0);
-// const answer = ref<HTMLDivElement | null>(null);
-// const toggle = async () => {
-//   isOpen.value = !isOpen.value;
-//   await nextTick();
-//   if (answer.value) {
-//     answerHeight.value = answer.value.scrollHeight;
-//   }
-// };
 </script>
 
 <style scoped>
