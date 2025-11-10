@@ -1,7 +1,25 @@
 <template>
   <main class="OurAchievement">
     <header-img-section :img="achevments" title="pages.achievement" />
-    <div class="section" v-if="data && !pending">
+    <div v-if="pending" class="py-[60px]">
+      <h1
+        class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
+      >
+        {{ locale === "en" ? "loading.." : "جاري التحميل... " }}
+      </h1>
+    </div>
+    <div
+      v-else-if="(data && data.results.length === 0) || error"
+      class="py-[60px]"
+    >
+      <h1
+        class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
+      >
+        {{ locale === "en" ? "There Is No Actievements" : "لا يوجد إنجازات" }}
+      </h1>
+    </div>
+
+    <div class="section" v-else>
       <OurAchievementCard
         v-for="(achievement, index) in data?.results"
         :key="achievement.id"
@@ -33,68 +51,20 @@ interface AchievementResponse {
   results: Achievement[];
 }
 
-const { data, pending, error } = await useFetch<AchievementResponse>(
+const { data, pending, error } = useFetch<AchievementResponse>(
   "http://37.27.29.234/shangiti/api/achievements/detailed-achievements/"
 );
 
-// const Achievements = [
-//   {
-//     id: 1,
-//     title: "achievements.cases[0].title",
-//     content: [
-//       "achievements.cases[0].content[0]",
-//       "achievements.cases[0].content[1]",
-//       "achievements.cases[0].content[2]",
-//       "achievements.cases[0].content[3]",
-//     ],
-//     toggle: true,
-//   },
-//   {
-//     id: 2,
-//     title: "achievements.cases[1].title",
-//     content: [
-//       "achievements.cases[1].content[0]",
-//       "achievements.cases[1].content[1]",
-//       "achievements.cases[1].content[2]",
-//     ],
-//     toggle: false,
-//   },
-//   {
-//     id: 3,
-//     title: "achievements.cases[2].title",
-//     content: [
-//       "achievements.cases[2].content[0]",
-//       "achievements.cases[2].content[1]",
-//       "achievements.cases[2].content[2]",
-//       "achievements.cases[2].content[3]",
-//     ],
-//     toggle: false,
-//   },
-//   {
-//     id: 4,
-//     title: "achievements.cases[3].title",
-//     content: [
-//       "achievements.cases[3].content[0]",
-//       "achievements.cases[3].content[1]",
-//       "achievements.cases[3].content[2]",
-//       "achievements.cases[3].content[3]",
-//       "achievements.cases[3].content[4]",
-//     ],
-//     toggle: false,
-//   },
-// ];
-
-const isOpen = ref(false);
-const answerHeight = ref(0);
-const answer = ref<HTMLDivElement | null>(null);
-const toggle = async () => {
-  isOpen.value = !isOpen.value;
-
-  await nextTick();
-  if (answer.value) {
-    answerHeight.value = answer.value.scrollHeight;
-  }
-};
+// const isOpen = ref(false);
+// const answerHeight = ref(0);
+// const answer = ref<HTMLDivElement | null>(null);
+// const toggle = async () => {
+//   isOpen.value = !isOpen.value;
+//   await nextTick();
+//   if (answer.value) {
+//     answerHeight.value = answer.value.scrollHeight;
+//   }
+// };
 </script>
 
 <style scoped>

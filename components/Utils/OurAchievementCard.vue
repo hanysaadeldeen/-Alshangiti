@@ -8,7 +8,6 @@
             class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer"
             :class="isOpen ? 'text-text' : 'text-[#808080]'"
           >
-            <!-- {{ $t(title) }} -->
             {{ title }}
           </h1>
           <div class="p-2 cursor-pointer" @click="toggle">
@@ -27,9 +26,6 @@
           :class="isOpen ? 'text-text mt-5' : 'text-[#5E5E5E]'"
         >
           {{ details }}
-          <!-- <span v-for="content in details">
-            {{ $t(content) }}
-          </span> -->
         </div>
       </div>
     </div>
