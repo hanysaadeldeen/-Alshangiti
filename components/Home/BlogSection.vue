@@ -34,11 +34,18 @@
         </button>
       </div>
     </div>
-    <div v-if="pending" class="py-[60px]">
+    <div v-if="pending">
       <h1
         class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
       >
         {{ locale === "en" ? "loading.." : "جاري التحميل... " }}
+      </h1>
+    </div>
+    <div v-else-if="(data && data.results.length === 0) || error">
+      <h1
+        class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
+      >
+        {{ locale === "en" ? "There Is No Blogs" : "لا يوجد مقالات" }}
       </h1>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20">
