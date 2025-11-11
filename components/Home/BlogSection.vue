@@ -43,7 +43,7 @@
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20">
       <blog-card
-        v-for="blog in data?.results"
+        v-for="blog in data?.results.slice(0, 3)"
         :id="blog.id"
         :title="locale === 'ar' ? blog.title_ar : blog.title_en"
         :description="locale === 'ar' ? blog.excerpt_ar : blog.excerpt_en"

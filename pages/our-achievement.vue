@@ -52,13 +52,12 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = useFetch<AchievementResponse>(
-  "http://37.27.29.234/shangiti/api/achievements/detailed-achievements/",
+  "https://37-27-29-234.nip.io/shangiti/api/achievements/detailed-achievements/",
   {
     server: false,
     lazy: true,
   }
 );
-// http://37.27.29.234/shangiti/api/blog/blog-posts/
 </script>
 
 <style scoped>
