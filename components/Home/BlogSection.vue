@@ -71,7 +71,7 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = useFetch<AchievementResponse>(
-  "http://37.27.29.234/shangiti/api/blog/blog-posts/",
+  "https://37-27-29-234.nip.io/shangiti/api/blog/blog-posts/",
   {
     server: false,
     lazy: true,
