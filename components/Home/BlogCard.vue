@@ -18,11 +18,22 @@
         </div>
         <div
           ref="answer"
-          class="overflow-hidden transition-all duration-500 text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6"
+          class="overflow-hidden transition-all duration-500"
           :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }"
-          :class="isOpen ? 'mt-5' : ''"
+          :class="isOpen ? 'mt-1' : ''"
         >
-          {{ description }}
+          <p
+            class="text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6"
+          >
+            {{ description }}
+          </p>
+
+          <nuxt-link
+            :to="localePath(`/blogs/${link}`)"
+            class="text-primary-500 mt-2 inline-block hover:text-primary-700 font-normal transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            {{ locale === "ar" ? "اعرف المزيد" : "Read more" }}
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -31,10 +42,12 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
+const localePath = useLocalePath();
 
 defineProps<{
   title: string;
   description: string;
+  link: string;
   id: number;
 }>();
 

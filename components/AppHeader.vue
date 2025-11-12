@@ -8,7 +8,11 @@
       <div class="relative z-40">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-between gap-6">
-            <nuxt-link :to="localePath('index')" class="block relative">
+            <nuxt-link
+              @click="isSideBar = false"
+              :to="localePath('index')"
+              class="block relative"
+            >
               <img
                 src="~/assets/img/Logo.svg"
                 class="h-[40px] md:h-[50px] w-fit xl:h-[57px] relative"

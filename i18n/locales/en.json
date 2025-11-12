@@ -9,7 +9,7 @@
     "projects": "Project Services",
     "achievement": "Our Achievement",
     "collectionservices": "Collection services",
-    "blog": "Blog",
+    "blog": "Blogs",
     "contactUs": "Contact Us",
     "privacy": "Privacy",
     "terms": "Terms and Conditions"
@@ -163,6 +163,12 @@
     "locations": {
       "jeddah": "Jeddah: Al-Khalidiyah District, Prince Saud Al-Faisal Street, J View Tower, 9th Floor, Office No. 904.",
       "madinah": "Al-Madinah Al-Munawarah: Al-Ahn District, Prince Abdulmohsin Road, Al-Masi Business Centre, 2nd Floor, Office No. 5."
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Blog",
+      "subtext": "Your comprehensive reference for the most prominent legal topics."
     }
   },
   "services": {

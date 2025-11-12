@@ -21,22 +21,22 @@
       <div class="flex max-lg:flex-col w-full gap-4 lg:gap-8 mb-6">
         <div class="flex flex-col w-full lg:max-w-[304px]">
           <label
-            for="FullName"
+            for="FirstName"
             class="text-text w-fit font-normal text-sm mb-2 cursor-pointer inline-block"
           >
             {{ locale === "ar" ? "الاسم الأول" : "First Name" }}
           </label>
           <Field
-            id="FullName"
-            name="FullName"
+            id="FirstName"
+            name="FirstName"
             type="text"
             :placeholder="
               locale === 'en' ? 'Enter First Name' : 'أدخل اسمك الأول'
             "
             class="inputBack py-2 md:py-3 px-2.5 md:px-4 h-[48px] w-full border focus:outline-none focus:ring-2 focus:ring-Primary"
-            :class="{ '!border-red-500': errors.FullName }"
+            :class="{ '!border-red-500': errors.FirstName }"
           />
-          <span class="text-red-500 text-sm">{{ errors.FullName }}</span>
+          <span class="text-red-500 text-sm">{{ errors.FirstName }}</span>
         </div>
         <div class="flex flex-col w-full lg:max-w-[304px]">
           <label
@@ -123,7 +123,13 @@
         />
         <span class="text-red-500 text-sm">{{ errors.message }}</span>
       </div>
-      <Button />
+      <Button :loading="isLoading" />
+      <p v-if="contactMessage" class="my-2 text-center text-primary-300">
+        {{ contactMessage }}
+      </p>
+      <p v-if="contactMessageE" class="my-2 text-center text-red-500">
+        {{ contactMessageE }}
+      </p>
       <div class="mt-5 text-text text-sm font-normal">
         {{
           locale === "ar"
@@ -143,14 +149,15 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 const localpath = useLocalePath();
-import { Form, Field } from "vee-validate";
+import { Form, Field, useForm } from "vee-validate";
 import * as yup from "yup";
 const isOpenSuccess = ref(false);
 const isLoading = ref(false);
-const { sendEmail } = useEmail();
+const contactMessage = ref("");
+const contactMessageE = ref("");
 
 const schema = yup.object({
-  FullName: yup
+  FirstName: yup
     .string()
     .min(
       3,
@@ -184,15 +191,14 @@ const schema = yup.object({
   phoneNumber: yup
     .string()
     .matches(
-      /^\+?[0-9]{10,}$/,
+      /^(\+?20|0)?1[0-2,5]\d{8}$|^(\+?966|0)?5\d{8}$/,
       locale.value === "en"
-        ? "Number must be at least 10 digits"
-        : "يجب أن يكون الرقم على الأقل 10 أرقام"
+        ? "Please enter a valid Egyptian or Saudi phone number"
+        : "من فضلك أدخل رقم هاتف مصري أو سعودي صحيح"
     )
     .required(
       locale.value === "en" ? "Phone number is required" : "رقم الهاتف مطلوب"
     ),
-
   message: yup
     .string()
     .min(
@@ -209,19 +215,41 @@ const schema = yup.object({
     )
     .required(locale.value === "en" ? "Message is required" : "الرسالة مطلوبة"),
 });
-const onSubmit = async (values: any) => {
-  //   console.log(values);
+const onSubmit = async (values: any, { resetForm }: any) => {
   try {
     isLoading.value = true;
-    const response = await sendEmail(values);
-
-    if (response.status === 200) {
-      console.log("success");
+    const { data, pending, error } = await useFetch(
+      "https://37-27-29-234.nip.io/shangiti/api/contact/",
+      {
+        method: "POST",
+        body: {
+          first_name: values.FirstName,
+          last_name: values.LastName,
+          phone: values.phoneNumber,
+          email: values.email,
+          message: values.message,
+        },
+        server: false,
+      }
+    );
+    if (error.value) {
+      throw new Error("Unknown error occurred");
     }
-    isLoading.value = false;
+    if (data.value) {
+      contactMessage.value =
+        locale.value === "en"
+          ? "Your message has been sent successfully"
+          : "تم إرسال رسالتك بنجاح. سنتواصل معك قريباً";
+      resetForm();
+      isOpenSuccess.value = true;
+    }
   } catch (error) {
+    contactMessageE.value =
+      locale.value === "en"
+        ? "There was an error sending your message. Please try again later."
+        : "حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى لاحقاً.";
+  } finally {
     isLoading.value = false;
-    isOpenSuccess.value = true;
   }
 };
 </script>

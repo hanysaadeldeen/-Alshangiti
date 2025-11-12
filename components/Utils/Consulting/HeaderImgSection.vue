@@ -19,6 +19,12 @@
       >
         {{ $t("homePage.home.hero.subtext") }}
       </p>
+      <p
+        v-if="adjustedPath === '/blogs'"
+        class="text-white font-normal text-lg md:text-xl mt-5"
+      >
+        {{ $t("blog.hero.subtext") }}
+      </p>
     </div>
   </div>
 </template>

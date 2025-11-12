@@ -36,7 +36,6 @@
       >
         <FormSec />
       </div>
-      <!-- grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 -->
       <div
         class="flex flex-wrap gap-6 lg:gap-10 pb-10 md:pb-14 relative border-b border-white"
       >
@@ -133,13 +132,10 @@
                   {{ $t("pages.aboutUs") }}
                 </nuxt-link>
               </li>
-              <li
-                :class="{ active: adjustedPath.includes('/blogs') }"
-                class="my-1"
-              >
-                <div>
+              <li :class="{ active: adjustedPath === '/blogs' }">
+                <nuxt-link :to="localePath('/blogs')">
                   {{ $t("pages.blog") }}
-                </div>
+                </nuxt-link>
               </li>
               <li :class="{ active: adjustedPath === '/contact-us' }">
                 <nuxt-link :to="localePath('/contact-us')">
