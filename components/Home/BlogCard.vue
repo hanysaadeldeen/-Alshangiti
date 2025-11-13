@@ -30,7 +30,7 @@
 
           <nuxt-link
             :to="localePath(`/blogs/${link}`)"
-            class="text-primary-500 mt-2 inline-block hover:text-primary-700 font-normal transition-all duration-300 ease-in-out cursor-pointer"
+            class="text-primary-500 mt-2 inline-block hover:text-primary-700 font-bold transition-all duration-300 ease-in-out cursor-pointer"
           >
             {{ locale === "ar" ? "اعرف المزيد" : "Read more" }}
           </nuxt-link>
