@@ -21,7 +21,7 @@
 
     <div class="section" v-else>
       <OurAchievementCard
-        v-for="(achievement, index) in data?.results"
+        v-for="(achievement, index) in data?.results.slice(0, limit)"
         :key="achievement.id"
         :title="locale === 'ar' ? achievement.title_ar : achievement.title_en"
         :details="
@@ -32,6 +32,27 @@
         :id="achievement.id"
         :defaultToggle="index === 0"
       />
+      <button
+        v-if="data?.results"
+        class="w-fit my-6 md:my-10 h-full mx-auto border-[2px] border-primary-500 relative overflow-hidden min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
+        :class="{
+          '!opacity-60 !cursor-not-allowed':
+            pending || data?.results?.length <= limit,
+        }"
+        :disabled="pending || data?.results?.length <= limit"
+        @click="limit += 10"
+      >
+        <span
+          class="text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 ease-in-out text-white"
+        >
+          {{ locale === "ar" ? "عرض المزيد" : "Show More" }}</span
+        >
+        <span
+          class="absolute -bottom-10 text-sm lg:text-base font-medium group-hover:bottom-0 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out text-secondary"
+        >
+          {{ locale === "ar" ? "عرض المزيد" : "Show More" }}</span
+        >
+      </button>
     </div>
   </main>
 </template>
@@ -50,6 +71,7 @@ interface Achievement {
 interface AchievementResponse {
   results: Achievement[];
 }
+const limit = ref(10);
 
 const { data, pending, error } = useFetch<AchievementResponse>(
   "https://37-27-29-234.nip.io/shangiti/api/achievements/detailed-achievements/",
@@ -58,6 +80,14 @@ const { data, pending, error } = useFetch<AchievementResponse>(
     lazy: true,
   }
 );
+// const url = computed(
+//   () =>
+//     `https://37-27-29-234.nip.io/shangiti/api/achievements/detailed-achievements/?limit=${limit.value}`
+// );
+// const { data, pending, error } = useFetch<AchievementResponse>(url, {
+//   server: false,
+//   lazy: true,
+// });
 </script>
 
 <style scoped>

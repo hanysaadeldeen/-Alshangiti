@@ -12,9 +12,6 @@
           <div
             class="font-normal text-base md:text-lg mb-6 flex flex-col gap-4"
           >
-            <!-- <p class="text-justify">
-              {{ $t("homePage.about.contentOne") }}
-            </p> -->
             <p class="text-justify">
               {{ $t("homePage.about.contentTwo") }}
             </p>

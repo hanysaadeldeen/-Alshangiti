@@ -2,8 +2,10 @@
   <main class="BlogsPage">
     <header-img-section :img="blog" title="blog.hero.title" />
     <div class="mx-auto max-w-[1315px] max-2xl:px-10 mb-16 md:mb-[120px]">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20">
-        <blog-card
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20 items-stretch"
+      >
+        <blog-card-t
           v-for="blog in data?.results"
           :id="blog.id"
           :title="locale === 'ar' ? blog.title_ar : blog.title_en"
