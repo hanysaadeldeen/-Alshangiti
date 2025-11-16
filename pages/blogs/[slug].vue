@@ -1,67 +1,54 @@
 <template>
-  <main class="BlogsPage">
-    <!-- 
-    
-    flex justify-center items-start
-    -->
-    <div class="py-16 md:py-24 relative max-h-[400px]">
-      <div class="absolute top-0 left-0 w-full h-full">
-        <img
-          :src="blog"
-          alt="blog hero image"
-          class="w-full h-full object-cover brightness-50"
-        />
-      </div>
-      <div class="max-w-[1315px] w-full mx-auto relative z-10 max-2xl:px-6">
-        <div class="w-full">
-          <h1
-            v-if="data && !pending"
-            class="text-3xl md:text-4xl lg:text-5xl lg:!leading-[70px] text-white font-bold max-w-[750px]"
-            :class="locale === 'ar' ? 'ml-auto' : 'mr-auto'"
-          >
-            {{ locale === "ar" ? data.title_ar : data.title_en }}
-          </h1>
-
-          <p
-            v-if="data && !pending"
-            class="text-[#ddd] font-normal text-lg md:text-xl mt-5"
-            :class="locale === 'ar' ? 'ml-auto' : 'mr-auto'"
-          >
+  <main class="BlogsPage mt-20">
+    <div class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto">
+      <div class="w-full">
+        <div
+          class="flex gap-2 justify-center items-center"
+          v-if="data && !pending"
+        >
+          <p class="text-lg text-center text-primary-900 font-normal">
+            {{ formatDate(data?.created_at || "") }}
+            -
+          </p>
+          <p class="text-lg text-center text-primary-900 font-normal">
             {{
               locale === "ar"
                 ? data?.category?.name_ar
                 : data?.category?.name_en
             }}
-
             -
+          </p>
+          <p class="text-lg text-center text-primary-900 font-normal">
             {{ data?.status_display }}
-            -
-            {{ formatDate(data?.created_at || "") }}
           </p>
         </div>
+        <h1
+          v-if="data && !pending"
+          class="text-3xl mt-2 text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
+        >
+          {{ locale === "ar" ? data.title_ar : data.title_en }}
+        </h1>
+      </div>
+      <div
+        v-if="data"
+        class="mx-auto max-w-[839px] max-2xl:px-10 mb-16 md:mb-[120px] mt-12 md:mt-16"
+      >
+        <p
+          class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
+        >
+          {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
+        </p>
+        <p
+          class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
+        >
+          {{ locale === "ar" ? data.content_ar : data.content_en }}
+        </p>
       </div>
     </div>
-    <section
-      v-if="data"
-      class="mx-auto max-w-[1315px] max-2xl:px-10 mb-16 md:mb-[120px]"
-    >
-      <h1
-        class="font-bold text-text text-2xl md:text-2xl md:!leading-[40px] mb-2 md:mb-4 max-w-[800px]"
-      >
-        {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
-      </h1>
-      <p
-        class="text-text text-lg md:text-xl font-normal flex flex-col max-w-[1100px]"
-      >
-        {{ locale === "ar" ? data.content_ar : data.content_en }}
-      </p>
-    </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import blog from "~/assets/img/Blog/blog.webp";
-
 const { locale } = useI18n();
 const route = useRoute();
 const slug = computed(() => {

@@ -3,14 +3,13 @@
     <header-img-section :img="blog" title="blog.hero.title" />
     <div class="mx-auto max-w-[1315px] max-2xl:px-10 mb-16 md:mb-[120px]">
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20 items-stretch"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-20 items-stretch"
       >
-        <blog-card-t
+        <blog-card-f
           v-for="blog in data?.results"
-          :id="blog.id"
-          :title="locale === 'ar' ? blog.title_ar : blog.title_en"
-          :description="locale === 'ar' ? blog.excerpt_ar : blog.excerpt_en"
-          :link="`${blog.slug}`"
+          :key="blog.id"
+          :data="blog"
+          :pending="pending"
         />
       </div>
     </div>
@@ -31,6 +30,7 @@ interface Achievement {
   excerpt_en: string;
   content_ar: string;
   content_en: string;
+  created_at: string;
   featured_image: string;
 }
 
