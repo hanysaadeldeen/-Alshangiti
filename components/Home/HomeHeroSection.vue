@@ -101,9 +101,9 @@
           <img
             src="~/assets/img/scrollTo.gif"
             alt="scrollTo.gif"
-            width="60"
-            height="60"
-            class="w-[60px] h-[60px]"
+            width="50"
+            height="80"
+            class="size-[60px]"
           />
         </div>
       </div>
