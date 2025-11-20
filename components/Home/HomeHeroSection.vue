@@ -4,7 +4,7 @@
       class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50"
     ></div>
 
-    <picture>
+    <!-- <picture>
       <source
         srcset="~/assets/img/seo/heroPoster-1200.webp"
         media="(min-width: 1200px)"
@@ -20,7 +20,20 @@
         decoding="async"
         fetchpriority="high"
       />
-    </picture>
+    </picture> -->
+    <img
+      src="/images/heroPoster-400.webp"
+      srcset="
+        /images/heroPoster-400.webp   400w,
+        /images/heroPoster-800.webp   800w,
+        /images/heroPoster-1200.webp 1200w
+      "
+      sizes="100vw"
+      alt="Hero Background"
+      class="absolute inset-0 w-full h-full object-cover"
+      decoding="async"
+      fetchpriority="high"
+    />
     <!-- <video
       autoplay
       muted

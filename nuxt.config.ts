@@ -46,6 +46,24 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css",
         },
+        {
+          rel: "preload",
+          as: "image",
+          href: "/images/heroPoster-400.webp",
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "/images/heroPoster-800.webp",
+          media: "(min-width: 600px)",
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "/images/heroPoster-1200.webp",
+
+          media: "(min-width: 1200px)",
+        },
       ],
       title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
       meta: [
