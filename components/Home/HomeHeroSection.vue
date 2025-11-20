@@ -4,38 +4,39 @@
       class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50"
     ></div>
 
-    <div>
-      <!-- <picture>
-        <source
-          srcset="~/assets/img/seo/heroPoster-1200.webp"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="~/assets/img/seo/heroPoster-800.webp"
-          media="(min-width: 600px)"
-        />
-        <img
-          src="~/assets/img/seo/heroPoster-400.webp"
-          alt="Hero Image"
-          class="absolute inset-0 w-full h-full object-cover"
-          width="1920"
-          height="1080"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </picture> -->
-    </div>
+    <picture>
+      <source
+        srcset="~/assets/img/seo/heroPoster-1200.webp"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="~/assets/img/seo/heroPoster-800.webp"
+        media="(min-width: 600px)"
+      />
+      <img
+        src="~/assets/img/seo/heroPoster-400.webp"
+        alt="Hero Image"
+        class="absolute inset-0 w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </picture>
+
     <!-- <video
       autoplay
       muted
-      loop
       playsinline
+      loop
       preload="none"
       class="absolute inset-0 w-full h-full object-cover"
-      id="heroVideo"
     >
       <source src="~/assets/img/heroVideo.webm" type="video/webm" />
     </video> -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60"
+    ></div>
     <div class="h-full flex flex-col justify-evenly z-20 relative max-2xl:px-6">
       <div
         class="absolute top-6 sm:top-10 text-white font-medium text-xl md:text-2xl lg:text-3xl text-center"
@@ -146,10 +147,8 @@ const scrollToSection = (sectionId: string) => {
 };
 
 onMounted(() => {
-  setTimeout(() => {
-    const v = document.getElementById("heroVideo");
-    v?.play();
-  }, 500);
+  const video = document.getElementById("heroVideo");
+  video && video.play();
 });
 </script>
 
