@@ -40,10 +40,7 @@ export default defineNuxtConfig({
           rel: "preload",
           as: "style",
           href: "https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap",
+          onload: "this.onload=null;this.rel='stylesheet'",
         },
         {
           rel: "stylesheet",

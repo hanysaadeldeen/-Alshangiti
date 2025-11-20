@@ -19,10 +19,20 @@ const setDirection = () => {
     document.documentElement.setAttribute("lang", locale.value);
   }
 };
+
 onMounted(() => {
   setDirection();
 });
 watch(locale, setDirection, { immediate: true });
+
+useHead({
+  noscript: [
+    {
+      innerHTML:
+        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap">',
+    },
+  ],
+});
 </script>
 
 <style scoped>
