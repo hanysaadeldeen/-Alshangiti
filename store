@@ -3,9 +3,48 @@
     <div
       class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50"
     ></div>
+    <!-- <video
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="~/assets/img/heroPoster.webp"
+      class="w-full h-full object-cover absolute -z-10"
+    >
+      <source src="~/assets/img/heroVideo.webm" type="video/webm" />
+    </video> -->
+    <!-- <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster="~/assets/img/heroPoster.webp"
+      width="1920"
+      height="1080"
+      class="w-full h-full object-cover absolute -z-10"
+      id="heroVideo"
+    >
+      <source src="~/assets/img/heroVideo.webm" type="video/webm" />
+    </video> -->
 
+    <!-- <img
+      src="~/assets/img/seo/heroPoster-1920.webp"
+      srcset="
+        ~/assets/img/seo/heroPoster-400.webp   480w,
+        ~/assets/img/seo/heroPoster-800.webp   800w,
+        ~/assets/img/seo/heroPoster-1200.webp 1200w
+      "
+      sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
+      alt="Hero Image"
+      class="absolute inset-0 w-full h-full object-cover"
+      width="1920"
+      height="1080"
+      decoding="async"
+      fetchpriority="high"
+    /> -->
     <div class="">
-      <!-- <picture>
+      <picture>
         <source
           srcset="~/assets/img/seo/heroPoster-1200.webp"
           media="(min-width: 1200px)"
@@ -23,7 +62,7 @@
           decoding="async"
           fetchpriority="high"
         />
-      </picture> -->
+      </picture>
     </div>
     <!-- <video
       autoplay
@@ -69,7 +108,9 @@
         </div>
       </div>
       <div class="max-w-[898px] mx-auto">
-        <h1 class="text-white font-bold mb-5 text-3xl md:text-5xl lg:text-6xl">
+        <h1
+          class="text-white font-bold mb-5 text-3xl text-center md:text-5xl lg:text-[64px] lg:!leading-[100px]"
+        >
           {{ $t("homePage.home.hero.headline") }}
         </h1>
 
@@ -154,22 +195,5 @@ onMounted(() => {
 <style scoped>
 #hook {
   scroll-margin-top: 40px;
-}
-.hero-section {
-  background-image: url("../../assets/img/seo/heroPoster-400.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 600px) {
-  .hero-section {
-    background-image: url("../../assets/img/seo/heroPoster-800.webp");
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero-section {
-    background-image: url("../../assets/img/seo/heroPoster-1200.webp");
-  }
 }
 </style>

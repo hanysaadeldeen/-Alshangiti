@@ -19,6 +19,14 @@ export default defineNuxtConfig({
     ],
     detectBrowserLanguage: false,
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+      fallback: "200.html", // هنا بنحدد ملف الـ SPA fallback
+    },
+  },
+  ssr: false,
   app: {
     head: {
       script: [],
@@ -27,6 +35,11 @@ export default defineNuxtConfig({
           rel: "icon",
           type: "image/png",
           href: "/LogoTap.svg",
+        },
+        {
+          rel: "preload",
+          as: "style",
+          href: "https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap",
         },
         {
           rel: "stylesheet",

@@ -250,9 +250,13 @@
                     'text-white hover:text-PrimaryPL3',
                   ]"
                 >
-                  <div @click="isSideBar = !isSideBar" class="w-full">
+                  <nuxt-link
+                    @click="isSideBar = !isSideBar"
+                    class="w-full"
+                    :to="localePath('blogs')"
+                  >
                     {{ $t("pages.blog") }}
-                  </div>
+                  </nuxt-link>
                 </li>
 
                 <li
