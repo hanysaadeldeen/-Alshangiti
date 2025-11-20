@@ -40,7 +40,7 @@
             >
               {{ $t("homePage.licenses.items.moj") }}
             </h2>
-            <p class="text-[#A1A1A1] font-bold text-base md:text-lg">26141</p>
+            <p class="text-[#5E5E5E] font-bold text-base md:text-lg">26141</p>
           </div>
         </div>
         <div
@@ -72,7 +72,7 @@
             >
               {{ $t("homePage.licenses.items.sba") }}
             </h2>
-            <p class="text-[#A1A1A1] font-bold text-base md:text-lg">
+            <p class="text-[#5E5E5E] font-bold text-base md:text-lg">
               SBA00007274
             </p>
           </div>

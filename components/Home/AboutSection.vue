@@ -22,7 +22,7 @@
           <div class="flex justify-center md:justify-start">
             <nuxt-link to="/about-us">
               <button
-                class="relative overflow-hidden border w-fit mt-6 px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent"
+                class="relative overflow-hidden border w-fit mt-6 px-6 py-2.5 flex flex-col max-h-[47px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent"
               >
                 <span
                   class="text-sm lg:text-base font-medium group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"

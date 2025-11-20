@@ -1,12 +1,15 @@
 <template>
-  <a :href="`https://wa.me/966126065682?text=${data}`" target="_blank">
+  <a
+    :href="`https://wa.me/966126065682?text=${data}`"
+    target="_blank"
+    aria-label="Contact us on WhatsApp"
+  >
     <span
       v-if="showButton"
       class="fixed bottom-20 text-white p-4 rounded-full shadow-lg transition duration-300 z-50 ease-in-out size-12 md:w-14 md:h-14 flex justify-center items-center opacity-0 group animate-fadeIn bg-[#20B038] hover:bg-[#60D66A]"
       :class="locale === 'ar' ? ' right-10' : 'left-10'"
     >
       <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i>
-      <span class="sr-only">Contact us on WhatsApp</span>
     </span>
   </a>
 </template>

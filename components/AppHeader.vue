@@ -24,7 +24,7 @@
               />
             </nuxt-link>
             <div
-              class="hidden md:inline text-white text-base font-medium capitalize border-[#EEC882] py-2.5"
+              class="hidden md:inline text-white text-base font-medium capitalize border-secondary py-2.5"
               :class="
                 locale === 'ar'
                   ? 'border-r-[2.5px] pr-2.5'
@@ -34,11 +34,11 @@
               <p>
                 <span v-if="locale === 'ar'">
                   خبرة في قطاع الأعمال B2B
-                  <span class="text-[#EEC882]">منذ 2005</span>
+                  <span class="text-secondary">منذ 2005</span>
                 </span>
                 <span v-else>
                   Expertise in the B2B business sector
-                  <span class="text-[#EEC882]">since 2005</span>
+                  <span class="text-secondary">since 2005</span>
                 </span>
               </p>
             </div>

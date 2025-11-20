@@ -1,7 +1,7 @@
 <template>
   <button
     type="submit"
-    class="relative overflow-hidden border w-full mt-6 py-3 px-6 md:px-8 lg:px-10 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent"
+    class="relative overflow-hidden border w-full mt-6 py-3 px-6 md:px-8 lg:px-10 flex flex-col max-h-[47px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 border-transparent"
     :class="{
       '!opacity-60 !cursor-not-allowed': loading,
     }"
