@@ -1,67 +1,74 @@
 <template>
-  <div class="w-full boxShadow p-6 h-fit">
-    <div class="relative" :key="id">
-      <div class="max-2xl:px-6 w-full max-w-[1315px] mx-auto">
-        <div class="flex gap-4 items-center justify-between">
-          <h1
-            @click="toggle"
-            class="text-text font-bold text-lg md:text-xl cursor-pointer leading-6 md:leading-7"
-          >
-            {{ title }}
-          </h1>
-          <div class="p-2 cursor-pointer" @click="toggle">
-            <i
-              class="fa-solid fa-chevron-up transition-all ease-in-out duration-300 text-text"
-              :class="isOpen ? ' rotate-0 ' : '-rotate-180 '"
-            ></i>
-          </div>
-        </div>
-        <div
-          ref="answer"
-          class="overflow-hidden transition-all duration-500"
-          :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }"
-          :class="isOpen ? 'mt-1' : ''"
-        >
-          <p
-            class="text-justify text-[#5E5E5E] font-normal text-sm md:text-base leading-5 md:leading-6"
-          >
-            {{ description }}
-          </p>
+  <div
+    class="relative px-6 border-[#E1E1E1] flex flex-col gap-2 transition-all ease-in-out duration-300 hover:border-primary-500"
+    :class="locale === 'ar' ? 'border-r-[2px]' : 'border-l-[2px]'"
+  >
+    <p v-if="data && !pending" class="text-[#5E5E5E] font-normal text-sm">
+      {{ formatDate(data.created_at || "") }} -
+      <span>{{ locale === "en" ? "red by" : "مقروء من " }}</span>
+      {{ data.views_count }}
+    </p>
 
-          <nuxt-link
-            :to="localePath(`/blogs/${link}`)"
-            class="text-primary-500 mt-2 inline-block hover:text-primary-700 font-bold transition-all duration-300 ease-in-out cursor-pointer"
-          >
-            {{ locale === "ar" ? "اعرف المزيد" : "Read more" }}
-          </nuxt-link>
-        </div>
-      </div>
-    </div>
+    <nuxt-link :to="localePath(`/blogs/${data?.slug}`)">
+      <h1
+        v-if="data && !pending"
+        class="text-2xl text-primary-500 font-bold transition-all ease-in-out duration-300 hover:underline"
+      >
+        {{ locale === "ar" ? data.title_ar : data.title_en }}
+      </h1>
+    </nuxt-link>
+    <p
+      v-if="data && !pending"
+      class="text-primary-900 font-normal text-base text-justify line-clamp-3"
+    >
+      {{ locale === "ar" ? data?.excerpt_ar : data?.excerpt_en }}
+    </p>
+    <nuxt-link :to="localePath(`/blogs/${data?.slug}`)">
+      <p
+        v-if="data && !pending"
+        class="text-primary-500 font-semibold text-base hover:underline"
+      >
+        {{ locale === "ar" ? "قراءة المزيد" : "Read more" }}
+      </p>
+    </nuxt-link>
   </div>
 </template>
 
 <script setup lang="ts">
 const { locale } = useI18n();
 const localePath = useLocalePath();
-
-defineProps<{
-  title: string;
-  description: string;
-  link: string;
+interface BlogDetails {
   id: number;
-}>();
+  title_ar: string;
+  title_en: string;
+  slug: string;
+  excerpt_ar: string;
+  excerpt_en: string;
+  content_ar: string;
+  content_en: string;
+  featured_image: string;
+  created_at: string;
+  views_count: number;
+  // status_display: string;
+}
 
-const isOpen = ref(false);
-const answerHeight = ref(0);
-const answer = ref<HTMLDivElement | null>(null);
-const toggle = async () => {
-  isOpen.value = !isOpen.value;
+interface Props {
+  data: BlogDetails | null;
+  pending: boolean;
+}
 
-  await nextTick();
-  if (answer.value) {
-    answerHeight.value = answer.value.scrollHeight;
-  }
-};
+defineProps<Props>();
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+
+  console.log(dateString, date);
+  return date.toLocaleString("en-US", {
+    day: "2-digit",
+    month: "numeric",
+    year: "numeric",
+  });
+}
 </script>
 
 <style scoped></style>

@@ -7,19 +7,23 @@
           v-if="data && !pending"
         >
           <p class="text-lg text-center text-primary-900 font-normal">
-            {{ formatDate(data?.created_at || "") }}
+            {{ formatDate(data.created_at || "") }}
             -
           </p>
           <p class="text-lg text-center text-primary-900 font-normal">
             {{
-              locale === "ar"
-                ? data?.category?.name_ar
-                : data?.category?.name_en
+              locale === "ar" ? data.category.name_ar : data.category.name_en
             }}
             -
           </p>
           <p class="text-lg text-center text-primary-900 font-normal">
-            {{ data?.status_display }}
+            {{ data.status_display }}
+          </p>
+          -
+          <p class="text-lg text-center text-primary-900 font-normal">
+            <span>{{ locale === "en" ? "red by" : "مقروء من " }}</span>
+
+            {{ data.views_count }}
           </p>
         </div>
         <h1
@@ -40,9 +44,8 @@
         </p>
         <p
           class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
-        >
-          {{ locale === "ar" ? data.content_ar : data.content_en }}
-        </p>
+          v-html="locale === 'ar' ? data.content_ar : data.content_en"
+        />
       </div>
     </div>
   </main>
@@ -68,6 +71,7 @@ interface BlogDetails {
   featured_image: string;
   status_display: string;
   created_at: string;
+  views_count: number;
   category: {
     id: number;
     name_ar: string;

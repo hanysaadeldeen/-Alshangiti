@@ -51,14 +51,7 @@
       </h1>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-20">
-      <!-- <blog-card
-        v-for="blog in data?.results.slice(0, 3)"
-        :id="blog.id"
-        :title="locale === 'ar' ? blog.title_ar : blog.title_en"
-        :description="locale === 'ar' ? blog.excerpt_ar : blog.excerpt_en"
-        :link="`${blog.slug}`"
-      /> -->
-      <blog-card-f
+      <blog-card
         v-for="blog in data?.results.slice(0, 3)"
         :key="blog.id"
         :data="blog"
@@ -83,6 +76,7 @@ interface Achievement {
   content_en: string;
   created_at: string;
   featured_image: string;
+  views_count: number;
 }
 
 interface AchievementResponse {

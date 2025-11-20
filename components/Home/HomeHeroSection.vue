@@ -147,29 +147,12 @@ const videoLoaded = ref(false);
 
 onMounted(() => {
   const video = document.querySelector("video");
-  if (video) video.load(); // يبدأ التحميل بعد ظهور الصفحة
+  if (video) video.load();
 });
 </script>
 
 <style scoped>
 #hook {
   scroll-margin-top: 40px;
-}
-.hero-section {
-  background-image: url("../../assets/img/seo/heroPoster-400.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 600px) {
-  .hero-section {
-    background-image: url("../../assets/img/seo/heroPoster-800.webp");
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero-section {
-    background-image: url("../../assets/img/seo/heroPoster-1200.webp");
-  }
 }
 </style>

@@ -5,7 +5,7 @@
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-20 items-stretch"
       >
-        <blog-card-f
+        <blog-card
           v-for="blog in data?.results"
           :key="blog.id"
           :data="blog"
