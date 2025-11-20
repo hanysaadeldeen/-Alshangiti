@@ -17,13 +17,10 @@
         src="~/assets/img/seo/heroPoster-400.webp"
         alt="Hero Image"
         class="absolute inset-0 w-full h-full object-cover"
-        width="1920"
-        height="1080"
         decoding="async"
         fetchpriority="high"
       />
     </picture>
-
     <!-- <video
       autoplay
       muted
