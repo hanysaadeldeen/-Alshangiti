@@ -4,7 +4,7 @@
       class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50"
     ></div>
 
-    <div class="">
+    <div>
       <!-- <picture>
         <source
           srcset="~/assets/img/seo/heroPoster-1200.webp"
@@ -69,7 +69,9 @@
         </div>
       </div>
       <div class="max-w-[898px] mx-auto">
-        <h1 class="text-white font-bold mb-5 text-3xl md:text-5xl lg:text-6xl">
+        <h1
+          class="text-white text-center font-bold mb-5 text-3xl md:text-5xl lg:text-6xl"
+        >
           {{ $t("homePage.home.hero.headline") }}
         </h1>
 

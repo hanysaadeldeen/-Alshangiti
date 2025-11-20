@@ -31,14 +31,14 @@
                   : 'border-l-[2.5px] pl-2.5'
               "
             >
-              <p>
+              <p class="text-white">
                 <span v-if="locale === 'ar'">
                   خبرة في قطاع الأعمال B2B
-                  <span class="text-secondary">منذ 2005</span>
+                  <span class="text-[#e2ae4e]">منذ 2005</span>
                 </span>
                 <span v-else>
                   Expertise in the B2B business sector
-                  <span class="text-secondary">since 2005</span>
+                  <span class="text-[#e2ae4e]">since 2005</span>
                 </span>
               </p>
             </div>
