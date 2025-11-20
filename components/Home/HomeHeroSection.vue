@@ -3,24 +3,6 @@
     <div
       class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/50"
     ></div>
-
-    <!-- <picture>
-      <source
-        srcset="~/assets/img/seo/heroPoster-1200.webp"
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="~/assets/img/seo/heroPoster-800.webp"
-        media="(min-width: 600px)"
-      />
-      <img
-        src="~/assets/img/seo/heroPoster-400.webp"
-        alt="Hero Image"
-        class="absolute inset-0 w-full h-full object-cover"
-        decoding="async"
-        fetchpriority="high"
-      />
-    </picture> -->
     <img
       src="/images/heroPoster-400.webp"
       srcset="
@@ -30,20 +12,23 @@
       "
       sizes="100vw"
       alt="Hero Background"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
       decoding="async"
       fetchpriority="high"
     />
-    <!-- <video
+
+    <video
+      ref="heroVideo"
       autoplay
       muted
       playsinline
       loop
       preload="none"
       class="absolute inset-0 w-full h-full object-cover"
+      @loadeddata="videoLoaded = true"
     >
-      <source src="~/assets/img/heroVideo.webm" type="video/webm" />
-    </video> -->
+      <source src="/videos/heroVideo.webm" type="video/webm" />
+    </video>
     <div
       class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60"
     ></div>
@@ -155,10 +140,11 @@ const scrollToSection = (sectionId: string) => {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 };
+const videoLoaded = ref(false);
 
 onMounted(() => {
-  const video = document.getElementById("heroVideo");
-  video && video.play();
+  const video = document.querySelector("video");
+  if (video) video.load(); // يبدأ التحميل بعد ظهور الصفحة
 });
 </script>
 
