@@ -6,6 +6,7 @@
       :class="locale === 'ar' ? ' right-10' : 'left-10'"
     >
       <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i>
+      <span class="sr-only">Contact us on WhatsApp</span>
     </span>
   </a>
 </template>

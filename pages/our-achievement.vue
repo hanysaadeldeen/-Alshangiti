@@ -34,7 +34,7 @@
       />
       <button
         v-if="data?.results"
-        class="w-fit my-6 md:my-10 h-full mx-auto border-[2px] border-primary-500 relative overflow-hidden min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
+        class="w-fit my-6 md:my-10 h-full mx-auto border-[2px] border-primary-500 relative overflow-hidden min-w-[191px] px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
         :class="{
           '!opacity-60 !cursor-not-allowed':
             pending || data?.results?.length <= limit,

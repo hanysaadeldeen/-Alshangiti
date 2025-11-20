@@ -85,7 +85,7 @@
               class="max-[390px]:w-full sm:w-fit"
             >
               <button
-                class="relative overflow-hidden max-[390px]:w-full sm:w-fit border-[2px] px-4 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary border-secondary"
+                class="relative overflow-hidden max-[390px]:w-full sm:w-fit border-[2px] px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary border-secondary"
               >
                 <span
                   class="text-sm lg:text-base group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-secondary"
@@ -105,7 +105,7 @@
               class="max-[390px]:w-full sm:w-fit"
             >
               <button
-                class="relative overflow-hidden border-[2px] max-[390px]:w-full sm:w-fit px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary border-secondary"
+                class="relative overflow-hidden border-[2px] max-[390px]:w-full sm:w-fit px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:bg-secondary border-secondary"
               >
                 <span
                   class="text-sm lg:text-base group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-secondary"

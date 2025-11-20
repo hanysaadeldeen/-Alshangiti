@@ -19,7 +19,7 @@
         >
           <nuxt-link to="contact-us">
             <button
-              class="border-[2px] border-white border-transparent relative overflow-hidden max-md:w-full min-w-[168px] w-fit px-5 py-2 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
+              class="border-[2px] border-white border-transparent relative overflow-hidden max-md:w-full min-w-[168px] w-fit px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
             >
               <span
                 class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"
@@ -35,7 +35,7 @@
           </nuxt-link>
           <nuxt-link to="contact-us">
             <button
-              class="w-fit relative overflow-hidden border-[2px] max-md:w-full min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:text-secondary border-white hover:border-secondary"
+              class="w-fit relative overflow-hidden border-[2px] max-md:w-full min-w-[191px] px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-transparent text-white hover:text-secondary border-white hover:border-secondary"
             >
               <span
                 class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"

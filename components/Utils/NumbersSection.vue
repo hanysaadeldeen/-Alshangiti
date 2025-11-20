@@ -19,7 +19,7 @@
             {{ state.value }}+
           </h1>
           <p
-            class="md:mb-6 text-[#777777] text-lg md:text-xl font-normal text-center"
+            class="md:mb-6 text-[#5E5E5E] text-lg md:text-xl font-normal text-center"
           >
             {{ $t(state.text) }}
           </p>

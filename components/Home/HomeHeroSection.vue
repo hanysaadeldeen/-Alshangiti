@@ -78,7 +78,7 @@
         >
           <nuxt-link :to="$localePath('our-achievement')">
             <button
-              class="w-fit h-full mx-auto border-[2px] border-primary-500 relative overflow-hidden min-w-[191px] py-2 px-5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
+              class="w-fit h-full mx-auto border-[2px] border-primary-500 relative overflow-hidden min-w-[191px] px-6 py-2.5 flex flex-col max-h-[46px] justify-center items-center gap-4 transition-all duration-300 cursor-pointer group ease-in-out bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700"
             >
               <span
                 class="text-sm lg:text-base font-bold group-hover:-translate-y-[200%] transition-all duration-300 cursor-pointer ease-in-out text-white"
@@ -103,7 +103,7 @@
             alt="scrollTo.gif"
             width="60"
             height="60"
-            class="size-[45px] md:size-[60px]"
+            class="w-[45px] md:w-[60px] h-[45px] md:h-[60px]"
           />
         </div>
       </div>
