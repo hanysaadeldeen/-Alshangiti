@@ -12,19 +12,22 @@
       "
       sizes="100vw"
       alt="Hero Background"
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+      class="absolute inset-0 w-full h-full object-cover brightness-50 transition-opacity duration-700"
       decoding="async"
       fetchpriority="high"
     />
 
+    <!-- Video -->
     <video
       ref="heroVideo"
+      poster="/images/heroPoster-1200.webp"
       autoplay
       muted
       playsinline
       loop
       preload="none"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+      :class="{ 'opacity-100': videoLoaded, 'opacity-0': !videoLoaded }"
       @loadeddata="videoLoaded = true"
     >
       <source src="/videos/heroVideo.webm" type="video/webm" />
