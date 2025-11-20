@@ -1,15 +1,13 @@
 <template>
   <div class="relative border-b border-[#D3D3D3] py-[60px]">
     <div
-      class="absolute top-0 left-0 h-full w-full bg-text transition-all ease-in-out duration-300"
+      class="absolute top-0 left-0 h-full w-full bg-text transition-all ease-in-out duration-300 bg-cover bg-center bg-no-repeat"
       :class="isOpen ? 'opacity-100' : 'opacity-0'"
+      :style="{ backgroundImage: `url(${img})` }"
     >
-      <img
-        :src="img"
-        :alt="$t(title)"
-        class="w-full h-full object-cover opacity-20"
-      />
+      <div class="absolute inset-0 bg-black/50"></div>
     </div>
+
     <div
       class="max-w-[1315px] mx-auto max-2xl:px-6 flex justify-between items-center relative z-20"
     >

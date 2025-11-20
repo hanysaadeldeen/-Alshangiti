@@ -95,7 +95,7 @@
         </div>
       </div>
       <div
-        class="flex justify-center items-center w-fit mx-auto cursor-pointer"
+        class="hidden lg:flex justify-center items-center w-fit mx-auto cursor-pointer"
       >
         <div @click="scrollToSection('hook')">
           <img
@@ -103,7 +103,7 @@
             alt="scrollTo.gif"
             width="60"
             height="60"
-            class="w-[45px] md:w-[60px] h-[45px] md:h-[60px]"
+            class="w-[60px] h-[60px]"
           />
         </div>
       </div>
