@@ -40,20 +40,10 @@ export default defineNuxtConfig({
         {
           rel: "preload",
           as: "image",
-          href: "/images/heroPoster-400.webp",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "/images/heroPoster-800.webp",
-          media: "(min-width: 600px)",
-        },
-        {
-          rel: "preload",
-          as: "image",
           href: "/images/heroPoster-1200.webp",
-
-          media: "(min-width: 1200px)",
+          imagesrcset:
+            "/images/heroPoster-400.webp 400w, /images/heroPoster-800.webp 800w, /images/heroPoster-1200.webp 1200w",
+          imagesizes: "100vw",
         },
       ],
       title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
