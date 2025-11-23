@@ -10,10 +10,23 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
     font-family: "Cairo", sans-serif;
+}
+
+@font-face {
+    font-family: "Cairo";
+    src: url("/fonts/cairo/Cairo-VariableFont_slnt,wght.ttf") format("truetype");
+    font-weight: 100 1000;
+    font-display: swap;
+}
+
+body {
+
     background-color: #FFFFFF
 }
+
 
 section,
 .section {
@@ -31,8 +44,4 @@ section,
 
 .boxShadow {
     box-shadow: 0 0 10px 0px rgba(41, 51, 41, 0.16)
-}
-
-html {
-    scroll-behavior: smooth;
 }
