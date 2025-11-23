@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [],
+
       link: [
         {
           rel: "icon",
@@ -70,6 +71,17 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+  build: {
+    extractCSS: true,
+    optimizeCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+        cssnano: {},
+      },
     },
   },
 });
