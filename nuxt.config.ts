@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false,
-      fallback: "200.html", // هنا بنحدد ملف الـ SPA fallback
+      fallback: "200.html",
     },
   },
   ssr: false,
@@ -42,10 +42,6 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap",
           onload: "this.onload=null;this.rel='stylesheet'",
         },
-        // {
-        //   rel: "stylesheet",
-        //   href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css",
-        // },
         {
           rel: "preload",
           as: "image",

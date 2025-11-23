@@ -208,9 +208,10 @@
                   target="_blank"
                   class="flex items-center gap-2 group cursor-pointer"
                 >
-                  <i
-                    class="fa-solid fa-location-dot text-TextM group-hover:text-[#EEC882] transition-all ease-in-out duration-300"
-                  ></i>
+                  <LucideMapPin
+                    :size="40"
+                    class="group-hover:text-[#EEC882] transition-all ease-in-out duration-300"
+                  />
                   <span>
                     {{ $t("contact.JeddahLocation") }}
                   </span>
@@ -222,9 +223,10 @@
                   target="_blank"
                   class="flex items-center gap-2 group cursor-pointer"
                 >
-                  <i
-                    class="fa-solid fa-location-dot text-TextM group-hover:text-[#EEC882] transition-all ease-in-out duration-300"
-                  ></i>
+                  <LucideMapPin
+                    :size="40"
+                    class="group-hover:text-[#EEC882] transition-all ease-in-out duration-300"
+                  />
                   <span>
                     {{ $t("contact.Al-Madinah") }}
                   </span>

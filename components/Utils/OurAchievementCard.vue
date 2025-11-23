@@ -11,12 +11,13 @@
             {{ title }}
           </h1>
           <div class="p-2 cursor-pointer" @click="toggle">
-            <i
-              class="fa-solid fa-chevron-up transition-all ease-in-out duration-300"
+            <LucideChevronUp
+              class="transition-all ease-in-out duration-300"
+              :size="32"
               :class="
                 isOpen ? ' rotate-0 text-text' : '-rotate-180 text-[#5E5E5E]'
               "
-            ></i>
+            />
           </div>
         </div>
         <div

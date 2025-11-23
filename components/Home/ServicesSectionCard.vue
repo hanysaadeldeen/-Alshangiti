@@ -29,10 +29,11 @@
             </p>
           </div>
           <div class="p-2 cursor-pointer lg:hidden" @click="toggle">
-            <i
-              class="fa-solid fa-chevron-up transition-all ease-in-out duration-300"
+            <LucideChevronUp
+              class="transition-all ease-in-out duration-300"
+              :size="32"
               :class="isOpen ? ' rotate-0 text-white' : '-rotate-180 text-text'"
-            ></i>
+            />
           </div>
         </div>
         <div
@@ -120,10 +121,11 @@
         </div>
       </div>
       <div class="p-2 cursor-pointer max-lg:hidden" @click="toggle">
-        <i
-          class="fa-solid fa-chevron-up transition-all ease-in-out duration-300"
+        <LucideChevronUp
+          class="transition-all ease-in-out duration-300"
+          :size="32"
           :class="isOpen ? ' rotate-0 text-white' : '-rotate-180 text-text'"
-        ></i>
+        />
       </div>
     </div>
   </div>

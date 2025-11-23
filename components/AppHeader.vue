@@ -69,10 +69,12 @@
                     >
                       {{ $t("pages.service") }}
                     </span>
-                    <i
-                      class="fa-solid fa-chevron-up text-white transition-all ease-in-out duration-300"
+
+                    <LucideChevronUp
+                      class="text-white transition-all ease-in-out duration-300"
+                      :size="32"
                       :class="!openMenu ? '-rotate-180' : 'rotate-0'"
-                    ></i>
+                    />
                   </div>
 
                   <div
@@ -135,16 +137,8 @@
             </div>
           </div>
           <div class="lg:hidden text-2xl cursor-pointer sm:text-3xl">
-            <i
-              class="fa-solid fa-bars"
-              :class="{ hidden: isSideBar }"
-              @click="toggleSidebar"
-            />
-            <i
-              class="fa-solid fa-xmark text-white"
-              :class="{ hidden: !isSideBar }"
-              @click="toggleSidebar"
-            />
+            <LucideMenu :class="{ hidden: isSideBar }" @click="toggleSidebar" />
+            <LucideX :class="{ hidden: !isSideBar }" @click="toggleSidebar" />
           </div>
         </div>
       </div>
@@ -199,10 +193,11 @@
                     <span>
                       {{ $t("pages.service") }}
                     </span>
-                    <i
-                      class="fa-solid fa-chevron-up text-white transition-all ease-in-out duration-300"
+
+                    <LucideChevronUp
+                      class="text-white transition-all ease-in-out duration-300"
                       :class="!isOpen ? '-rotate-180' : 'rotate-0'"
-                    ></i>
+                    />
                   </div>
                   <div
                     ref="answer"
