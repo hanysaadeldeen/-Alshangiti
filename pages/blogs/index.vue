@@ -32,6 +32,7 @@ interface Achievement {
   content_en: string;
   created_at: string;
   featured_image: string;
+  views_count: number;
 }
 
 interface AchievementResponse {

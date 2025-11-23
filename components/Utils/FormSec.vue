@@ -2,13 +2,13 @@
   <div
     class="bg-white boxShadow w-full md:max-w-[500px] rounded-xl py-6 lg:py-8 px-10 lg:px-14 lg:max-w-[616px] relative"
   >
-    <h1
+    <h3
       class="font-normal text-xl md:text-2xl lg:text-[32px] leading-[50px] md:leading-[72px] relative z-10"
     >
       {{
         locale === "ar" ? " تواصل مع فريقنا القانوني" : "Contact our legal team"
       }}
-    </h1>
+    </h3>
     <div
       class="bg-[#3A3A3A] rounded-full h-0.5 w-full max-w-[85px] mb-7 relative z-10"
     ></div>
