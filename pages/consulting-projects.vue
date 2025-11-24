@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <header-img-section
       :img="ConsultingContracts"
       title="services.projectServices.title"
@@ -28,7 +28,7 @@
       :img="arbitration"
     />
     <!-- <OtherServicesSection /> -->
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
