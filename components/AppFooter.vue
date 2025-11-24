@@ -240,26 +240,6 @@
       <div
         class="flex justify-between flex-wrap items-center gap-4 md:gap-6 pt-6 md:pt-8"
       >
-        <!-- <div class="flex flex-wrap gap-3 md:gap-4">
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-white group cursor-pointer hover:border-[#EEC882] transition-all duration-200 ease-in-out"
-            v-for="social in SocialMedia"
-            :key="social.id"
-          >
-            <a
-              :href="social.link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-base group-hover:text-[#EEC882]"
-              :aria-label="`Visit our ${social.socialName} page`"
-            >
-              <i
-                class="fa-brands text-white group-hover:text-[#EEC882] duration-200 ease-in-out transition-all text-xl group-hover:text-2xl"
-                :class="social.icon"
-              ></i>
-            </a>
-          </div>
-        </div> -->
         <p class="text-base font-normal text-white">
           {{
             locale === "ar"

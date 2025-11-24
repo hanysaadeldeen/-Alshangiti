@@ -281,16 +281,8 @@
 </template>
 
 <script setup lang="ts">
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// onMounted(() => {
-//     AOS.init({
-//         duration: 600,
-//         once: true,
-//     })
-// })
 import { useDebounceFn } from "@vueuse/core";
-const { locale, setLocale } = useI18n();
+const { locale } = useI18n();
 const localePath = useLocalePath();
 const isSideBar = ref<boolean>(false);
 const transitionName = computed(() =>
@@ -369,15 +361,6 @@ ul li {
   border-bottom: 2px solid transparent;
 }
 
-/*
-@media (max-width: 1280px) {
-    ul li {
-        font-size: 14px;
-        line-height: 22.4px;
-        padding: 8px 16px;
-    }
-} */
-
 @media (min-width: 768px) {
   ul li {
     padding: 8px 0;
@@ -392,8 +375,6 @@ ul li {
 
 @media (min-width: 1024px) {
   ul li {
-    /* font-size: 14px;
-        line-height: 22.4px; */
     padding: 8px 16px;
   }
 }
