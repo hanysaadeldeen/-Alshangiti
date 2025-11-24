@@ -14,13 +14,13 @@
       <div class="w-full">
         <div class="flex gap-6 items-center justify-between">
           <div>
-            <h1
+            <h3
               @click="toggle"
               class="font-bold cursor-pointer text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] mb-1 transition-all ease-in-out duration-300"
               :class="isOpen ? 'text-white' : 'text-text'"
             >
               {{ $t(title) }}
-            </h1>
+            </h3>
             <p
               class="text-lg md:text-xl font-normal transition-all ease-in-out duration-300"
               :class="isOpen ? 'text-white' : 'text-[#5E5E5E]'"

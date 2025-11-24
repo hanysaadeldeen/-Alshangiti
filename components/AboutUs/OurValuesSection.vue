@@ -1,11 +1,11 @@
 <template>
   <section class="OurValuesSection max-w-[1315px] mx-auto max-2xl:px-6">
     <div class="sectionTitle">
-      <h1
+      <h2
         class="text-text font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2 text-center"
       >
         {{ $t("about.values.title") }}
-      </h1>
+      </h2>
       <p class="text-xl md:text-2xl font-normal text-[#5E5E5E] text-center">
         {{
           locale === "ar"
@@ -30,9 +30,9 @@
           />
         </div>
         <div>
-          <h2 class="text-text text-lg font-bold text-center mb-1">
+          <h3 class="text-text text-lg font-bold text-center mb-1">
             {{ $t(card.title) }}
-          </h2>
+          </h3>
           <p class="text-[#5E5E5E] text-base font-normal text-center">
             {{ $t(card.desc) }}
           </p>

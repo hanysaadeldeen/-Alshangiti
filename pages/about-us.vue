@@ -1,12 +1,12 @@
 <template>
   <main class="AboutUsPage">
     <header-img-section :img="aboutUs" title="pages.aboutUs" />
-    <!-- <AboutNumbersSection /> -->
     <HistorySection />
     <TeamSection />
     <VisionMissionSection />
     <OurValuesSection />
     <CertificatesSection />
+    <section />
   </main>
 </template>
 

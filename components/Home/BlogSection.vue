@@ -4,11 +4,11 @@
       class="sectionTitle mb-10 md:mb-16 lg:mb-24 flex gap-4 md:gap-6 sm:items-end justify-between max-sm:flex-col"
     >
       <div>
-        <h1
+        <h2
           class="text-text font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2"
         >
           {{ $t("homePage.licenses.blog") }}
-        </h1>
+        </h2>
         <p class="text-2xl font-normal text-[#5E5E5E]">
           {{
             locale === "ar"
@@ -37,18 +37,18 @@
       </div>
     </div>
     <div v-if="pending">
-      <h1
+      <h2
         class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
       >
         {{ locale === "en" ? "loading.." : "جاري التحميل... " }}
-      </h1>
+      </h2>
     </div>
     <div v-else-if="(data && data.results.length === 0) || error">
-      <h1
+      <h2
         class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
       >
         {{ locale === "en" ? "There Is No Blogs" : "لا يوجد مقالات" }}
-      </h1>
+      </h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-20">
       <blog-card

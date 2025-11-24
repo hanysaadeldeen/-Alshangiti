@@ -1,11 +1,11 @@
 <template>
   <div class="TeamSection relative">
     <div class="pt-[100px] text-center relative z-10">
-      <h1
+      <h2
         class="text-white font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2"
       >
         {{ $t("about.team") }}
-      </h1>
+      </h2>
       <p class="text-[#EFF2EF] text-xl md:text-2xl">
         {{
           locale === "ar"
@@ -39,9 +39,9 @@
         class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h1 class="text-base md:text-lg font-bold text-[#354335]">
+          <h3 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / بندر الشهري " : "Mr. Bandar Alshehri" }}
-          </h1>
+          </h3>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -65,9 +65,9 @@
         class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-100 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h1 class="text-base md:text-lg font-bold text-[#354335]">
+          <h3 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / البراء محضار" : "Mr. Albaraa Almehdar" }}
-          </h1>
+          </h3>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -91,11 +91,11 @@
         class="pt-10 px-11 flex gap-20 flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h2 class="text-base md:text-lg font-bold text-[#354335]">
+          <h3 class="text-base md:text-lg font-bold text-[#354335]">
             {{
               locale === "ar" ? "أ / محمود الشنقيطي" : "Mr. Mahmoud Alshangiti"
             }}
-          </h2>
+          </h3>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -119,9 +119,9 @@
         class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-100 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h2 class="text-base md:text-lg font-bold text-[#354335]">
+          <h3 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / صهيب باحاذق" : "Mr. Sohayeb Bahaziq" }}
-          </h2>
+          </h3>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -145,9 +145,9 @@
         class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h2 class="text-base md:text-lg font-bold text-[#354335]">
+          <h3 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / حسان رسلان" : "Mr. Hassan Raslan" }}
-          </h2>
+          </h3>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -205,11 +205,11 @@
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h2 class="text-base md:text-lg font-bold text-[#354335]">
+              <h3 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / بندر الشهري " : "Mr. Bandar Alshehri"
                 }}
-              </h2>
+              </h3>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -235,11 +235,11 @@
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-100"
           >
             <div class="text-center max-w-[174px]">
-              <h2 class="text-base md:text-lg font-bold text-[#354335]">
+              <h3 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / البراء محضار" : "Mr. Albaraa Almehdar"
                 }}
-              </h2>
+              </h3>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -265,13 +265,13 @@
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h2 class="text-base md:text-lg font-bold text-[#354335]">
+              <h3 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar"
                     ? "أ / محمود الشنقيطي"
                     : "Mr. Mahmoud Alshangiti"
                 }}
-              </h2>
+              </h3>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -297,11 +297,11 @@
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-100"
           >
             <div class="text-center max-w-[174px]">
-              <h2 class="text-base md:text-lg font-bold text-[#354335]">
+              <h3 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / صهيب باحاذق" : "Mr. Sohayeb Bahaziq"
                 }}
-              </h2>
+              </h3>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -327,9 +327,9 @@
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h2 class="text-base md:text-lg font-bold text-[#354335]">
+              <h3 class="text-base md:text-lg font-bold text-[#354335]">
                 {{ locale === "ar" ? "أ / حسان رسلان" : "Mr. Hassan Raslan" }}
-              </h2>
+              </h3>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"

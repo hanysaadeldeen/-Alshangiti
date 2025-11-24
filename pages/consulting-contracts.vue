@@ -22,7 +22,6 @@
       buttonT="services.contracts.buttons.bookConsultation"
       :img="cta"
     />
-    <!-- <OtherServicesSection /> -->
   </main>
 </template>
 

@@ -80,14 +80,6 @@ const { data, pending, error } = useFetch<AchievementResponse>(
     lazy: true,
   }
 );
-// const url = computed(
-//   () =>
-//     `https://37-27-29-234.nip.io/shangiti/api/achievements/detailed-achievements/?limit=${limit.value}`
-// );
-// const { data, pending, error } = useFetch<AchievementResponse>(url, {
-//   server: false,
-//   lazy: true,
-// });
 </script>
 
 <style scoped>

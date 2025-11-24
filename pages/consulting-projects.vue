@@ -27,7 +27,6 @@
       buttonT="احجز استشارة قانونية"
       :img="arbitration"
     />
-    <!-- <OtherServicesSection /> -->
   </main>
 </template>
 

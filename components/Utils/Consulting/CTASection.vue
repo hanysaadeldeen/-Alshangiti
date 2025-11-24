@@ -9,11 +9,11 @@
     </div>
     <div class="mx-auto max-w-[1315px] max-2xl:px-6">
       <div class="max-w-[834px] relative z-10">
-        <h1
+        <h2
           class="text-2xl md:text-3xl lg:text-[40px] lg:!leading-[72px] text-white font-bold"
         >
           {{ $t(title) }}
-        </h1>
+        </h2>
         <div
           class="flex gap-3 md:gap-6 justify-start items-center flex-wrap mt-8 md:mt-12"
         >

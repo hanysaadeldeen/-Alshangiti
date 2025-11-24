@@ -7,13 +7,9 @@
     <ServicesSection />
     <WhyUsSection />
     <CertificatesSection />
-    <!-- <TestmonialsSection /> -->
     <BlogSection />
-
-    <section></section>
+    <section />
   </main>
 </template>
 
-<script setup>
-const { locales, setLocale } = useI18n();
-</script>
+<script setup></script>
