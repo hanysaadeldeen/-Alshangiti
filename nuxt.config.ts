@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import i18nconfig from "./i18n/i18n.config";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
@@ -14,10 +16,11 @@ export default defineNuxtConfig({
     defaultLocale: "ar",
     strategy: "prefix_except_default",
     locales: [
-      { code: "ar", name: "Arabic", file: "ar.json" },
-      { code: "en", name: "English", file: "en.json" },
+      { code: "ar", name: "Arabic" },
+      { code: "en", name: "English" },
     ],
     detectBrowserLanguage: false,
+    vueI18n: "./i18n.config.ts",
   },
   nitro: {
     prerender: {
