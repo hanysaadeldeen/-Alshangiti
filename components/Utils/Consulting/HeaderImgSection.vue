@@ -1,9 +1,15 @@
 <template>
-  <div
-    class="py-24 lg:py-44 relative bg-cover bg-center bg-no-repeat"
-    :style="{ backgroundImage: `url(${img})` }"
-  >
-    <div class="absolute inset-0 bg-black/50"></div>
+  <div class="py-24 lg:py-44 relative">
+    <div class="absolute inset-0 z-10 bg-black/50"></div>
+    <picture>
+      <img
+        :src="img"
+        alt="Hero Image"
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high"
+      />
+    </picture>
+
     <div class="mx-auto max-w-[1315px] relative z-10 max-2xl:px-6">
       <h1
         class="text-[32px] md:text-[40px] lg:text-[52px] lg:!leading-[52px] text-white font-bold"

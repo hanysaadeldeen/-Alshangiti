@@ -2,11 +2,11 @@
   <div class="TeamSection relative">
     <div class="pt-[100px] text-center relative z-10">
       <h1
-        class="text-white font-bold text-xl md:text-2xl lg:text-[40px] lg:!leading-[72px]"
+        class="text-white font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-2"
       >
         {{ $t("about.team") }}
       </h1>
-      <p class="text-[#EFF2EF] text-lg md:text-xl lg:text-2xl">
+      <p class="text-[#EFF2EF] text-xl md:text-2xl">
         {{
           locale === "ar"
             ? "خبرة متكاملة وشغف بالتميز"
@@ -33,9 +33,9 @@
       </div>
     </div>
     <div
-      class="max-md:hidden members mx-auto max-w-[1315px] relative z-10 flex items-end mt-[132px]"
+      class="max-md:hidden members mx-auto max-w-[1315px] relative z-10 flex items-end mt-20 xl:mt-[132px]"
     >
-      <div
+      <article
         class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
@@ -60,8 +60,8 @@
             class="max-h-[196px] object-contain"
           />
         </div>
-      </div>
-      <div
+      </article>
+      <article
         class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-100 w-full"
       >
         <div class="text-center max-w-[174px]">
@@ -86,16 +86,16 @@
             class="w-full h-full object-contain max-h-[198px]"
           />
         </div>
-      </div>
-      <div
+      </article>
+      <article
         class="pt-10 px-11 flex gap-20 flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h1 class="text-base md:text-lg font-bold text-[#354335]">
+          <h2 class="text-base md:text-lg font-bold text-[#354335]">
             {{
               locale === "ar" ? "أ / محمود الشنقيطي" : "Mr. Mahmoud Alshangiti"
             }}
-          </h1>
+          </h2>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -114,14 +114,14 @@
             class="w-full h-full max-h-[220px] object-contain"
           />
         </div>
-      </div>
-      <div
+      </article>
+      <article
         class="pt-10 px-4 flex gap-[62px] flex-col items-center justify-between bg-primary-100 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h1 class="text-base md:text-lg font-bold text-[#354335]">
+          <h2 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / صهيب باحاذق" : "Mr. Sohayeb Bahaziq" }}
-          </h1>
+          </h2>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -140,14 +140,14 @@
             class="w-full h-full max-h-[196px] object-contain"
           />
         </div>
-      </div>
-      <div
+      </article>
+      <article
         class="pt-10 px-4 flex gap-6 flex-col items-center justify-between bg-primary-200 w-full"
       >
         <div class="text-center max-w-[174px]">
-          <h1 class="text-base md:text-lg font-bold text-[#354335]">
+          <h2 class="text-base md:text-lg font-bold text-[#354335]">
             {{ locale === "ar" ? "أ / حسان رسلان" : "Mr. Hassan Raslan" }}
-          </h1>
+          </h2>
           <p class="text-[#656565] font-normal text-sm">
             {{
               locale === "ar"
@@ -166,7 +166,7 @@
             class="w-full h-full max-h-[198px] object-contain"
           />
         </div>
-      </div>
+      </article>
     </div>
 
     <div class="md:hidden px-16 mt-20 relative">
@@ -201,15 +201,15 @@
         }"
       >
         <SwiperSlide class="justify-end items-end h-full rounded-full">
-          <div
+          <article
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h1 class="text-base md:text-lg font-bold text-[#354335]">
+              <h2 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / بندر الشهري " : "Mr. Bandar Alshehri"
                 }}
-              </h1>
+              </h2>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -228,18 +228,18 @@
                 class="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </article>
         </SwiperSlide>
         <SwiperSlide>
-          <div
+          <article
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-100"
           >
             <div class="text-center max-w-[174px]">
-              <h1 class="text-base md:text-lg font-bold text-[#354335]">
+              <h2 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / البراء محضار" : "Mr. Albaraa Almehdar"
                 }}
-              </h1>
+              </h2>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -258,20 +258,20 @@
                 class="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </article>
         </SwiperSlide>
         <SwiperSlide>
-          <div
+          <article
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h1 class="text-base md:text-lg font-bold text-[#354335]">
+              <h2 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar"
                     ? "أ / محمود الشنقيطي"
                     : "Mr. Mahmoud Alshangiti"
                 }}
-              </h1>
+              </h2>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -290,18 +290,18 @@
                 class="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </article>
         </SwiperSlide>
         <SwiperSlide>
-          <div
+          <article
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-100"
           >
             <div class="text-center max-w-[174px]">
-              <h1 class="text-base md:text-lg font-bold text-[#354335]">
+              <h2 class="text-base md:text-lg font-bold text-[#354335]">
                 {{
                   locale === "ar" ? "أ / صهيب باحاذق" : "Mr. Sohayeb Bahaziq"
                 }}
-              </h1>
+              </h2>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -320,16 +320,16 @@
                 class="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </article>
         </SwiperSlide>
         <SwiperSlide>
-          <div
+          <article
             class="pt-10 px-4 flex gap-20 flex-col items-center justify-between bg-primary-200"
           >
             <div class="text-center max-w-[174px]">
-              <h1 class="text-base md:text-lg font-bold text-[#354335]">
+              <h2 class="text-base md:text-lg font-bold text-[#354335]">
                 {{ locale === "ar" ? "أ / حسان رسلان" : "Mr. Hassan Raslan" }}
-              </h1>
+              </h2>
               <p class="text-[#656565] font-normal text-sm">
                 {{
                   locale === "ar"
@@ -348,7 +348,7 @@
                 class="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </article>
         </SwiperSlide>
       </Swiper>
     </div>

@@ -46,7 +46,7 @@ const detailsEn = [
   "Intellectual Property",
   "Logistics Services",
 ];
-import ConsultingContracts from "../assets/img/pannel/cta.webp";
+import ConsultingContracts from "../assets/img/pannel/achevments.webp";
 import arbitration from "../assets/img/pannel/arbitration.webp";
 </script>
 

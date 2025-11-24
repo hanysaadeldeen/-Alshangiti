@@ -1,30 +1,30 @@
 <template>
-  <main class="BlogsPage mt-20">
+  <main class="BlogPage mt-20">
     <div class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto">
       <div class="w-full">
         <div
           class="flex gap-2 justify-center items-center"
           v-if="data && !pending"
         >
-          <p class="text-lg text-center text-primary-900 font-normal">
+          <span class="text-lg text-center text-primary-900 font-normal">
             {{ formatDate(data.created_at || "") }}
             -
-          </p>
-          <p class="text-lg text-center text-primary-900 font-normal">
+          </span>
+          <span class="text-lg text-center text-primary-900 font-normal">
             {{
               locale === "ar" ? data.category.name_ar : data.category.name_en
             }}
             -
-          </p>
-          <p class="text-lg text-center text-primary-900 font-normal">
+          </span>
+          <span class="text-lg text-center text-primary-900 font-normal">
             {{ data.status_display }}
-          </p>
+          </span>
           -
-          <p class="text-lg text-center text-primary-900 font-normal">
+          <span class="text-lg text-center text-primary-900 font-normal">
             <span>{{ locale === "en" ? "red by" : "مقروء من " }}</span>
 
             {{ data.views_count }}
-          </p>
+          </span>
         </div>
         <h1
           v-if="data && !pending"
@@ -42,7 +42,7 @@
         >
           {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
         </p>
-        <p
+        <div
           class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
           v-html="locale === 'ar' ? data.content_ar : data.content_en"
         />

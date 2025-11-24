@@ -122,9 +122,9 @@
           </div>
         </div>
         <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
-          <h1 class="text-white text-base font-medium mb-6">
+          <p class="text-white text-base font-medium mb-6">
             {{ locale === "ar" ? "استكشف" : "Explore" }}
-          </h1>
+          </p>
           <nav>
             <ul>
               <li :class="{ active: adjustedPath === '/about-us' }">
@@ -146,9 +146,9 @@
           </nav>
         </div>
         <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
-          <h1 class="text-white text-base font-medium mb-6">
+          <p class="text-white text-base font-medium mb-6">
             {{ $t("pages.footerService") }}
-          </h1>
+          </p>
           <nav class="text-white">
             <ul>
               <li :class="{ active: adjustedPath === '/consulting-contracts' }">

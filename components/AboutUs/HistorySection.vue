@@ -23,12 +23,12 @@
             :class="item.active ? 'bg-primary-500' : 'bg-white'"
           ></div>
         </div>
-        <h1
+        <h2
           class="mb-10 font-bold text-xl md:text-2xl lg:text-[40px] transition-all duration-500 ease-in-out"
           :class="item.active ? 'opacity-100' : 'opacity-20'"
         >
           {{ $t(item.title) }}
-        </h1>
+        </h2>
         <div>
           <p
             class="text-lg md:text-xl text-justify lg:text-2xl font-normal text-[#5E5E5E] transition-all duration-500 ease-in-out"
