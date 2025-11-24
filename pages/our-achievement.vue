@@ -2,21 +2,21 @@
   <main class="OurAchievement">
     <header-img-section :img="achevments" title="pages.achievement" />
     <div v-if="pending" class="py-[60px]">
-      <h1
+      <h2
         class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
       >
         {{ locale === "en" ? "loading.." : "جاري التحميل... " }}
-      </h1>
+      </h2>
     </div>
     <div
       v-else-if="(data && data.results.length === 0) || error"
       class="py-[60px]"
     >
-      <h1
+      <h2
         class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer text-text text-center"
       >
         {{ locale === "en" ? "There Is No Actievements" : "لا يوجد إنجازات" }}
-      </h1>
+      </h2>
     </div>
 
     <div class="section" v-else>
