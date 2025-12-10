@@ -195,6 +195,21 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي:  تواصل معنا"
+      : "Mr. Mahmoud Alshangiti: Contact Us",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "سواء كانت لديك استفسارات حول خدماتنا، أو تحتاج إلى استشارة قانونية، أو ترغب في بدء شراكة جديدة، فإن فريقنا على أتم الاستعداد لتقديم المساعدة."
+          : "We are happy to be your legal partner. Whether you have questions about our services, need legal advice, or are looking to start a new partnership, our team is ready to help.",
+    },
+  ],
+}));
 </script>
 
 <style scoped></style>

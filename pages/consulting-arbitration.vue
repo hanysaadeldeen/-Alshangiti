@@ -57,6 +57,22 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي: التقاضي والتحكيم"
+      : "Mr. Mahmoud Alshangiti: Litigation and Arbitration",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "خدمة التقاضي والتحكيم هي عملية التمثيل القانوني التي يتم تقديمها للأفراد والشركات لحل المنازعات القانونية. تشمل هذه الخدمة الترافع أمام المحاكم على اختلاف أنواعها ودرجاتها، بالإضافة إلى تقديم الدعم اللازم في عمليات التحكيم أمام الهيئات المتخصصة."
+          : "Litigation and arbitration services involve legal representation provided to individuals and companies to resolve disputes efficiently and effectively. This includes advocacy before courts of all types and levels, as well as comprehensive support in arbitration proceedings before specialised tribunals and institutions.",
+    },
+  ],
+}));
+
 const detailsAr = [
   "القضايا الإدارية",
   "القضايا التجارية",

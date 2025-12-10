@@ -20,7 +20,21 @@
 import blog from "~/assets/img/Blog/blog.webp";
 
 const { locale } = useI18n();
-
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي: المدونة"
+      : "Mr. Mahmoud Alshangiti: Blog",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "مرجعك الشامل لأبرز الموضوعات القانونية."
+          : "Your comprehensive reference for the most prominent legal topics.",
+    },
+  ],
+}));
 interface Achievement {
   id: number;
   title_ar: string;

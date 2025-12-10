@@ -67,6 +67,21 @@
 import ConsultingContracts from "../assets/img/pannel/ConsultingContracts.webp";
 
 const { locale } = useI18n();
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي:  سياسة الخصوصية"
+      : "Mr. Mahmoud Alshangiti: Privacy ",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "نلتزم في shangiti بحماية خصوصية بيانات عملائنا وشركائنا، والتعامل معها بسرية تامة وفق معايير الأمان والجودة المعتمدة عالميًا."
+          : "Shangiti is committed to protecting the privacy of our customers and partners, handling their data with strict confidentiality in accordance with globally recognized security and quality standards.",
+    },
+  ],
+}));
 const sections = [
   {
     id: "Introduction",

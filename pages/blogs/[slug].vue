@@ -3,7 +3,7 @@
     <div class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto">
       <div class="w-full">
         <div
-          class="flex gap-2 justify-center items-center"
+          class="flex gap-2 justify-center items-center flex-wrap"
           v-if="data && !pending"
         >
           <span class="text-lg text-center text-primary-900 font-normal">
@@ -28,14 +28,14 @@
         </div>
         <h1
           v-if="data && !pending"
-          class="text-3xl mt-2 text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
+          class="text-2xl mt-4 text-center md:text-3xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
         >
           {{ locale === "ar" ? data.title_ar : data.title_en }}
         </h1>
       </div>
       <div
         v-if="data"
-        class="mx-auto max-w-[839px] max-2xl:px-10 mb-16 md:mb-[120px] mt-12 md:mt-16"
+        class="mx-auto max-w-[839px] mb-16 md:mb-[120px] mt-6 md:mt-12 lg:mt-16"
       >
         <p
           class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
@@ -53,6 +53,7 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
+
 const route = useRoute();
 const slug = computed(() => {
   const s = route.params.slug;
@@ -89,6 +90,21 @@ const { data, pending, error, refresh } = useFetch<BlogDetails>(url, {
   lazy: false,
 });
 
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? ` محمود الشنقيطي: ${data.value?.title_ar}  `
+      : `Mr. Mahmoud Alshangiti :${data.value?.title_en} `,
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? `${data.value?.excerpt_ar}`
+          : `${data.value?.excerpt_en}`,
+    },
+  ],
+}));
 function formatDate(dateString: string) {
   const date = new Date(dateString);
 
@@ -99,11 +115,11 @@ function formatDate(dateString: string) {
   });
 }
 
-watch(data, () => {
-  if (data) {
-    console.log(data.value);
-  }
-});
+// watch(data, () => {
+//   if (data) {
+//     console.log(data.value);
+//   }
+// });
 
 watch(slug, async () => {
   await refresh();

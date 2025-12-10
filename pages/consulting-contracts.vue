@@ -28,6 +28,22 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي: العقود والاستشارات "
+      : "Mr. Mahmoud Alshangiti: Contracts and Consulting",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "خدمة الاستشارات والعقود هي ركيزة أساسية لأي عمل تجاري، حيث تعمل على توفير الحماية القانونية الوقائية والداعمة."
+          : "Advisory and contract services form a fundamental pillar of any commercial enterprise. They provide both preventive and supportive legal protection, ensuring that businesses operate within a secure and compliant framework.",
+    },
+  ],
+}));
+
 const detailsAr = [
   "التفاوض القانوني",
   "حماية الحقوق والالتزامات",

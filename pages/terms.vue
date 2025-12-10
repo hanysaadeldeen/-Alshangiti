@@ -74,7 +74,21 @@
 import ConsultingContracts from "../assets/img/pannel/ConsultingContracts.webp";
 
 const { locale } = useI18n();
-
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي: الشروط والأحكام"
+      : "Mr. Mahmoud Alshangiti: Terms and Conditions",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "تنظم هذه الشروط استخدامك لموقع وخدمات shangiti، ويعد دخولك أو استخدامك للموقع موافقة على هذه الشروط."
+          : "These terms govern your use of Shangiti’s website and services. Accessing or using the site constitutes your agreement to these terms.",
+    },
+  ],
+}));
 const sections = [
   {
     id: "Introduction",

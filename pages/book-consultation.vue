@@ -119,7 +119,23 @@
 import evaluation from "../../assets/img/consultation/evaluation.svg";
 import internship from "../../assets/img/consultation/internship.svg";
 import listeningSkills from "../../assets/img/consultation/listeningSkills.svg";
+const { locale } = useI18n();
 
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي:  احجز موعد استشارتك القانونية"
+      : "Mr. Mahmoud Alshangiti: book-consultation",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "يسعدنا في أن نكون شريكك القانوني. سواء كنت مقبلاً على مشروع جديد، أو تواجه تحدياً قانونياً، أو تحتاج إلى رأي خبير حول قرار مهم، فإن الاستشارة القانونية هي خطوتك الأولى نحو اتخاذ قرار سليم ومدروس. "
+          : "We are pleased to be your legal partner. Whether you are embarking on a new project, facing a legal challenge, or need expert advice on an important decision, legal consultation is your first step towards making a sound and informed decision.",
+    },
+  ],
+}));
 const Cards = [
   {
     id: 1,

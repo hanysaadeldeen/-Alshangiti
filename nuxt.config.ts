@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import i18nconfig from "./i18n/i18n.config";
-
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
@@ -29,11 +27,13 @@ export default defineNuxtConfig({
       fallback: "200.html",
     },
   },
+  routeRules: {
+    "/**": { prerender: true },
+  },
   ssr: false,
   app: {
     head: {
       script: [],
-
       link: [
         {
           rel: "icon",
@@ -50,11 +50,22 @@ export default defineNuxtConfig({
         },
       ],
       title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+
       meta: [
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
         {
           name: "description",
           content:
             "محمود الشنقيطي وشركاه هو صرح قانوني رائد تأسس على يد محامٍ خبير أمضى أكثر من 20 عامًا في قلب المشهد القانوني السعودي",
+        },
+        {
+          property: "og:image",
+          content: "https://shangiti.com/LogoTap.png",
+        },
+        {
+          name: "twitter:image",
+          content: "https://shangiti.com/LogoTap.png",
         },
       ],
     },

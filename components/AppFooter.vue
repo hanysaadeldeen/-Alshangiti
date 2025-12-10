@@ -243,8 +243,8 @@
         <p class="text-base font-normal text-white">
           {{
             locale === "ar"
-              ? "© 2025 جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  بواسطة "
-              : "© 2025 All rights reserved to Alshangiti & Associates Law Firm — powered by"
+              ? `© ${currentYear} جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  بواسطة `
+              : `© ${currentYear} All rights reserved to Alshangiti & Associates Law Firm — powered by`
           }}
           <a href="https://do.com.sa/" target="_blank"> DO </a>
         </p>
@@ -290,15 +290,16 @@ const getPathWithoutLocale = (path: string) => {
 };
 
 const adjustedPath = computed(() => getPathWithoutLocale(route.path));
+const currentYear = new Date().getFullYear();
 
-const SocialMedia = [
-  {
-    id: 1,
-    icon: '<i class="fa-brands fa-whatsapp text-[#7B7B7B]"></i>',
-    socialName: "whatsapp",
-    link: "https://wa.me/966126069234",
-  },
-];
+// const SocialMedia = [
+//   {
+//     id: 1,
+//     icon: '<i class="fa-brands fa-whatsapp text-[#7B7B7B]"></i>',
+//     socialName: "whatsapp",
+//     link: "https://wa.me/966126069234",
+//   },
+// ];
 </script>
 
 <style scoped>

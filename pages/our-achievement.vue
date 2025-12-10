@@ -60,6 +60,22 @@
 <script setup lang="ts">
 import achevments from "~/assets/img/pannel/achevments.webp";
 const { locale } = useI18n();
+
+useHead(() => ({
+  title:
+    locale.value === "ar"
+      ? "محمود الشنقيطي:  استكشف انجازاتنا"
+      : "Mr. Mahmoud Alshangiti: Our Achievement",
+  meta: [
+    {
+      name: "description",
+      content:
+        locale.value === "ar"
+          ? "لمحة من إنجازاتنا التي نفخر بها"
+          : "A showcase of milestones that reflect our commitment, growth, and excellence.",
+    },
+  ],
+}));
 interface Achievement {
   id: number;
   title_ar: string;
