@@ -49,16 +49,16 @@ export default defineNuxtConfig({
           imagesizes: "100vw",
         },
       ],
-      title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+      // title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
 
       meta: [
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
-        {
-          name: "description",
-          content:
-            "محمود الشنقيطي وشركاه هو صرح قانوني رائد تأسس على يد محامٍ خبير أمضى أكثر من 20 عامًا في قلب المشهد القانوني السعودي",
-        },
+        // {
+        //   name: "description",
+        //   content:
+        //     "محمود الشنقيطي وشركاه هو صرح قانوني رائد تأسس على يد محامٍ خبير أمضى أكثر من 20 عامًا في قلب المشهد القانوني السعودي",
+        // },
         {
           property: "og:image",
           content: "https://shangiti.com/LogoTap.png",
