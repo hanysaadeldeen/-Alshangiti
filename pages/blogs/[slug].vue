@@ -42,8 +42,12 @@
         >
           {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
         </p>
-        <div
+        <!-- <div
           class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
+          v-html="locale === 'ar' ? data.content_ar : data.content_en"
+        /> -->
+        <div
+          class="prose prose-lg max-w-none"
           v-html="locale === 'ar' ? data.content_ar : data.content_en"
         />
       </div>
@@ -153,5 +157,23 @@ section,
   .section {
     margin-top: 50px;
   }
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #293329;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #293329;
 }
 </style>
