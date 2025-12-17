@@ -105,6 +105,20 @@ useHead(() => ({
           ? `${data.value?.excerpt_ar}`
           : `${data.value?.excerpt_en}`,
     },
+    {
+      property: "og:title",
+      content:
+        locale.value === "ar" ? data.value?.title_ar : data.value?.title_en,
+    },
+    {
+      property: "og:description",
+      content:
+        locale.value === "ar" ? data.value?.excerpt_ar : data.value?.excerpt_en,
+    },
+    {
+      property: "og:image",
+      content: data.value?.featured_image,
+    },
   ],
 }));
 function formatDate(dateString: string) {
