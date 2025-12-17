@@ -20,17 +20,17 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     vueI18n: "./i18n.config.ts",
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      failOnError: false,
-      fallback: "200.html",
-    },
-  },
-  routeRules: {
-    "/**": { prerender: true },
-  },
-  ssr: false,
+  // ssr: false,
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     failOnError: false,
+  //     fallback: "200.html",
+  //   },
+  // },
+  // routeRules: {
+  //   "/**": { prerender: true },
+  // },
   app: {
     head: {
       script: [],
@@ -77,15 +77,15 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  build: {
-    extractCSS: true,
-    optimizeCSS: true,
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-        cssnano: {},
-      },
-    },
-  },
+  // build: {
+  //   extractCSS: true,
+  //   optimizeCSS: true,
+  //   postcss: {
+  //     plugins: {
+  //       tailwindcss: {},
+  //       autoprefixer: {},
+  //       cssnano: {},
+  //     },
+  //   },
+  // },
 });

@@ -85,10 +85,12 @@ const url = computed(
   () => `https://37-27-29-234.nip.io/shangiti/api/blog/blog-posts/${slug.value}`
 );
 
-const { data, pending, error, refresh } = useFetch<BlogDetails>(url, {
-  server: false,
-  lazy: false,
-});
+const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
+
+// const { data, pending, error, refresh } = useFetch<BlogDetails>(url, {
+//   server: false,
+//   lazy: false,
+// });
 
 useHead(() => ({
   title:
