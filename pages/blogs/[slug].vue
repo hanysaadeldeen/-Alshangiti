@@ -170,6 +170,7 @@ useHead(() => {
           author: {
             "@type": "Organization",
             name: "Mahmoud Al-Shangiti Law Firm",
+            url: "https://shangiti.com/",
           },
           publisher: {
             "@type": "Organization",
