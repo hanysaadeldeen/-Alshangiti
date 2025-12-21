@@ -77,6 +77,8 @@ interface BlogDetails {
   status_display: string;
   created_at: string;
   views_count: number;
+  published_at: string;
+  updated_at: string;
   category: {
     id: number;
     name_ar: string;
@@ -96,35 +98,96 @@ const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
 //   lazy: false,
 // });
 
-useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? ` محمود الشنقيطي: ${data.value?.title_ar}  `
-      : `Mr. Mahmoud Alshangiti :${data.value?.title_en} `,
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? `${data.value?.excerpt_ar}`
-          : `${data.value?.excerpt_en}`,
-    },
-    {
-      property: "og:title",
-      content:
-        locale.value === "ar" ? data.value?.title_ar : data.value?.title_en,
-    },
-    {
-      property: "og:description",
-      content:
-        locale.value === "ar" ? data.value?.excerpt_ar : data.value?.excerpt_en,
-    },
-    {
-      property: "og:image",
-      content: data.value?.featured_image,
-    },
-  ],
-}));
+// useHead(() => ({
+//   title:
+//     locale.value === "ar"
+//       ? ` محمود الشنقيطي: ${data.value?.title_ar}  `
+//       : `Mr. Mahmoud Alshangiti :${data.value?.title_en} `,
+//   meta: [
+//     {
+//       name: "description",
+//       content:
+//         locale.value === "ar"
+//           ? `${data.value?.excerpt_ar}`
+//           : `${data.value?.excerpt_en}`,
+//     },
+//     {
+//       property: "og:title",
+//       content:
+//         locale.value === "ar" ? data.value?.title_ar : data.value?.title_en,
+//     },
+//     {
+//       property: "og:description",
+//       content:
+//         locale.value === "ar" ? data.value?.excerpt_ar : data.value?.excerpt_en,
+//     },
+//     {
+//       property: "og:image",
+//       content: data.value?.featured_image,
+//     },
+//   ],
+// }));
+useHead(() => {
+  const siteUrl = "https://shangiti.com";
+  const isAr = locale.value === "ar";
+  const post = data.value;
+
+  return {
+    title: isAr
+      ? ` محمود الشنقيطي: ${post?.title_ar} `
+      : `Mr. Mahmoud Alshangiti :${post?.title_en} `,
+    meta: [
+      {
+        name: "description",
+        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+      },
+      {
+        property: "og:title",
+        content: isAr ? post?.title_ar : post?.title_en,
+      },
+      {
+        property: "og:description",
+        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+      },
+      {
+        property: "og:image",
+        content: post?.featured_image,
+      },
+    ],
+    script: [
+      {
+        type: "application/ld+json",
+        innerHTML: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${siteUrl}/${isAr ? "ar" : "en"}/blog/${post?.slug}`,
+          },
+          headline: isAr ? post?.title_ar : post?.title_en,
+          description: isAr ? post?.excerpt_ar : post?.excerpt_en,
+          image: [post?.featured_image],
+          author: {
+            "@type": "Organization",
+            name: "Mahmoud Al-Shangiti Law Firm",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Mahmoud Al-Shangiti Law Firm",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://alshangiti.vercel.app/_nuxt/alshangiti.CRUN2QOj.svg", // حط لوجو حقيقي
+            },
+          },
+          datePublished: post?.published_at,
+          dateModified: post?.updated_at,
+        }),
+      },
+    ],
+    __dangerouslyDisableSanitizers: ["script"],
+  };
+});
+
 function formatDate(dateString: string) {
   const date = new Date(dateString);
 
@@ -134,12 +197,6 @@ function formatDate(dateString: string) {
     year: "numeric",
   });
 }
-
-// watch(data, () => {
-//   if (data) {
-//     console.log(data.value);
-//   }
-// });
 
 watch(slug, async () => {
   await refresh();
