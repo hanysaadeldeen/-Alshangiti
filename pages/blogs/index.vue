@@ -56,13 +56,6 @@ const { data, pending, error } = await useFetch<AchievementResponse>(
     lazy: true,
   }
 );
-// const { data, pending, error } = useFetch<AchievementResponse>(
-//   "https://37-27-29-234.nip.io/shangiti/api/blog/blog-posts/",
-//   {
-//     server: false,
-//     lazy: true,
-//   }
-// );
 </script>
 
 <style scoped></style>

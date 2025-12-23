@@ -99,11 +99,6 @@ const url = computed(
 
 const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
 
-// const { data, pending, error, refresh } = useFetch<BlogDetails>(url, {
-//   server: false,
-//   lazy: false,
-// });
-
 useHead(() => {
   const siteUrl = "https://shangiti.com";
   const isAr = locale.value === "ar";
