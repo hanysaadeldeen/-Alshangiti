@@ -15,10 +15,7 @@ const { locale } = useI18n();
 import aboutUs from "~/assets/img/pannel/table.webp";
 
 useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي: من نحن"
-      : "Mr. Mahmoud Alshangiti: About Us",
+  title: locale.value === "ar" ? ": من نحن" : "About Us:",
   meta: [
     {
       name: "description",

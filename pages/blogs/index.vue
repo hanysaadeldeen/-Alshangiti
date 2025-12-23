@@ -21,10 +21,7 @@ import blog from "~/assets/img/Blog/blog.webp";
 
 const { locale } = useI18n();
 useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي: المدونة"
-      : "Mr. Mahmoud Alshangiti: Blog",
+  title: locale.value === "ar" ? ": المدونة" : "Blog:",
   meta: [
     {
       name: "description",
