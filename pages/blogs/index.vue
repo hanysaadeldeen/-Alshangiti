@@ -21,7 +21,7 @@ import blog from "~/assets/img/Blog/blog.webp";
 
 const { locale } = useI18n();
 useHead(() => ({
-  title: locale.value === "ar" ? ": المدونة" : "Blog:",
+  title: locale.value === "ar" ? "المدونة" : "Blog",
   meta: [
     {
       name: "description",

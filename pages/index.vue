@@ -14,7 +14,6 @@
 
 <script setup>
 useHead({
-  title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
   meta: [
     {
       name: "description",

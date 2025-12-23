@@ -124,8 +124,8 @@ const { locale } = useI18n();
 useHead(() => ({
   title:
     locale.value === "ar"
-      ? "محمود الشنقيطي:  احجز موعد استشارتك القانونية"
-      : "Mr. Mahmoud Alshangiti: book-consultation",
+      ? "احجز موعد استشارتك القانونية"
+      : "book-consultation",
   meta: [
     {
       name: "description",

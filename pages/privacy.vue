@@ -68,10 +68,7 @@ import ConsultingContracts from "../assets/img/pannel/ConsultingContracts.webp";
 
 const { locale } = useI18n();
 useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي:  سياسة الخصوصية"
-      : "Mr. Mahmoud Alshangiti: Privacy ",
+  title: locale.value === "ar" ? "سياسة الخصوصية" : "Privacy ",
   meta: [
     {
       name: "description",

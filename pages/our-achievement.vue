@@ -62,10 +62,7 @@ import achevments from "~/assets/img/pannel/achevments.webp";
 const { locale } = useI18n();
 
 useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي:  استكشف انجازاتنا"
-      : "Mr. Mahmoud Alshangiti: Our Achievement",
+  title: locale.value === "ar" ? "استكشف انجازاتنا" : "Our Achievement",
   meta: [
     {
       name: "description",

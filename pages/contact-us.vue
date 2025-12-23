@@ -196,10 +196,7 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 useHead(() => ({
-  title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي:  تواصل معنا"
-      : "Mr. Mahmoud Alshangiti: Contact Us",
+  title: locale.value === "ar" ? "تواصل معنا" : "Contact Us",
   meta: [
     {
       name: "description",

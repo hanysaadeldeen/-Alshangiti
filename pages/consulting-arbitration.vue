@@ -59,9 +59,7 @@ const { locale } = useI18n();
 
 useHead(() => ({
   title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي: التقاضي والتحكيم"
-      : "Mr. Mahmoud Alshangiti: Litigation and Arbitration",
+    locale.value === "ar" ? "التقاضي والتحكيم" : "Litigation and Arbitration",
   meta: [
     {
       name: "description",

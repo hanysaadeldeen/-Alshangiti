@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   ],
   site: {
     url: "https://formylearn.com",
-    name: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
   },
   components: [
     {

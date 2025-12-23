@@ -104,18 +104,13 @@ const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
 //   lazy: false,
 // });
 
-console.log("error data:", error.value?.data?.detail);
-console.log("Blog data:", data);
-
 useHead(() => {
   const siteUrl = "https://shangiti.com";
   const isAr = locale.value === "ar";
   const post = data.value;
 
   return {
-    title: isAr
-      ? ` محمود الشنقيطي: ${post?.title_ar} `
-      : `Mr. Mahmoud Alshangiti :${post?.title_en} `,
+    title: isAr ? `${post?.title_ar} ` : `${post?.title_en} `,
     meta: [
       {
         name: "description",

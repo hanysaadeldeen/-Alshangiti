@@ -30,9 +30,7 @@ const { locale } = useI18n();
 
 useHead(() => ({
   title:
-    locale.value === "ar"
-      ? "محمود الشنقيطي: العقود والاستشارات "
-      : "Mr. Mahmoud Alshangiti: Contracts and Consulting",
+    locale.value === "ar" ? "العقود والاستشارات" : "Contracts and Consulting",
   meta: [
     {
       name: "description",
