@@ -28,8 +28,56 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     vueI18n: "./i18n.config.ts",
   },
+  // app: {
+  //   head: {
+  //     script: [],
+  //     link: [
+  //       {
+  //         rel: "icon",
+  //         type: "image/png",
+  //         href: "/LogoTap.svg",
+  //       },
+  //       {
+  //         rel: "preload",
+  //         as: "image",
+  //         href: "/images/heroPoster-1200.webp",
+  //         imagesrcset:
+  //           "/images/heroPoster-400.webp 400w, /images/heroPoster-800.webp 800w, /images/heroPoster-1200.webp 1200w",
+  //         imagesizes: "100vw",
+  //       },
+  //     ],
+  //     meta: [
+  //       { property: "og:image:width", content: "1200" },
+  //       { property: "og:image:height", content: "630" },
+  //       {
+  //         property: "og:image",
+  //         content: "https://formylearn.com/LogoTap.png",
+  //       },
+  //       {
+  //         name: "twitter:image",
+  //         content: "https://formylearn.com/LogoTap.png",
+  //       },
+  //     ],
+  //   },
+  // },
+  // seo: {
+  //   meta: {
+  //     ogSiteName: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+  //     applicationName: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+  //   },
+  // },
+  // routeRules: {
+  //   "/en/**": {
+  //     seoMeta: {
+  //       ogSiteName: "Mr Mahmoud Alshangiti",
+  //       applicationName: "Mr Mahmoud Alshangiti",
+  //     },
+  //   },
+  // },
+
   app: {
     head: {
+      titleTemplate: "%s | محمود الشنقيطي للمحاماة والاستشارات القانونية",
       script: [],
       link: [
         {
@@ -68,6 +116,9 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/en/**": {
+      head: {
+        titleTemplate: "%s | Mr Mahmoud Alshangiti",
+      },
       seoMeta: {
         ogSiteName: "Mr Mahmoud Alshangiti",
         applicationName: "Mr Mahmoud Alshangiti",
