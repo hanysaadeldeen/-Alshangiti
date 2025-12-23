@@ -25,12 +25,12 @@ onMounted(() => {
 });
 watch(locale, setDirection, { immediate: true });
 
-useHead({
+useHead(() => ({
   titleTemplate:
     locale.value === "en"
       ? "%s | Mr Mahmoud Alshangiti"
       : "%s | محمود الشنقيطي للمحاماة والاستشارات القانونية",
-});
+}));
 </script>
 
 <style scoped>
