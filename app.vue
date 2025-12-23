@@ -26,12 +26,10 @@ onMounted(() => {
 watch(locale, setDirection, { immediate: true });
 
 useHead({
-  noscript: [
-    {
-      innerHTML:
-        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap">',
-    },
-  ],
+  titleTemplate:
+    locale.value === "en"
+      ? "%s | Mr Mahmoud Alshangiti"
+      : "%s | محمود الشنقيطي للمحاماة والاستشارات القانونية",
 });
 </script>
 

@@ -77,7 +77,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: "%s | محمود الشنقيطي للمحاماة والاستشارات القانونية",
       script: [],
       link: [
         {
