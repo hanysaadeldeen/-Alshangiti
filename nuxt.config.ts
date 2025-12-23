@@ -60,6 +60,20 @@ export default defineNuxtConfig({
       ],
     },
   },
+  seo: {
+    meta: {
+      ogSiteName: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+      applicationName: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
+    },
+  },
+  routeRules: {
+    "/en/**": {
+      seoMeta: {
+        ogSiteName: "Mr Mahmoud Alshangiti",
+        applicationName: "Mr Mahmoud Alshangiti",
+      },
+    },
+  },
 
   postcss: {
     plugins: {
