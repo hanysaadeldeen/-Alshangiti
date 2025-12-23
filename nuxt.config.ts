@@ -10,9 +10,8 @@ export default defineNuxtConfig({
     "nuxt-seo-utils",
   ],
   site: {
-    url: "https://shangiti.com/",
+    url: "https://formylearn.com",
   },
-
   components: [
     {
       path: "~/components",
@@ -29,17 +28,6 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     vueI18n: "./i18n.config.ts",
   },
-  // ssr: false,
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true,
-  //     failOnError: false,
-  //     fallback: "200.html",
-  //   },
-  // },
-  // routeRules: {
-  //   "/**": { prerender: true },
-  // },
   app: {
     head: {
       script: [],
@@ -58,23 +46,16 @@ export default defineNuxtConfig({
           imagesizes: "100vw",
         },
       ],
-      // title: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
-
       meta: [
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
-        // {
-        //   name: "description",
-        //   content:
-        //     "محمود الشنقيطي وشركاه هو صرح قانوني رائد تأسس على يد محامٍ خبير أمضى أكثر من 20 عامًا في قلب المشهد القانوني السعودي",
-        // },
         {
           property: "og:image",
-          content: "https://shangiti.com/LogoTap.png",
+          content: "https://formylearn.com/LogoTap.png",
         },
         {
           name: "twitter:image",
-          content: "https://shangiti.com/LogoTap.png",
+          content: "https://formylearn.com/LogoTap.png",
         },
       ],
     },
@@ -86,15 +67,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  // build: {
-  //   extractCSS: true,
-  //   optimizeCSS: true,
-  //   postcss: {
-  //     plugins: {
-  //       tailwindcss: {},
-  //       autoprefixer: {},
-  //       cssnano: {},
-  //     },
-  //   },
-  // },
 });

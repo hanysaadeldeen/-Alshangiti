@@ -61,8 +61,6 @@ defineProps<Props>();
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
-
-  console.log(dateString, date);
   return date.toLocaleString("en-US", {
     day: "2-digit",
     month: "numeric",

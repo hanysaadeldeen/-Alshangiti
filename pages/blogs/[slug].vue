@@ -1,6 +1,9 @@
 <template>
   <main class="BlogPage mt-20">
-    <div class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto">
+    <div
+      v-if="!error?.data && data"
+      class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto"
+    >
       <div class="w-full">
         <div
           class="flex gap-2 justify-center items-center flex-wrap"
@@ -42,16 +45,19 @@
         >
           {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
         </p>
-        <!-- <div
-          class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
-          v-html="locale === 'ar' ? data.content_ar : data.content_en"
-        /> -->
         <div
           class="prose prose-lg max-w-none"
           v-html="locale === 'ar' ? data.content_ar : data.content_en"
         />
       </div>
     </div>
+
+    <h1
+      v-if="error?.data"
+      class="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-500 text-center mb-20"
+    >
+      {{ error?.data?.detail }}
+    </h1>
   </main>
 </template>
 
@@ -98,35 +104,9 @@ const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
 //   lazy: false,
 // });
 
-// useHead(() => ({
-//   title:
-//     locale.value === "ar"
-//       ? ` محمود الشنقيطي: ${data.value?.title_ar}  `
-//       : `Mr. Mahmoud Alshangiti :${data.value?.title_en} `,
-//   meta: [
-//     {
-//       name: "description",
-//       content:
-//         locale.value === "ar"
-//           ? `${data.value?.excerpt_ar}`
-//           : `${data.value?.excerpt_en}`,
-//     },
-//     {
-//       property: "og:title",
-//       content:
-//         locale.value === "ar" ? data.value?.title_ar : data.value?.title_en,
-//     },
-//     {
-//       property: "og:description",
-//       content:
-//         locale.value === "ar" ? data.value?.excerpt_ar : data.value?.excerpt_en,
-//     },
-//     {
-//       property: "og:image",
-//       content: data.value?.featured_image,
-//     },
-//   ],
-// }));
+console.log("error data:", error.value?.data?.detail);
+console.log("Blog data:", data);
+
 useHead(() => {
   const siteUrl = "https://shangiti.com";
   const isAr = locale.value === "ar";
@@ -177,7 +157,7 @@ useHead(() => {
             name: "Mahmoud Al-Shangiti Law Firm",
             logo: {
               "@type": "ImageObject",
-              url: "https://alshangiti.vercel.app/_nuxt/alshangiti.CRUN2QOj.svg", // حط لوجو حقيقي
+              url: "https://alshangiti.vercel.app/_nuxt/alshangiti.CRUN2QOj.svg",
             },
           },
           datePublished: post?.published_at,
