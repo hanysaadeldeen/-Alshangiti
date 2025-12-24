@@ -51,7 +51,7 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = await useFetch<AchievementResponse>(
-  "https://37-27-29-234.nip.io/shangiti/api/blog/blog-posts/",
+  "https://be.shangiti.com/shangiti/api/blog/blog-posts/",
   {
     lazy: true,
   }

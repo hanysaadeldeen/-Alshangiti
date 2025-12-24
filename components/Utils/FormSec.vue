@@ -219,7 +219,7 @@ const onSubmit = async (values: any, { resetForm }: any) => {
   try {
     isLoading.value = true;
     const { data, pending, error } = await useFetch(
-      "https://37-27-29-234.nip.io/shangiti/api/contact/",
+      "https://be.shangiti.com/shangiti/api/contact/",
       {
         method: "POST",
         body: {

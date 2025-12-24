@@ -94,7 +94,7 @@ interface BlogDetails {
 }
 
 const url = computed(
-  () => `https://37-27-29-234.nip.io/shangiti/api/blog/blog-posts/${slug.value}`
+  () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}`
 );
 
 const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
