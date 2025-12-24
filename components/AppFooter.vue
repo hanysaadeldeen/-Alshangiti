@@ -243,10 +243,18 @@
         <p class="text-base font-normal text-white">
           {{
             locale === "ar"
-              ? `© ${currentYear} جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  بواسطة `
-              : `© ${currentYear} All rights reserved to Alshangiti & Associates Law Firm — powered by`
+              ? `جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  &COPY; ${currentYear} — تنفيذ وتطوير بواسطة شركة  `
+              : `All rights reserved for Alshangiti & Associates Law Firm &COPY; ${currentYear} — Designed and developed by`
           }}
-          <a href="https://do.com.sa/" target="_blank"> DO </a>
+          <a href="https://do.com.sa/" target="_blank">
+            <img
+              src="~/assets/img/whiteDo.gif"
+              class="w-10 h-5 mx-1 inline-block"
+              width="40"
+              height="20"
+              alt="Do Logo"
+            />
+          </a>
         </p>
         <div class="flex gap-4 md:gap-6 items-center text-white">
           <nuxt-link
@@ -291,15 +299,6 @@ const getPathWithoutLocale = (path: string) => {
 
 const adjustedPath = computed(() => getPathWithoutLocale(route.path));
 const currentYear = new Date().getFullYear();
-
-// const SocialMedia = [
-//   {
-//     id: 1,
-//     icon: '<i class="fa-brands fa-whatsapp text-[#7B7B7B]"></i>',
-//     socialName: "whatsapp",
-//     link: "https://wa.me/966126069234",
-//   },
-// ];
 </script>
 
 <style scoped>

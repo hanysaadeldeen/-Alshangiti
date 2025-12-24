@@ -5,8 +5,14 @@
       class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto"
     >
       <div class="w-full">
+        <h1
+          v-if="data && !pending"
+          class="text-3xl text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
+        >
+          {{ locale === "ar" ? data.title_ar : data.title_en }}
+        </h1>
         <div
-          class="flex gap-2 justify-center items-center flex-wrap"
+          class="flex gap-2 justify-center items-center flex-wrap mt-4"
           v-if="data && !pending"
         >
           <span class="text-lg text-center text-primary-900 font-normal">
@@ -29,16 +35,10 @@
             {{ data.views_count }}
           </span>
         </div>
-        <h1
-          v-if="data && !pending"
-          class="text-3xl mt-4 text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
-        >
-          {{ locale === "ar" ? data.title_ar : data.title_en }}
-        </h1>
       </div>
       <div
         v-if="data"
-        class="mx-auto max-w-[839px] mb-16 md:mb-[120px] mt-6 md:mt-12 lg:mt-16"
+        class="mx-auto max-w-[839px] mb-16 md:mb-[120px] mt-6 md:mt-8 lg:mt-12"
       >
         <div
           class="prose prose-lg max-w-none"
