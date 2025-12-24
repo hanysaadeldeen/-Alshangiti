@@ -1,5 +1,5 @@
 <template>
-  <main class="BlogPage mt-20">
+  <main class="BlogPage mt-10 md:mt-16 lg:mt-20">
     <div
       v-if="!error?.data && data"
       class="relative max-w-[839px] max-2xl:px-6 w-full mx-auto"
@@ -31,7 +31,7 @@
         </div>
         <h1
           v-if="data && !pending"
-          class="text-2xl mt-4 text-center md:text-3xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
+          class="text-3xl mt-4 text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
         >
           {{ locale === "ar" ? data.title_ar : data.title_en }}
         </h1>
@@ -40,11 +40,6 @@
         v-if="data"
         class="mx-auto max-w-[839px] mb-16 md:mb-[120px] mt-6 md:mt-12 lg:mt-16"
       >
-        <p
-          class="font-normal text-primary-900 text-xl mb-2 md:mb-4 text-justify"
-        >
-          {{ locale === "ar" ? data.excerpt_ar : data.excerpt_en }}
-        </p>
         <div
           class="prose prose-lg max-w-none"
           v-html="locale === 'ar' ? data.content_ar : data.content_en"
@@ -179,16 +174,8 @@ section,
 .section {
   margin-top: 80px;
 }
-
-@media (max-width: 768px) {
-  section,
-  .section {
-    margin-top: 50px;
-  }
-}
-
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   line-height: 2.25rem;
   font-weight: 700;
   margin-top: 2rem;
@@ -197,11 +184,34 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   color: #293329;
+}
+
+@media (max-width: 768px) {
+  section,
+  .section {
+    margin-top: 50px;
+  }
+
+  .prose-lg
+    :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    font-size: 1.2666667em;
+    line-height: 1.1333333;
+    margin-bottom: 1.0666667em;
+    margin-top: 1.3666667em;
+  }
+
+  .prose-lg
+    :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    font-size: 1.1333333em;
+    line-height: 1.5;
+    margin-bottom: 0.6666667em;
+    margin-top: 1.2666667em;
+  }
 }
 </style>
