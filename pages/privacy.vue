@@ -63,22 +63,17 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ConsultingContracts from "../assets/img/pannel/ConsultingContracts.webp";
-
 const { locale } = useI18n();
-useHead(() => ({
-  title: locale.value === "ar" ? "سياسة الخصوصية" : "Privacy ",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "نلتزم في shangiti بحماية خصوصية بيانات عملائنا وشركائنا، والتعامل معها بسرية تامة وفق معايير الأمان والجودة المعتمدة عالميًا."
-          : "Shangiti is committed to protecting the privacy of our customers and partners, handling their data with strict confidentiality in accordance with globally recognized security and quality standards.",
-    },
-  ],
-}));
+
+import type { SEODataFetch } from "~/types/seo";
+
+const { data, pending, error, refresh } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/privacy"
+);
+
+usePageSeo(data, locale);
 const sections = [
   {
     id: "Introduction",
@@ -130,7 +125,7 @@ const sections = [
   },
 ];
 
-const scrollToSection = (sectionId) => {
+const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
   if (element) {
     element.scrollIntoView({ behavior: "smooth", block: "start" });

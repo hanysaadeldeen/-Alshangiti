@@ -32,18 +32,14 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
-useHead(() => ({
-  title: locale.value === "ar" ? "خدمات المشاريع " : "Project Services",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "ما بين زمنين وتسلسل إجرائي محدد، يقع نطاق بالغ الأهمية لقطاع الأعمال يوصف مهنيا بالمشاريع، والتي قد تكون فكرة استثمارية يرافقها ما هو ذهني وقيمي، كالعلامات والنماذج، وما يضمن الاستمرار والنمو، كحماية المنتجات من التقليد وحصرية العمل في المشاريع عن طريق الوكالات والامتياز."
-          : "A particularly important scope for The Business Sector located by and between two times and a specific procedural sequence, which professionally described as projects.",
-    },
-  ],
-}));
+import type { SEODataFetch } from "~/types/seo";
+
+const { data, pending, error, refresh } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/consulting-projects"
+);
+
+usePageSeo(data, locale);
+
 const detailsAr = [
   "السجلات و التراخيص",
   "الاستثمار و الصفقات",

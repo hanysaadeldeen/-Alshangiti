@@ -60,19 +60,13 @@
 <script setup lang="ts">
 import achevments from "~/assets/img/pannel/achevments.webp";
 const { locale } = useI18n();
+import type { SEODataFetch } from "~/types/seo";
 
-useHead(() => ({
-  title: locale.value === "ar" ? "استكشف انجازاتنا" : "Our Achievement",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "لمحة من إنجازاتنا التي نفخر بها"
-          : "A showcase of milestones that reflect our commitment, growth, and excellence.",
-    },
-  ],
-}));
+const { data: dataSEO } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/our-achievement"
+);
+
+usePageSeo(dataSEO, locale);
 interface Achievement {
   id: number;
   title_ar: string;

@@ -27,20 +27,13 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
+import type { SEODataFetch } from "~/types/seo";
 
-useHead(() => ({
-  title:
-    locale.value === "ar" ? "العقود والاستشارات" : "Contracts and Consulting",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "خدمة الاستشارات والعقود هي ركيزة أساسية لأي عمل تجاري، حيث تعمل على توفير الحماية القانونية الوقائية والداعمة."
-          : "Advisory and contract services form a fundamental pillar of any commercial enterprise. They provide both preventive and supportive legal protection, ensuring that businesses operate within a secure and compliant framework.",
-    },
-  ],
-}));
+const { data, pending, error, refresh } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/consulting-contracts"
+);
+
+usePageSeo(data, locale);
 
 const detailsAr = [
   "التفاوض القانوني",

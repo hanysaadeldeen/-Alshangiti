@@ -20,18 +20,14 @@
 import blog from "~/assets/img/Blog/blog.webp";
 
 const { locale } = useI18n();
-useHead(() => ({
-  title: locale.value === "ar" ? "المدونة" : "Blog",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "مرجعك الشامل لأبرز الموضوعات القانونية."
-          : "Your comprehensive reference for the most prominent legal topics.",
-    },
-  ],
-}));
+
+import type { SEODataFetch } from "~/types/seo";
+
+const { data: DataSEO } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/blogs"
+);
+
+usePageSeo(DataSEO, locale);
 interface Achievement {
   id: number;
   title_ar: string;

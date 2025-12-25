@@ -7,7 +7,7 @@
       <div class="w-full">
         <h1
           v-if="data && !pending"
-          class="text-3xl text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
+          class="text-2xl sm:text-3xl text-center md:text-4xl lg:text-5xl lg:!leading-[70px] mx-auto text-primary-900 font-bold max-w-[673px]"
         >
           {{ locale === "ar" ? data.title_ar : data.title_en }}
         </h1>
@@ -23,16 +23,6 @@
             {{
               locale === "ar" ? data.category.name_ar : data.category.name_en
             }}
-            -
-          </span>
-          <span class="text-lg text-center text-primary-900 font-normal">
-            {{ data.status_display }}
-          </span>
-          -
-          <span class="text-lg text-center text-primary-900 font-normal">
-            <span>{{ locale === "en" ? "red by" : "مقروء من " }}</span>
-
-            {{ data.views_count }}
           </span>
         </div>
       </div>
@@ -200,7 +190,7 @@ h3 {
 
   .prose-lg
     :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    font-size: 1.2666667em;
+    font-size: 1.1666667em;
     line-height: 1.1333333;
     margin-bottom: 1.0666667em;
     margin-top: 1.3666667em;
@@ -208,7 +198,7 @@ h3 {
 
   .prose-lg
     :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    font-size: 1.1333333em;
+    font-size: 1.01333333em;
     line-height: 1.5;
     margin-bottom: 0.6666667em;
     margin-top: 1.2666667em;

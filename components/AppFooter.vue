@@ -1,10 +1,7 @@
 <template>
   <footer
     class="relative"
-    :class="[
-      adjustedPath.includes('contact-us') ? 'pt-28 ' : '',
-      adjustedPath === '/book-consultation' ? 'bg-[#F6F6F6]' : '',
-    ]"
+    :class="[adjustedPath.includes('contact-us') ? 'pt-28 ' : '']"
   >
     <div
       class="bg-primary-500 absolute bottom-0 left-0 w-full"

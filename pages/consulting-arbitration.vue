@@ -56,20 +56,13 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
+import type { SEODataFetch } from "~/types/seo";
 
-useHead(() => ({
-  title:
-    locale.value === "ar" ? "التقاضي والتحكيم" : "Litigation and Arbitration",
-  meta: [
-    {
-      name: "description",
-      content:
-        locale.value === "ar"
-          ? "خدمة التقاضي والتحكيم هي عملية التمثيل القانوني التي يتم تقديمها للأفراد والشركات لحل المنازعات القانونية. تشمل هذه الخدمة الترافع أمام المحاكم على اختلاف أنواعها ودرجاتها، بالإضافة إلى تقديم الدعم اللازم في عمليات التحكيم أمام الهيئات المتخصصة."
-          : "Litigation and arbitration services involve legal representation provided to individuals and companies to resolve disputes efficiently and effectively. This includes advocacy before courts of all types and levels, as well as comprehensive support in arbitration proceedings before specialised tribunals and institutions.",
-    },
-  ],
-}));
+const { data, pending, error, refresh } = await useFetch<SEODataFetch>(
+  () => "https://be.shangiti.com/shangiti/api/pages/consulting-arbitration"
+);
+
+usePageSeo(data, locale);
 
 const detailsAr = [
   "القضايا الإدارية",
