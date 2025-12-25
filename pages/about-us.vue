@@ -18,6 +18,10 @@ import type { SEODataFetch } from "~/types/seo";
 
 const { data, pending, error, refresh } = await useFetch<SEODataFetch>(
   () => "https://be.shangiti.com/shangiti/api/pages/about-us/"
+  // {
+  //   lazy: true,
+  //   server: false,
+  // }
 );
 
 usePageSeo(data, locale);

@@ -78,6 +78,11 @@ export default defineNuxtConfig({
     },
   },
 
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //   },
+  // },
   postcss: {
     plugins: {
       tailwindcss: {},

@@ -84,11 +84,11 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = useFetch<AchievementResponse>(
-  "https://be.shangiti.com/shangiti/api/blog/blog-posts/",
-  {
-    server: false,
-    lazy: true,
-  }
+  "https://be.shangiti.com/shangiti/api/blog/blog-posts/"
+  // {
+  //   server: false,
+  //   lazy: true,
+  // }
 );
 
 if (data.value) {

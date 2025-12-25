@@ -47,10 +47,11 @@ interface AchievementResponse {
 }
 
 const { data, pending, error } = await useFetch<AchievementResponse>(
-  "https://be.shangiti.com/shangiti/api/blog/blog-posts/",
-  {
-    lazy: true,
-  }
+  "https://be.shangiti.com/shangiti/api/blog/blog-posts/"
+  // {
+  //   lazy: true,
+  //   server: false,
+  // }
 );
 </script>
 

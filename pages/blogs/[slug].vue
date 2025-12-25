@@ -82,7 +82,9 @@ const url = computed(
   () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}`
 );
 
-const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {});
+const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {
+  // lazy: true,
+});
 
 useHead(() => {
   const siteUrl = "https://shangiti.com";
