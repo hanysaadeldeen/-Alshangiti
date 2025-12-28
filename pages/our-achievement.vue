@@ -82,10 +82,6 @@ const limit = ref(10);
 
 const { data, pending, error } = useFetch<AchievementResponse>(
   "https://be.shangiti.com/shangiti/api/achievements/detailed-achievements/"
-  // {
-  //   server: false,
-  //   lazy: true,
-  // }
 );
 </script>
 

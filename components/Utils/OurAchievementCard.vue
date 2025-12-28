@@ -22,12 +22,11 @@
         </div>
         <div
           ref="answer"
-          class="overflow-hidden transition-all duration-500 text-justify text-lg md:text-xl md:!leading-[32px] max-w-[98%]"
+          class="overflow-hidden transition-all duration-500 text-justify text-lg md:text-xl md:!leading-[32px] max-w-[98%] prose prose-lg"
           :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }"
           :class="isOpen ? 'text-text mt-5' : 'text-[#5E5E5E]'"
-        >
-          {{ details }}
-        </div>
+          v-html="details"
+        />
       </div>
     </div>
   </div>

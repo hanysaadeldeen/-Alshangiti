@@ -79,15 +79,13 @@ interface BlogDetails {
 }
 
 const url = computed(
-  () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}`
+  () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}/`
 );
 
-const { data, pending, error, refresh } = await useFetch<BlogDetails>(url, {
-  // lazy: true,
-});
+const { data, pending, error, refresh } = await useFetch<BlogDetails>(url);
 
 useHead(() => {
-  const siteUrl = "https://shangiti.com";
+  const siteUrl = "https://law.shangiti.com/";
   const isAr = locale.value === "ar";
   const post = data.value;
 
@@ -127,7 +125,7 @@ useHead(() => {
           author: {
             "@type": "Organization",
             name: "Mahmoud Al-Shangiti Law Firm",
-            url: "https://shangiti.com/",
+            url: "https://law.shangiti.com/",
           },
           publisher: {
             "@type": "Organization",

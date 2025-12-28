@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     "nuxt-seo-utils",
   ],
   site: {
-    url: "https://www.shangiti.com/",
+    url: "https://law.shangiti.com/",
   },
   components: [
     {
@@ -51,11 +51,11 @@ export default defineNuxtConfig({
         { property: "og:image:height", content: "630" },
         {
           property: "og:image",
-          content: "https://www.shangiti.com/LogoTap.png",
+          content: "https://law.shangiti.com/LogoTap.png",
         },
         {
           name: "twitter:image",
-          content: "https://www.shangiti.com/LogoTap.png",
+          content: "https://law.shangiti.com/LogoTap.png",
         },
       ],
     },
@@ -68,9 +68,6 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/en/**": {
-      head: {
-        titleTemplate: "%s | Mr Mahmoud Alshangiti",
-      },
       seoMeta: {
         ogSiteName: "Mr Mahmoud Alshangiti",
         applicationName: "Mr Mahmoud Alshangiti",
