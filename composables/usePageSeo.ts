@@ -25,12 +25,17 @@ export const usePageSeo = (
 
     const url = data.value.slug ? `${baseUrl}/${data.value.slug}` : baseUrl;
 
+    const ogTitleBased =
+      locale.value === "ar"
+        ? `محمود الشنقيطي للمحاماة والاستشارات القانونية - ${title}`
+        : `${title} - Mr Mahmoud Alshangiti`;
+
     return {
       title,
       meta: [
         { name: "description", content: description },
 
-        { property: "og:title", content: title },
+        { property: "og:title", content: ogTitleBased },
         { property: "og:description", content: description },
         {
           property: "og:image",

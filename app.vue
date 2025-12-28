@@ -26,10 +26,16 @@ onMounted(() => {
 watch(locale, setDirection, { immediate: true });
 
 useHead(() => ({
-  titleTemplate:
-    locale.value === "en"
-      ? "%s | Mr Mahmoud Alshangiti"
-      : "%s | محمود الشنقيطي للمحاماة والاستشارات القانونية",
+  titleTemplate: (titleChunk?: string) => {
+    const siteName =
+      locale.value === "en"
+        ? "Mr Mahmoud Alshangiti"
+        : "محمود الشنقيطي للمحاماة والاستشارات القانونية";
+
+    if (!titleChunk) return siteName;
+
+    return `${titleChunk} - ${siteName}`;
+  },
 }));
 </script>
 
