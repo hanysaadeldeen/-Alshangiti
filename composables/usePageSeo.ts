@@ -27,7 +27,7 @@ export const usePageSeo = (
 
     const ogTitleBased =
       locale.value === "ar"
-        ? `محمود الشنقيطي للمحاماة والاستشارات القانونية - ${title}`
+        ? ` ${title} - محمود الشنقيطي للمحاماة والاستشارات القانونية `
         : `${title} - Mr Mahmoud Alshangiti`;
 
     return {
