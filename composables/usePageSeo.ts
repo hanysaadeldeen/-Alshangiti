@@ -12,7 +12,7 @@ interface SeoPage {
 export const usePageSeo = (
   data: Ref<SeoPage | null>,
   locale: Ref<string>,
-  baseUrl = "https://law.shangiti.com/"
+  baseUrl = "https://law.shangiti.com"
 ) => {
   useHead(() => {
     if (!data.value) return {};
