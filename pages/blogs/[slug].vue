@@ -132,7 +132,7 @@ useHead(() => {
             name: "Mahmoud Al-Shangiti Law Firm",
             logo: {
               "@type": "ImageObject",
-              url: "https://alshangiti.vercel.app/_nuxt/alshangiti.CRUN2QOj.svg",
+              url: "https://law.shangiti.com/_nuxt/alshangiti.CRUN2QOj.svg",
             },
           },
           datePublished: post?.published_at,
