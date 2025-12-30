@@ -6,10 +6,20 @@ export default defineSitemapEventHandler(async () => {
 
   const posts = res?.results ?? [];
 
-  return posts.map((post: any) => ({
-    loc: `/blogs/${post.slug}`,
-    lastmod: post.updated_at || post.published_at || post.created_at,
-    changefreq: "weekly",
-    priority: 0.7,
-  }));
+  return posts.flatMap((post: any) => [
+    // Arabic (default language)
+    {
+      loc: `/blogs/${post.slug}`,
+      lastmod: post.updated_at || post.published_at || post.created_at,
+      changefreq: "weekly",
+      priority: 0.7,
+    },
+    // English
+    {
+      loc: `/en/blogs/${post.slug}`,
+      lastmod: post.updated_at || post.published_at || post.created_at,
+      changefreq: "weekly",
+      priority: 0.7,
+    },
+  ]);
 });
