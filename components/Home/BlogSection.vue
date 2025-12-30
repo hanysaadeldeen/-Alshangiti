@@ -85,15 +85,11 @@ interface AchievementResponse {
 
 const { data, pending, error } = useFetch<AchievementResponse>(
   "https://be.shangiti.com/shangiti/api/blog/blog-posts/"
-  // {
-  //   server: false,
-  //   lazy: true,
-  // }
 );
 
-if (data.value) {
-  console.log("Blog Data:", data.value);
-}
+// if (data.value) {
+//   console.log("Blog Data:", data);
+// }
 </script>
 
 <style scoped></style>

@@ -12,6 +12,10 @@ export default defineNuxtConfig({
   site: {
     url: "https://law.shangiti.com/",
   },
+  sitemap: {
+    siteUrl: "https://law.shangiti.com",
+    sources: ["/__sitemap__/blogs"],
+  },
   components: [
     {
       path: "~/components",
@@ -74,12 +78,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true,
-  //   },
-  // },
   postcss: {
     plugins: {
       tailwindcss: {},
