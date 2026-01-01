@@ -4,7 +4,6 @@ export default defineNuxtRouteMiddleware(async (to) => {
     to.path.startsWith("/_nuxt") ||
     to.path.startsWith("/api") ||
     to.path === "/favicon.ico" ||
-    to.path === "/robots.txt" ||
     to.path.startsWith("/sitemap")
   ) {
     return;
