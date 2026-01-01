@@ -3,13 +3,13 @@
     <div class="relative border-b border-[#D3D3D3] py-8 md:py-[60px]" :key="id">
       <div class="max-2xl:px-6 w-full max-w-[1315px] mx-auto">
         <div class="flex gap-4 items-center justify-between">
-          <h1
+          <h2
             @click="toggle"
             class="font-bold text-xl md:text-2xl lg:text-3xl lg:!leading-[60px] cursor-pointer"
             :class="isOpen ? 'text-text' : 'text-[#808080]'"
           >
             {{ title }}
-          </h1>
+          </h2>
           <div class="p-2 cursor-pointer" @click="toggle">
             <LucideChevronUp
               class="transition-all ease-in-out duration-300"
