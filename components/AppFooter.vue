@@ -96,7 +96,6 @@
                 </span>
               </button>
             </nuxt-link>
-
             <nuxt-link
               :to="$localePath('blogs')"
               class="max-[390px]:w-full sm:w-fit"
@@ -116,6 +115,25 @@
                 </span>
               </button>
             </nuxt-link>
+          </div>
+          <div class="flex flex-wrap gap-3 md:gap-4 mt-6">
+            <div
+              class="relative group h-10 w-10 items-center justify-center rounded-full border border-white inline-block"
+              v-for="social in SocialMedia"
+              :key="social.id"
+            >
+              <a
+                :href="social.link"
+                target="_blank"
+                class="transition-all duration-300 ease-in-out group-hover:rotate-12 group-hover:scale-110 items-center absolute w-full top-1/2 -translate-y-1/2 mx-auto"
+              >
+                <img
+                  :src="social.icon"
+                  :alt="social.socialName"
+                  class="group size-7 mx-auto"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div class="min-w-[120px] lg:w-[183px] md:mx-auto">
@@ -235,9 +253,35 @@
       </div>
 
       <div
-        class="flex justify-between flex-wrap items-center gap-4 md:gap-6 pt-6 md:pt-8"
+        class="flex justify-between flex-wrap items-start gap-4 md:gap-6 pt-6 md:pt-8"
       >
-        <p class="text-base font-normal text-white">
+        <div class="text-base font-normal space-y-1">
+          <p class="text-white">
+            {{
+              locale === "ar"
+                ? `جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  &COPY; ${currentYear} — تنفيذ وتطوير بواسطة شركة  `
+                : `All rights reserved for Alshangiti & Associates Law Firm &COPY; ${currentYear} — Designed and developed by`
+            }}
+            <a href="https://do.com.sa/" target="_blank">
+              <img
+                src="~/assets/img/whiteDo.gif"
+                class="w-10 h-5 mx-1 inline-block"
+                width="40"
+                height="20"
+                alt="Do Logo"
+              />
+            </a>
+          </p>
+          <p class="text-[#ddd]">
+            {{
+              locale === "ar"
+                ? "         رقم ترخيص وزارة العدل (26141) ورقم هيئة المحامين (SBA00007274)"
+                : "Ministry of Justice license number (26141) and Bar Association number (SBA00007274)"
+            }}
+          </p>
+        </div>
+
+        <!-- <p class="text-base font-normal text-white">
           {{
             locale === "ar"
               ? `جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  &COPY; ${currentYear} — تنفيذ وتطوير بواسطة شركة  `
@@ -252,7 +296,7 @@
               alt="Do Logo"
             />
           </a>
-        </p>
+        </p> -->
         <div class="flex gap-4 md:gap-6 items-center text-white">
           <nuxt-link
             :to="localePath('/terms')"
@@ -281,6 +325,9 @@
 </template>
 
 <script setup lang="ts">
+import linkedIn from "../assets/img/Utils/linkedin.svg";
+import twitter from "../assets/img/Utils/twitter.svg";
+
 const localePath = useLocalePath();
 const { locale } = useI18n();
 
@@ -296,6 +343,20 @@ const getPathWithoutLocale = (path: string) => {
 
 const adjustedPath = computed(() => getPathWithoutLocale(route.path));
 const currentYear = new Date().getFullYear();
+const SocialMedia = [
+  {
+    id: 2,
+    icon: linkedIn,
+    socialName: "linkedin",
+    link: "https://www.linkedin.com/company/mahmood-alshangiti-lawoffice",
+  },
+  {
+    id: 4,
+    icon: twitter,
+    socialName: "twitter",
+    link: "https://x.com/ShangitiLaw",
+  },
+];
 </script>
 
 <style scoped>
