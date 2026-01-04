@@ -82,7 +82,7 @@ const Services = [
       "homePage.services.services[2].details[2]",
       "homePage.services.services[2].details[3]",
     ],
-    link: "consulting-arbitration",
+    link: "consulting-projects",
   },
 ];
 </script>
