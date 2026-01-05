@@ -272,7 +272,7 @@
               />
             </a>
           </p>
-          <p class="text-[#ddd]">
+          <p class="text-secondary font-bold">
             {{
               locale === "ar"
                 ? "         رقم ترخيص وزارة العدل (26141) ورقم هيئة المحامين (SBA00007274)"
@@ -280,23 +280,6 @@
             }}
           </p>
         </div>
-
-        <!-- <p class="text-base font-normal text-white">
-          {{
-            locale === "ar"
-              ? `جميع الحقوق محفوظة محمود الشنقيطي للمحاماة  &COPY; ${currentYear} — تنفيذ وتطوير بواسطة شركة  `
-              : `All rights reserved for Alshangiti & Associates Law Firm &COPY; ${currentYear} — Designed and developed by`
-          }}
-          <a href="https://do.com.sa/" target="_blank">
-            <img
-              src="~/assets/img/whiteDo.gif"
-              class="w-10 h-5 mx-1 inline-block"
-              width="40"
-              height="20"
-              alt="Do Logo"
-            />
-          </a>
-        </p> -->
         <div class="flex gap-4 md:gap-6 items-center text-white">
           <nuxt-link
             :to="localePath('/terms')"
