@@ -3,11 +3,14 @@
     class="BlogCard relative px-4 md:px-6 border-[#E1E1E1] flex flex-col gap-2 transition-all ease-in-out duration-300 hover:border-primary-500"
     :class="locale === 'ar' ? 'border-r-[2px]' : 'border-l-[2px]'"
   >
-    <p v-if="data && !pending" class="text-[#5E5E5E] font-normal text-sm">
-      {{ formatDate(data.created_at || "") }} -
+    <div v-if="data && !pending" class="text-[#5E5E5E] font-normal text-sm">
+      <span>
+        {{ formatDate(data.created_at || "") }}
+      </span>
+      <span>-</span>
       <span>{{ locale === "en" ? "red by" : "مقروء من " }}</span>
-      {{ data.views_count }}
-    </p>
+      <span>{{ data.views_count }}</span>
+    </div>
 
     <nuxt-link :to="localePath(`/blogs/${data?.slug}`)">
       <h2
@@ -49,7 +52,6 @@ interface BlogDetails {
   featured_image: string;
   created_at: string;
   views_count: number;
-  // status_display: string;
 }
 
 interface Props {
@@ -61,11 +63,12 @@ defineProps<Props>();
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
-  return date.toLocaleString("en-US", {
-    day: "2-digit",
-    month: "numeric",
-    year: "numeric",
-  });
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  if (locale.value === "en") {
+    return `${day}/${month}/${year}`;
+  } else return `${year}/${month}/${day}`;
 }
 </script>
 

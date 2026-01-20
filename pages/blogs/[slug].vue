@@ -36,7 +36,18 @@
         />
       </div>
     </div>
-
+    <section
+      dir="rtl"
+      class="max-w-[839px] max-2xl:px-6 w-full mx-auto mb-10 md:mb-16 lg:mb-24"
+      v-if="!error?.data && data && data?.faqs.length > 0"
+    >
+      <h2
+        class="font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-6 w-fit max-sm:pl-10"
+      >
+        الأسئلة الأكثر شيوعاً (FAQ)
+      </h2>
+      <FaqSection v-for="faq in data.faqs" :key="faq.id" :faq="faq" />
+    </section>
     <h1
       v-if="error?.data"
       class="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-500 text-center mb-20"
@@ -76,10 +87,16 @@ interface BlogDetails {
     name_en: string;
     slug: string;
   };
+  faqs: Array<{
+    answer: string;
+    id: number;
+    order: number;
+    question: string;
+  }>;
 }
 
 const url = computed(
-  () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}/`
+  () => `https://be.shangiti.com/shangiti/api/blog/blog-posts/${slug.value}/`,
 );
 
 const { data, pending, error, refresh } = await useFetch<BlogDetails>(url);
@@ -144,14 +161,44 @@ useHead(() => {
   };
 });
 
+const faqJsonLd = computed(() => {
+  const faqs = data.value?.faqs ?? [];
+  if (!faqs.length) return null;
+
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  });
+});
+
+useHead(() => ({
+  script: faqJsonLd.value
+    ? [
+        {
+          type: "application/ld+json",
+          innerHTML: faqJsonLd.value,
+        },
+      ]
+    : [],
+}));
+
 function formatDate(dateString: string) {
   const date = new Date(dateString);
 
-  return date.toLocaleString("en-US", {
-    day: "2-digit",
-    month: "numeric",
-    year: "numeric",
-  });
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  if (locale.value === "en") {
+    return `${day}/${month}/${year}`;
+  } else return `${year}/${month}/${day}`;
 }
 
 watch(slug, async () => {
