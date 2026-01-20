@@ -101,65 +101,65 @@ const url = computed(
 
 const { data, pending, error, refresh } = await useFetch<BlogDetails>(url);
 
-useHead(() => {
-  const siteUrl = "https://law.shangiti.com/";
-  const isAr = locale.value === "ar";
-  const post = data.value;
+// useHead(() => {
+//   const siteUrl = "https://law.shangiti.com/";
+//   const isAr = locale.value === "ar";
+//   const post = data.value;
 
-  return {
-    title: isAr ? `${post?.title_ar} ` : `${post?.title_en} `,
-    meta: [
-      {
-        name: "description",
-        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
-      },
-      {
-        property: "og:title",
-        content: isAr ? post?.title_ar : post?.title_en,
-      },
-      {
-        property: "og:description",
-        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
-      },
-      {
-        property: "og:image",
-        content: post?.featured_image,
-      },
-    ],
-    script: [
-      {
-        type: "application/ld+json",
-        innerHTML: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${siteUrl}/${isAr ? "ar" : "en"}/blog/${post?.slug}`,
-          },
-          headline: isAr ? post?.title_ar : post?.title_en,
-          description: isAr ? post?.excerpt_ar : post?.excerpt_en,
-          image: [post?.featured_image],
-          author: {
-            "@type": "Organization",
-            name: "Mahmoud Al-Shangiti Law Firm",
-            url: "https://law.shangiti.com/",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Mahmoud Al-Shangiti Law Firm",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://law.shangiti.com/_nuxt/alshangiti.CRUN2QOj.svg",
-            },
-          },
-          datePublished: post?.published_at,
-          dateModified: post?.updated_at,
-        }),
-      },
-    ],
-    __dangerouslyDisableSanitizers: ["script"],
-  };
-});
+//   return {
+//     title: isAr ? `${post?.title_ar} ` : `${post?.title_en} `,
+//     meta: [
+//       {
+//         name: "description",
+//         content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+//       },
+//       {
+//         property: "og:title",
+//         content: isAr ? post?.title_ar : post?.title_en,
+//       },
+//       {
+//         property: "og:description",
+//         content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+//       },
+//       {
+//         property: "og:image",
+//         content: post?.featured_image,
+//       },
+//     ],
+//     script: [
+//       {
+//         type: "application/ld+json",
+//         innerHTML: JSON.stringify({
+//           "@context": "https://schema.org",
+//           "@type": "BlogPosting",
+//           mainEntityOfPage: {
+//             "@type": "WebPage",
+//             "@id": `${siteUrl}/${isAr ? "ar" : "en"}/blog/${post?.slug}`,
+//           },
+//           headline: isAr ? post?.title_ar : post?.title_en,
+//           description: isAr ? post?.excerpt_ar : post?.excerpt_en,
+//           image: [post?.featured_image],
+//           author: {
+//             "@type": "Organization",
+//             name: "Mahmoud Al-Shangiti Law Firm",
+//             url: "https://law.shangiti.com/",
+//           },
+//           publisher: {
+//             "@type": "Organization",
+//             name: "Mahmoud Al-Shangiti Law Firm",
+//             logo: {
+//               "@type": "ImageObject",
+//               url: "https://law.shangiti.com/_nuxt/alshangiti.CRUN2QOj.svg",
+//             },
+//           },
+//           datePublished: post?.published_at,
+//           dateModified: post?.updated_at,
+//         }),
+//       },
+//     ],
+//     __dangerouslyDisableSanitizers: ["script"],
+//   };
+// });
 
 const faqJsonLd = computed(() => {
   const faqs = data.value?.faqs ?? [];
@@ -179,16 +179,83 @@ const faqJsonLd = computed(() => {
   });
 });
 
-useHead(() => ({
-  script: faqJsonLd.value
-    ? [
-        {
-          type: "application/ld+json",
-          innerHTML: faqJsonLd.value,
-        },
-      ]
-    : [],
-}));
+// useHead(() => ({
+//   script: faqJsonLd.value
+//     ? [
+//         {
+//           key: "faq-schema",
+//           type: "application/ld+json",
+//           innerHTML: faqJsonLd.value,
+//         },
+//       ]
+//     : [],
+// }));
+
+useHead(() => {
+  const siteUrl = "https://law.shangiti.com/";
+  const isAr = locale.value === "ar";
+  const post = data.value;
+
+  const blogPosting = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/${isAr ? "ar" : "en"}/blog/${post?.slug}`,
+    },
+    headline: isAr ? post?.title_ar : post?.title_en,
+    description: isAr ? post?.excerpt_ar : post?.excerpt_en,
+    image: post?.featured_image ? [post.featured_image] : undefined,
+    author: {
+      "@type": "Organization",
+      name: "Mahmoud Al-Shangiti Law Firm",
+      url: "https://law.shangiti.com/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Mahmoud Al-Shangiti Law Firm",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://law.shangiti.com/_nuxt/alshangiti.CRUN2QOj.svg",
+      },
+    },
+    datePublished: post?.published_at,
+    dateModified: post?.updated_at,
+  };
+
+  return {
+    title: isAr ? `${post?.title_ar ?? ""}` : `${post?.title_en ?? ""}`,
+    meta: [
+      {
+        name: "description",
+        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+      },
+      { property: "og:title", content: isAr ? post?.title_ar : post?.title_en },
+      {
+        property: "og:description",
+        content: isAr ? post?.excerpt_ar : post?.excerpt_en,
+      },
+      { property: "og:image", content: post?.featured_image },
+    ],
+    script: [
+      {
+        key: "blogposting-schema",
+        type: "application/ld+json",
+        innerHTML: JSON.stringify(blogPosting),
+      },
+      ...(faqJsonLd.value
+        ? [
+            {
+              key: "faq-schema",
+              type: "application/ld+json",
+              innerHTML: JSON.stringify(faqJsonLd.value),
+            },
+          ]
+        : []),
+    ],
+    __dangerouslyDisableSanitizers: ["script"],
+  };
+});
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
