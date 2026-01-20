@@ -165,7 +165,7 @@ const faqJsonLd = computed(() => {
   const faqs = data.value?.faqs ?? [];
   if (!faqs.length) return null;
 
-  return JSON.stringify({
+  return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
@@ -176,20 +176,8 @@ const faqJsonLd = computed(() => {
         text: faq.answer,
       },
     })),
-  });
+  };
 });
-
-// useHead(() => ({
-//   script: faqJsonLd.value
-//     ? [
-//         {
-//           key: "faq-schema",
-//           type: "application/ld+json",
-//           innerHTML: faqJsonLd.value,
-//         },
-//       ]
-//     : [],
-// }));
 
 useHead(() => {
   const siteUrl = "https://law.shangiti.com/";
