@@ -36,11 +36,20 @@ export default defineNuxtConfig({
     head: {
       script: [],
       link: [
+        // {
+        //   rel: "icon",
+        //   type: "image/png",
+        //   href: "/LogoTap.svg",
+        // },
+
+        { rel: "icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         {
-          rel: "icon",
-          type: "image/png",
-          href: "/LogoTap.svg",
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
         },
+        { rel: "manifest", href: "/manifest.webmanifest" },
         {
           rel: "preload",
           as: "image",

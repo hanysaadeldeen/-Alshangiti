@@ -5,7 +5,7 @@
         @click="toggle"
         class="text-base max-md:!leading-10 md:text-lg lg:text-xl text-text font-bold transition-all ease-in-out duration-300"
       >
-        {{ faq.question }}
+        {{ locale === "en" ? faq.question_en : faq.question_ar }}
       </h3>
       <div class="p-2 cursor-pointer" @click="toggle">
         <LucideChevronUp
@@ -20,18 +20,22 @@
       class="overflow-hidden transition-all duration-500 font-medium text-sm md:text-base"
       :style="{ maxHeight: isOpen ? answerHeight + 'px' : '0px' }"
     >
-      {{ faq.answer }}
+      {{ locale === "ar" ? faq.answer_ar : faq.answer_en }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n();
+
 const props = defineProps<{
   faq: {
-    answer: string;
+    answer_ar: string;
+    answer_en: string;
     id: number;
     order: number;
-    question: string;
+    question_en: string;
+    question_ar: string;
   };
 }>();
 const isOpen = ref(false);

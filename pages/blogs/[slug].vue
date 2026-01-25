@@ -37,14 +37,17 @@
       </div>
     </div>
     <section
-      dir="rtl"
       class="max-w-[839px] max-2xl:px-6 w-full mx-auto mb-10 md:mb-16 lg:mb-24"
       v-if="!error?.data && data && data?.faqs.length > 0"
     >
       <h2
         class="font-bold text-[32px] md:text-[40px] leading-[50px] md:leading-[72px] mb-6 w-fit max-sm:pl-10"
       >
-        الأسئلة الأكثر شيوعاً (FAQ)
+        {{
+          locale === "ar"
+            ? "الأسئلة الأكثر شيوعاً (FAQ)"
+            : "Frequently Asked Questions (FAQ)"
+        }}
       </h2>
       <FaqSection v-for="faq in data.faqs" :key="faq.id" :faq="faq" />
     </section>
@@ -88,10 +91,12 @@ interface BlogDetails {
     slug: string;
   };
   faqs: Array<{
-    answer: string;
+    answer_ar: string;
+    answer_en: string;
     id: number;
     order: number;
-    question: string;
+    question_en: string;
+    question_ar: string;
   }>;
 }
 
@@ -110,10 +115,10 @@ const faqJsonLd = computed(() => {
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.question,
+      name: faq.question_ar,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: faq.answer_ar,
       },
     })),
   };
