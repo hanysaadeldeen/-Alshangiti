@@ -105,7 +105,7 @@ const url = computed(
 );
 
 const { data, pending, error, refresh } = await useFetch<BlogDetails>(url);
-
+const isArabic = locale.value === "ar";
 const faqJsonLd = computed(() => {
   const faqs = data.value?.faqs ?? [];
   if (!faqs.length) return null;
@@ -115,10 +115,10 @@ const faqJsonLd = computed(() => {
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.question_ar,
+      name: isArabic ? faq.question_ar : faq.question_en,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer_ar,
+        text: isArabic ? faq.answer_ar : faq.answer_en,
       },
     })),
   };
