@@ -69,10 +69,19 @@
       </div>
       <div class="max-w-[898px] mx-auto">
         <h1
-          class="text-white text-center font-bold mb-5 text-3xl md:text-5xl lg:text-6xl"
+          class="text-white text-center font-bold mb-8 text-3xl md:text-5xl lg:text-6xl"
+        >
+          {{
+            locale === "ar"
+              ? "محمود الشنقيطي للمحاماة "
+              : "ALSHANGITI & ASSOCIATES LAW FIRM"
+          }}
+        </h1>
+        <h2
+          class="text-white text-center font-bold mb-5 text-2xl md:text-3xl lg:text-4xl"
         >
           {{ $t("homePage.home.hero.headline") }}
-        </h1>
+        </h2>
 
         <div
           class="flex gap-3 md:gap-6 justify-center items-stretch max-md:flex-col mt-10"
