@@ -95,7 +95,7 @@ export default defineNuxtConfig({
 
   "/images/**": {
     headers: {
-      "Cache-Control": "public, max-age=2592000, immutable",
+      "Cache-Control": "public, max-age=2592000",
     },
   },
 
