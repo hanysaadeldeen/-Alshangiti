@@ -79,7 +79,7 @@ export default defineNuxtConfig({
       applicationName: "محمود الشنقيطي للمحاماة والاستشارات القانونية",
     },
   },
-  routeRules: {
+ routeRules: {
   "/en/**": {
     seoMeta: {
       ogSiteName: "Mr Mahmoud Alshangiti",
@@ -92,7 +92,20 @@ export default defineNuxtConfig({
       "Cache-Control": "public, max-age=2592000, immutable",
     },
   },
+
+  "/images/**": {
+    headers: {
+      "Cache-Control": "public, max-age=2592000, immutable",
+    },
+  },
+
+  "/cairo/**": {
+    headers: {
+      "Cache-Control": "public, max-age=2592000, immutable",
+    },
+  },
 },
+
   postcss: {
     plugins: {
       tailwindcss: {},
