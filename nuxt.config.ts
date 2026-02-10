@@ -80,13 +80,19 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/en/**": {
-      seoMeta: {
-        ogSiteName: "Mr Mahmoud Alshangiti",
-        applicationName: "Mr Mahmoud Alshangiti",
-      },
+  "/en/**": {
+    seoMeta: {
+      ogSiteName: "Mr Mahmoud Alshangiti",
+      applicationName: "Mr Mahmoud Alshangiti",
     },
   },
+
+  "/videos/**": {
+    headers: {
+      "Cache-Control": "public, max-age=2592000, immutable",
+    },
+  },
+},
   postcss: {
     plugins: {
       tailwindcss: {},
